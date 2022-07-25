@@ -11,4 +11,25 @@
   --gray-7-hsl: 210 9% 31%;
   --gray-8-hsl: 210 10% 23%;
   --gray-9-hsl: 210 11% 15%;
+
+  --faded-button-color: hsl(218deg 6% 24% / 6%);
+  --faded-button-text-color: hsl(218deg 6% 24%);
+  --faded-button-hover-color: hsl(218deg 6% 24% / 12%);
+
+  --accent-button-color: hsl(321deg 100% 50%);
+  --accent-button-text-color: hsl(0, 0%, 100%);
+  --accent-button-hover-color: hsl(325deg 100% 61%);
+
+  --primary-button-color: hsl(0, 0%, 100%);
+  --primary-button-text-color: hsl(220deg 5% 34%);
+  --primary-button-hover-color: ;
+
+  --button-border-width: 0.09375rem;
+  --normal-button-border-radius: 6px;
+  --rounded-button-border-radius: 48px;
+  --button-padding-horizontal: 6px;
+  --button-padding-verical: 1px;
+  --button-svg-size: 1em;
+
+  --global-svg-color: hsl(218, 6%, 24%);
 }
