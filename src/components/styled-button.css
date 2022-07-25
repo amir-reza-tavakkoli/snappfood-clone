@@ -1,0 +1,88 @@
+@import url("../assets/base.css");
+
+@media (pointer: coarse) {
+    .styled-button {
+        min-width: 44px;
+        min-height: 44px;
+    }
+}
+
+a.styled-button {}
+
+a.styled-button[data-disabled] {
+    pointer-events: none;
+}
+
+.styled-button {
+    border: none;
+    cursor: pointer;
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-style: solid;
+    border-radius: var(--normal-button-border-radius);
+    border-width: var(--button-border-width);
+    padding-top: var(--button-padding-vertical);
+    padding-right: var(--button-padding-horizontal);
+    padding-bottom: var(--button-padding-vertical);
+    padding-left: var(--button-padding-horizontal);
+}
+
+.styled-button[data-variant="primary"] {
+    font-weight: 400;
+}
+
+.styled-button[data-variant="primary"]:hover {
+    background-color: var(--primary-button-hover-color);
+    border-color: var(--primary-button-hover-color);
+}
+
+.styled-button[data-variant="faded"] {
+    color: var(--faded-button-text-color);
+    background-color: var(--faded-button-color);
+    border-color: var(--faded-button-color);
+    font-weight: 700;
+}
+
+.styled-button[data-variant="faded"]:hover {
+    background-color: var(--faded-button-hover-color);
+    border-color: var(--faded-button-hover-color);
+}
+
+.styled-button[data-variant="accent"] {
+    font-weight: 700;
+    background-color: var(--accent-button-color);
+    border-color: var(--accent-button-color);
+    color: var(--accent-button-text-color);
+}
+
+.styled-button[data-variant="accent"]:hover {
+    background-color: var(--accent-button-hover-color);
+    border-color: var(--accent-button-hover-color);
+}
+
+
+.styled-button>span {}
+
+.styled-button[data-rounded="rounded"] {
+    border-radius: var(--rounded-button-border-radius);
+}
+.styled-button>span>svg {
+    /* color: var(--priamry-svg-color); */
+    width: var(--button-svg-size);
+    height: var(--button-svg-size);
+    margin-left: calc(var(--button-svg-size) / 4);
+}
+
+.styled-button[data-variant="faded"]>span>svg {
+    color: var(--primary-button-text-color);
+}
+
+.styled-button[data-variant="faded"]>span>svg {
+    color: var(--faded-button-text-color);
+}
+
+.styled-button[data-variant="accent"]>span>svg {
+    color: var(--accent-button-text-color);
+}
