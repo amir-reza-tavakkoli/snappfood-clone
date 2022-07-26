@@ -15,7 +15,6 @@ type ButtonProps = {
 export const Button = ({
   text,
   icon,
-  iconSide = "right",
   disabled = false,
   type,
   rounded = "normal",
