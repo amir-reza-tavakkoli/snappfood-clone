@@ -2,8 +2,8 @@
 
 @media (pointer: coarse) {
     .styled-button {
-        min-width: 44px;
-        min-height: 44px;
+        min-inline-size: 44px;
+        min-block-size: 44px;
     }
 }
 
@@ -21,10 +21,10 @@
     padding-right: var(--button-padding-horizontal);
     padding-bottom: var(--button-padding-vertical);
     padding-left: var(--button-padding-horizontal);
-    min-width: max-content;
-    width: 100%;
-    min-height: fit-content;
-    height: 100%;
+    min-inline-size: max-content;
+    inline-size: 100%;
+    min-block-size: fit-content;
+    block-size: 100%;
 }
 
 .styled-button[data-variant="primary"] {
@@ -69,9 +69,9 @@
 
 .styled-button>span>svg {
     /* color: var(--priamry-svg-color); */
-    width: var(--button-svg-size);
-    height: var(--button-svg-size);
-    min-width: fit-content;
+    inline-size: var(--button-svg-size);
+    block-size: var(--button-svg-size);
+    min-inline-size: fit-content;
     margin-left: calc(var(--button-svg-size) / 4);
 }
 
