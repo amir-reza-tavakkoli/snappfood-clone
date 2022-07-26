@@ -17,10 +17,11 @@
     border-style: solid;
     border-radius: var(--normal-button-border-radius);
     border-width: var(--button-border-width);
-    padding-top: var(--button-padding-vertical);
-    padding-right: var(--button-padding-horizontal);
-    padding-bottom: var(--button-padding-vertical);
-    padding-left: var(--button-padding-horizontal);
+    /* padding:var(--button-padding-vertical) var(--button-inline-padding); */
+    padding-block-start: var(--button-padding-vertical);
+    padding-inline-end: var(--button-inline-padding);
+    padding-block-end:  var(--button-padding-vertical);
+    padding-inline-start: var(--button-inline-padding);
     min-inline-size: max-content;
     inline-size: 100%;
     min-block-size: fit-content;

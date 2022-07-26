@@ -26,10 +26,10 @@
   --button-border-width: 0.09375rem;
   --normal-button-border-radius: 6px;
   --rounded-button-border-radius: 48px;
-  --button-padding-horizontal: clamp(6px,
+  --button-inline-padding: clamp(6px,
       0.25em + 2px,
       2em);
-  --button-padding-verical: clamp(1px,
+  --button-block-padding: clamp(1px,
       2px,
       0.15em);
   --button-svg-size: 1em;
