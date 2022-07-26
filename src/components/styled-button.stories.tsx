@@ -19,6 +19,7 @@ export const accent = () => (
 export const RTLAccent = () => (
   <div style={{inlineSize:"40px"}}>
     <Button
+      dir="rtl"
       text="ممد"
       icon={<OrderIcon />}
       variant="accent"
