@@ -7,7 +7,6 @@ type CustomButtonProps = {
   text: string
   icon?: ReactNode
   rounded?: "normal" | "rounded"
-  intent? : "action" | "warning" | "neutral" | "error"
   variant?: "primary" | "accent" | "faded"
 }
 
@@ -18,7 +17,6 @@ export const Button = ({
   icon,
   rounded = "normal",
   variant = "faded",
-  intent = "neutral",
   ...rest
 }: ButtonProps) => {
   return (
