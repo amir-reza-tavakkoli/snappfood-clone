@@ -13,20 +13,6 @@
 
   --font-size-1: 1rem;
 
-  --faded-button-color: hsl(218deg 6% 24% / 6%);
-  --faded-button-text-color: hsl(218deg 6% 24%);
-  --faded-button-hover-color: hsl(218deg 6% 24% / 12%);
-  --faded-button-active-color: hsla(210, 14%, 11%, 0.2);
-
-  --accent-button-color: hsl(321deg 100% 50%);
-  --accent-button-text-color: hsl(0, 0%, 100%);
-  --accent-button-hover-color: hsl(325deg 100% 61%);
-  --accent-button-active-color: hsl(320, 100%, 44%);
-
-  --primary-button-color: hsl(0, 0%, 100%);
-  --primary-button-text-color: hsl(220deg 5% 34%);
-  --primary-button-hover-color:hsl(240, 33%, 99%) ;
-
   --button-border-width: 0.09375rem;
   --normal-button-border-radius: 6px;
   --rounded-button-border-radius: 48px;
