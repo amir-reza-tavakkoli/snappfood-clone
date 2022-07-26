@@ -1,4 +1,4 @@
-@import url("../assets/base.css");
+@import "../assets/base.css";
 
 @media (pointer: coarse) {
     .styled-button {
@@ -68,6 +68,7 @@ a.styled-button[data-disabled] {
 .styled-button[data-rounded="rounded"] {
     border-radius: var(--rounded-button-border-radius);
 }
+
 .styled-button>span>svg {
     /* color: var(--priamry-svg-color); */
     width: var(--button-svg-size);
