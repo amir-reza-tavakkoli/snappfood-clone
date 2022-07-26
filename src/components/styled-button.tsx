@@ -17,6 +17,7 @@ export const Button = ({
   type = "button",
   rounded = "normal",
   variant = "faded",
+  ...rest
 }: ButtonProps) => {
   return (
     <button
@@ -25,6 +26,7 @@ export const Button = ({
       disabled={disabled}
       className="styled-button"
       data-variant={variant}
+      {...rest}
     >
       {text} {icon ? <span>{icon}</span> : null}
     </button>
