@@ -16,3 +16,23 @@ export const accent = () => (
     />
   </div>
 )
+export const RTLAccent = () => (
+  <div style={{inlineSize:"40px"}}>
+    <Button
+      text="ممد"
+      icon={<OrderIcon />}
+      variant="accent"
+      rounded="rounded"
+      disabled={false}
+    />
+  </div>
+)
+export const primary = () => (
+  <div style={{inlineSize:"40px"}}>
+    <Button
+      text="button"
+      icon={<OrderIcon />}
+      variant="primary"
+    />
+  </div>
+)
