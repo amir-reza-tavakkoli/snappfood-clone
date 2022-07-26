@@ -7,12 +7,6 @@
     }
 }
 
-a.styled-button {}
-
-a.styled-button[data-disabled] {
-    pointer-events: none;
-}
-
 .styled-button {
     border: none;
     cursor: pointer;
