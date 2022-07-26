@@ -18,27 +18,10 @@ export const Button = ({
   iconSide = "right",
   disabled = false,
   type,
-  href,
   rounded = "normal",
   variant = "faded",
 }: ButtonProps) => {
-  const content = (
-    <>
-      {icon && iconSide === "left" ? <span>{icon}</span> : null}
-      {text} {icon && iconSide === "right" ? <span>{icon}</span> : null}
-    </>
-  )
-  return href ? (
-    <a
-      href={href}
-      className="styled-button"
-      data-rounded={rounded}
-      data-disabled={disabled}
-      data-variant={variant}
-    >
-      {content}
-    </a>
-  ) : (
+  return (
     <button
       data-rounded={rounded}
       type={type ? type : "button"}
@@ -46,7 +29,7 @@ export const Button = ({
       className="styled-button"
       data-variant={variant}
     >
-      {content}
+      {text} {icon && iconSide === "right" ? <span>{icon}</span> : null}
     </button>
   )
 }
