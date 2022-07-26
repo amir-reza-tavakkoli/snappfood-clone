@@ -8,6 +8,7 @@
 }
 
 .styled-button {
+    font-size: var(--font-size-1);
     border: none;
     cursor: pointer;
     display: inline-flex;
@@ -19,7 +20,7 @@
     border-width: var(--button-border-width);
     padding-block-start: var(--button-padding-vertical);
     padding-inline-end: var(--button-inline-padding);
-    padding-block-end:  var(--button-padding-vertical);
+    padding-block-end: var(--button-padding-vertical);
     padding-inline-start: var(--button-inline-padding);
     min-inline-size: max-content;
     inline-size: 100%;
@@ -27,13 +28,28 @@
     /* block-size: 100%; */
 }
 
-.styled-button[data-variant="primary"] {
-    font-weight: 400;
+.styled-button[data-variant="faded"] {
+    color: var(--faded-button-text-color);
+    background-color: var(--faded-button-color);
+    border-color: var(--faded-button-color);
+    font-weight: 700;
 }
 
-.styled-button[data-variant="primary"]:hover {
-    background-color: var(--primary-button-hover-color);
-    border-color: var(--primary-button-hover-color);
+.styled-button[data-variant="faded"]:hover {
+    background-color: var(--faded-button-hover-color);
+    border-color: var(--faded-button-hover-color);
+}
+
+.styled-button[data-variant="faded"]:active {
+    background-color: var(--faded-button-active-color);
+    border-color: var(--faded-button-active-color);
+}
+
+.styled-button[data-variant="primary"] {
+    color: var(--primary-button-text-color);
+    background-color: var(--primary-button-color);
+    border-color: var(--primary-button-color);
+    font-weight: 400;
 }
 
 .styled-button[data-variant="primary"]:hover {
@@ -46,17 +62,7 @@
     border-color: var(--primary-button-active-color);
 }
 
-.styled-button[data-variant="faded"] {
-    color: var(--faded-button-text-color);
-    background-color: var(--faded-button-color);
-    border-color: var(--faded-button-color);
-    font-weight: 700;
-}
 
-.styled-button[data-variant="faded"]:active {
-    background-color: var(--faded-button-active-color);
-    border-color: var(--faded-button-active-color);
-}
 
 .styled-button[data-variant="accent"] {
     font-weight: 700;
