@@ -14,10 +14,12 @@
   --faded-button-color: hsl(218deg 6% 24% / 6%);
   --faded-button-text-color: hsl(218deg 6% 24%);
   --faded-button-hover-color: hsl(218deg 6% 24% / 12%);
+  --faded-button-active-color: rgba(24, 28, 32, 0.2);
 
   --accent-button-color: hsl(321deg 100% 50%);
   --accent-button-text-color: hsl(0, 0%, 100%);
   --accent-button-hover-color: hsl(325deg 100% 61%);
+  --accent-button-active-color: hsl(320, 100%, 44%);
 
   --primary-button-color: hsl(0, 0%, 100%);
   --primary-button-text-color: hsl(220deg 5% 34%);
