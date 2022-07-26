@@ -1,8 +1,10 @@
-import { StyledButton } from "./styled-button"
+import { Button } from "./styled-button"
 import { OrderIcon } from "../assets/svg"
-export const faded = () => <StyledButton text="button" icon={<OrderIcon />} variant="faded" />
+export const faded = () => (
+  <Button text="button" icon={<OrderIcon />} variant="faded" />
+)
 export const accent = () => (
-  <StyledButton
+  <Button
     text="button"
     icon={<OrderIcon />}
     variant="accent"

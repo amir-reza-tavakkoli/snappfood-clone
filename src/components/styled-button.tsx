@@ -1,7 +1,7 @@
 import { ReactNode } from "react"
 import "./styled-button.css"
 
-type StyledButtonProps = {
+type ButtonProps = {
   text: string
   icon?: ReactNode
   iconSide?: "left" | "right"
@@ -12,7 +12,7 @@ type StyledButtonProps = {
   href?: string
 }
 
-export const StyledButton = ({
+export const Button = ({
   text,
   icon,
   iconSide = "right",
@@ -21,7 +21,7 @@ export const StyledButton = ({
   href,
   rounded = "normal",
   variant = "faded",
-}: StyledButtonProps) => {
+}: ButtonProps) => {
   const content = (
     <>
       {icon && iconSide === "left" ? <span>{icon}</span> : null}
