@@ -6,7 +6,7 @@ export const faded = () => (
 )
 
 export const accent = () => (
-  <div style={{width:"40px"}}>
+  <div style={{inlineSize:"40px"}}>
     <Button
       text="button"
       icon={<OrderIcon />}
