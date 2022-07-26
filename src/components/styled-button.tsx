@@ -1,7 +1,7 @@
 import { ReactNode } from "react"
 import "./styled-button.css"
-
-type ButtonProps = {
+type DefaultButtonProps = JSX.IntrinsicElements["button"]
+type CustomButtonProps = {
   text: string
   icon?: ReactNode
   disabled?: boolean
@@ -9,7 +9,7 @@ type ButtonProps = {
   rounded?: "normal" | "rounded"
   variant?: "primary" | "accent" | "faded" | "warning" | "error" | "action"
 }
-
+type ButtonProps = CustomButtonProps & DefaultButtonProps
 export const Button = ({
   text,
   icon,
