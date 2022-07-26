@@ -21,6 +21,7 @@
     padding-right: var(--button-padding-horizontal);
     padding-bottom: var(--button-padding-vertical);
     padding-left: var(--button-padding-horizontal);
+    min-width: max-content;
 }
 
 .styled-button[data-variant="primary"] {
@@ -67,6 +68,7 @@
     /* color: var(--priamry-svg-color); */
     width: var(--button-svg-size);
     height: var(--button-svg-size);
+    min-width: fit-content;
     margin-left: calc(var(--button-svg-size) / 4);
 }
 

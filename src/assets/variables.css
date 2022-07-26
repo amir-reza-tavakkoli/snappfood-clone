@@ -29,7 +29,9 @@
   --button-padding-horizontal: clamp(6px,
       0.25em + 2px,
       2em);
-  --button-padding-verical: 1px;
+  --button-padding-verical: clamp(1px,
+      2px,
+      0.15em);
   --button-svg-size: 1em;
 
   --global-svg-color: hsl(218, 6%, 24%);
