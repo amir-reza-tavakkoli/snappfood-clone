@@ -6,7 +6,7 @@ export const faded = () => (
 )
 
 export const accent = () => (
-  <div style={{inlineSize:"40px"}}>
+  <div style={{ inlineSize: "40px" }}>
     <Button
       text="button"
       icon={<OrderIcon />}
@@ -17,7 +17,7 @@ export const accent = () => (
   </div>
 )
 export const RTLAccent = () => (
-  <div style={{inlineSize:"40px"}}>
+  <div style={{ inlineSize: "40px" }}>
     <Button
       dir="rtl"
       text="ممد"
@@ -29,11 +29,7 @@ export const RTLAccent = () => (
   </div>
 )
 export const primary = () => (
-  <div style={{inlineSize:"40px"}}>
-    <Button
-      text="button"
-      icon={<OrderIcon />}
-      variant="primary"
-    />
+  <div style={{ inlineSize: "40px" }}>
+    <Button text="button" icon={<OrderIcon />} variant="primary" />
   </div>
 )
