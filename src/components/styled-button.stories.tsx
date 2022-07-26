@@ -6,11 +6,13 @@ export const faded = () => (
 )
 
 export const accent = () => (
-  <Button
-    text="button"
-    icon={<OrderIcon />}
-    variant="accent"
-    rounded="rounded"
-    disabled ={false}
-  />
+  <div style={{width:"40px"}}>
+    <Button
+      text="button"
+      icon={<OrderIcon />}
+      variant="accent"
+      rounded="rounded"
+      disabled={false}
+    />
+  </div>
 )
