@@ -1,4 +1,4 @@
-import { Button } from "./styled-button"
+import { Button } from "./button"
 import { OrderIcon } from "./svg"
 
 export const faded = () => (
