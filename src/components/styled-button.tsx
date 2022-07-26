@@ -12,6 +12,7 @@ type CustomButtonProps = {
 }
 
 type ButtonProps = CustomButtonProps & DefaultButtonProps
+
 export const Button = ({
   text,
   icon,
