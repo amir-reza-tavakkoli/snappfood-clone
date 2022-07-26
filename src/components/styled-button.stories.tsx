@@ -9,5 +9,6 @@ export const accent = () => (
     icon={<OrderIcon />}
     variant="accent"
     rounded="rounded"
+    disabled ={false}
   />
 )
