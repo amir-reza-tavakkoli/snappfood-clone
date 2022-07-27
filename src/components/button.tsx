@@ -20,8 +20,8 @@ export const Button = ({
 }: ButtonProps) => {
   return (
     <button
+    className="button"
       data-rounding={rounding}
-      className="button"
       data-variant={variant}
       {...rest}
     >
