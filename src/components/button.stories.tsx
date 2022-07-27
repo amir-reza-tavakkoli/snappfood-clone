@@ -1,13 +1,17 @@
 import { Button } from "./button"
 import { OrderIcon } from "./svg"
 
-export const faded = () => (
+export const defaultVariant = () => (
+  <Button></Button>
+)
+
+export const fadedVariant = () => (
   <Button icon={<OrderIcon />} variant="faded">
     button
   </Button>
 )
 
-export const accent = () => (
+export const accentVariant = () => (
   <div style={{ inlineSize: "40px" }}>
     <Button
       icon={<OrderIcon />}
@@ -20,7 +24,7 @@ export const accent = () => (
     </Button>
   </div>
 )
-export const RTLAccent = () => (
+export const RTLAccentVariant = () => (
   <div style={{ inlineSize: "40px" }}>
     <Button
       dir="rtl"
@@ -33,7 +37,7 @@ export const RTLAccent = () => (
     </Button>
   </div>
 )
-export const primary = () => (
+export const primaryVariant = () => (
   <div style={{ inlineSize: "40px" }}>
     <Button icon={<OrderIcon />} variant="primary">
       button
