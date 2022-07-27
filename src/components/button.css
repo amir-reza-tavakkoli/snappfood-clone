@@ -93,9 +93,7 @@
   border-color: var(--accent-button-active-color);
 }
 
-.button>span {}
-
-.button[data-rounded="rounded"] {
+.button[data-rounding="full"] {
   border-radius: var(--rounded-button-border-radius);
 }
 

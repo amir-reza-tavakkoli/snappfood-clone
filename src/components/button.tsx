@@ -5,7 +5,7 @@ type DefaultButtonProps = JSX.IntrinsicElements["button"]
 
 type CustomButtonProps = {
   icon?: ReactNode
-  rounded?: "normal" | "rounded"
+  rounding?: "normal" | "full"
   variant?: "primary" | "accent" | "faded"
 }
 
@@ -13,14 +13,14 @@ type ButtonProps = CustomButtonProps & DefaultButtonProps
 
 export const Button = ({
   icon,
-  rounded = "normal",
+  rounding = "normal",
   variant = "faded",
   children,
   ...rest
 }: ButtonProps) => {
   return (
     <button
-      data-rounded={rounded}
+      data-rounding={rounding}
       className="button"
       data-variant={variant}
       {...rest}

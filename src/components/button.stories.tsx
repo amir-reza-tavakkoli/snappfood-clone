@@ -12,7 +12,7 @@ export const accent = () => (
     <Button
       icon={<OrderIcon />}
       variant="accent"
-      rounded="rounded"
+      rounding="full"
       disabled={false}
     >
       button
@@ -25,7 +25,7 @@ export const RTLAccent = () => (
       dir="rtl"
       icon={<OrderIcon />}
       variant="accent"
-      rounded="rounded"
+      rounding="full"
       disabled={false}
     >
       ممد
