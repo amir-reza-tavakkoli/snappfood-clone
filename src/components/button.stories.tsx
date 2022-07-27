@@ -1,11 +1,11 @@
 import { Button } from "./button"
 import { OrderIcon, LeftPinkFlashIcon, UserIconFaded } from "./svg"
 
-export const defaultVariant = () => <Button>پیتزا</Button>
+export const WithDefaultVariant = () => <Button>پیتزا</Button>
 
-export const fadedVariantRTL = () => <Button variant="faded">انصراف</Button>
+export const WithFadedVariantRTL = () => <Button variant="faded">انصراف</Button>
 
-export const accentVariantIcon = () => (
+export const WithAccentVariantIcon = () => (
   <div style={{ inlineSize: "40px" }}>
     <Button icon={<OrderIcon />} variant="accent">
       offers
@@ -13,7 +13,7 @@ export const accentVariantIcon = () => (
   </div>
 )
 
-export const accentVariantConstraintedIconRTL = () => (
+export const WithAccentVariantConstraintedIconRTL = () => (
   <div style={{ inlineSize: "280px" }}>
     <Button dir="rtl" icon={<UserIconFaded />} variant="accent">
       ورود به حساب کاربری
@@ -21,7 +21,7 @@ export const accentVariantConstraintedIconRTL = () => (
   </div>
 )
 
-export const accentRuondedIconRTL = () => (
+export const WithAccentRuondedIconRTL = () => (
   <div style={{ inlineSize: "40px" }}>
     <Button icon={<OrderIcon />} variant="accent" rounding="full">
       سفارش
@@ -29,7 +29,7 @@ export const accentRuondedIconRTL = () => (
   </div>
 )
 
-export const fadedVariantIconConstraintedRTL = () => (
+export const WithFadedVariantIconConstraintedRTL = () => (
   <div style={{ inlineSize: "40px" }}>
     <Button icon={<UserIconFaded />} variant="faded">
       سفارش
