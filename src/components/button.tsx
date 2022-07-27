@@ -1,5 +1,5 @@
 import { ReactNode } from "react"
-import "./styled-button.css"
+import "./button.css"
 
 type DefaultButtonProps = JSX.IntrinsicElements["button"]
 
@@ -22,7 +22,7 @@ export const Button = ({
   return (
     <button
       data-rounded={rounded}
-      className="styled-button"
+      className="button"
       data-variant={variant}
       {...rest}
     >

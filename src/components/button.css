@@ -1,13 +1,13 @@
 @import "../assets/base.css";
 
 @media (pointer: coarse) {
-  .styled-button {
+  .button {
     min-inline-size: 44px;
     min-block-size: 44px;
   }
 }
 
-.styled-button {
+.button {
   --faded-button-color: hsl(218deg 6% 24% / 6%);
   --faded-button-text-color: hsl(218deg 6% 24%);
   --faded-button-hover-color: hsl(218deg 6% 24% / 12%);
@@ -42,65 +42,64 @@
   /* block-size: 100%; */
 }
 
-.styled-button[data-variant="faded"] {
+.button[data-variant="faded"] {
   color: var(--faded-button-text-color);
   background-color: var(--faded-button-color);
   border-color: var(--faded-button-color);
   font-weight: 700;
 }
 
-.styled-button[data-variant="faded"]:hover {
+.button[data-variant="faded"]:hover {
   background-color: var(--faded-button-hover-color);
   border-color: var(--faded-button-hover-color);
 }
 
-.styled-button[data-variant="faded"]:active {
+.button[data-variant="faded"]:active {
   background-color: var(--faded-button-active-color);
   border-color: var(--faded-button-active-color);
 }
 
-.styled-button[data-variant="primary"] {
+.button[data-variant="primary"] {
   color: var(--primary-button-text-color);
   background-color: var(--primary-button-color);
   border-color: var(--primary-button-color);
   font-weight: 400;
 }
 
-.styled-button[data-variant="primary"]:hover {
+.button[data-variant="primary"]:hover {
   background-color: var(--primary-button-hover-color);
   border-color: var(--primary-button-hover-color);
 }
 
-.styled-button[data-variant="primary"]:active {
+.button[data-variant="primary"]:active {
   background-color: var(--primary-button-active-color);
   border-color: var(--primary-button-active-color);
 }
 
-.styled-button[data-variant="accent"] {
+.button[data-variant="accent"] {
   font-weight: 700;
   background-color: var(--accent-button-color);
   border-color: var(--accent-button-color);
   color: var(--accent-button-text-color);
 }
 
-.styled-button[data-variant="accent"]:hover {
+.button[data-variant="accent"]:hover {
   background-color: var(--accent-button-hover-color);
   border-color: var(--accent-button-hover-color);
 }
 
-.styled-button[data-variant="accent"]:active {
+.button[data-variant="accent"]:active {
   background-color: var(--accent-button-active-color);
   border-color: var(--accent-button-active-color);
 }
 
-.styled-button > span {
-}
+.button>span {}
 
-.styled-button[data-rounded="rounded"] {
+.button[data-rounded="rounded"] {
   border-radius: var(--rounded-button-border-radius);
 }
 
-.styled-button > span > svg {
+.button>span>svg {
   /* color: var(--priamry-svg-color); */
   inline-size: var(--button-svg-size);
   block-size: var(--button-svg-size);
