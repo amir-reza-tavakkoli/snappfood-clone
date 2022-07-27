@@ -97,7 +97,7 @@
   border-radius: var(--rounded-button-border-radius);
 }
 
-.button>span>svg {
+.button > span > svg {
   /* color: var(--priamry-svg-color); */
   inline-size: var(--button-svg-size);
   block-size: var(--button-svg-size);

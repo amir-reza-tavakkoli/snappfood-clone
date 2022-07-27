@@ -19,7 +19,6 @@ export const Button = ({
   className: extraClassName,
   ...otherProps
 }: ButtonProps) => {
-  
   const className = useMemo(
     () => "button" + " " + `${extraClassName}`,
     [extraClassName],
