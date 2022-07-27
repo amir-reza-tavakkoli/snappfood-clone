@@ -102,5 +102,5 @@
   inline-size: var(--button-svg-size);
   block-size: var(--button-svg-size);
   min-inline-size: fit-content;
-  margin-left: calc(var(--button-svg-size) / 4);
+  margin-inline-start: calc(var(--button-svg-size) / 4);
 }
