@@ -821,7 +821,7 @@ export const MessageIcon = ({ ...props }) => (
   </svg>
 )
 
-export const LeftFadedFlash = ({ ...props }) => (
+export const UserIconFaded = ({ ...props }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width="14"
