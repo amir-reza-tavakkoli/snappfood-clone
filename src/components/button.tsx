@@ -1,10 +1,9 @@
-import { ReactNode } from "react"
+import { Children, ReactNode } from "react"
 import "./button.css"
 
 type DefaultButtonProps = JSX.IntrinsicElements["button"]
 
 type CustomButtonProps = {
-  text: string
   icon?: ReactNode
   rounded?: "normal" | "rounded"
   variant?: "primary" | "accent" | "faded"
@@ -13,10 +12,10 @@ type CustomButtonProps = {
 type ButtonProps = CustomButtonProps & DefaultButtonProps
 
 export const Button = ({
-  text,
   icon,
   rounded = "normal",
   variant = "faded",
+  children,
   ...rest
 }: ButtonProps) => {
   return (
@@ -26,7 +25,7 @@ export const Button = ({
       data-variant={variant}
       {...rest}
     >
-      {text} {icon ? <span>{icon}</span> : null}
+      {children} {icon ? <span>{icon}</span> : null}
     </button>
   )
 }
