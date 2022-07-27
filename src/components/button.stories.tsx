@@ -13,6 +13,7 @@ export const accent = () => (
       icon={<OrderIcon />}
       variant="accent"
       rounding="full"
+      className="fff"
       disabled={false}
     >
       button

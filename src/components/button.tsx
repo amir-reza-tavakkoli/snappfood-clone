@@ -1,4 +1,4 @@
-import { Children, ReactNode } from "react"
+import { ReactNode, useMemo } from "react"
 import "./button.css"
 
 type DefaultButtonProps = JSX.IntrinsicElements["button"]
@@ -16,11 +16,18 @@ export const Button = ({
   rounding = "normal",
   variant = "faded",
   children,
+  className: extraClassName,
   ...otherProps
 }: ButtonProps) => {
+  
+  const className = useMemo(
+    () => "button" + " " + `${extraClassName}`,
+    [extraClassName],
+  )
+
   return (
     <button
-    className="button"
+      className={className}
       data-rounding={rounding}
       data-variant={variant}
       {...otherProps}
