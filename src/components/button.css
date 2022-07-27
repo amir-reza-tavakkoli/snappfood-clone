@@ -32,14 +32,14 @@
   border-style: solid;
   border-radius: var(--normal-button-border-radius);
   border-width: var(--button-border-width);
-  padding-block-start: var(--button-padding-vertical);
+  padding-block-start: var(--button-block-padding);
   padding-inline-end: var(--button-inline-padding);
-  padding-block-end: var(--button-padding-vertical);
+  padding-block-end: var(--button-block-padding);
   padding-inline-start: var(--button-inline-padding);
   min-inline-size: max-content;
   inline-size: 100%;
   min-block-size: fit-content;
-  /* block-size: 100%; */
+  /* block-size: var(--button-block-padding); */
 }
 
 .button[data-variant="faded"] {
