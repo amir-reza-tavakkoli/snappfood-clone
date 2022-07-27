@@ -1,14 +1,26 @@
 @import "../assets/base.css";
 
 .card {
+    --card-border-radius: 8px;
+    --card-border-color: hsla(218, 6%, 24%, 0.06);
+    --card-color: hsl(0, 0%, 100%);
+    --card-border-width: 1px;
+    --card-text-color: hsl(218, 6%, 24%);
+
+    cursor: pointer;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: stretch;
+    align-items: center;
+    background-color: var(--card-color);
+    border: solid var(--card-border-color) var(--card-border-width);
+    border-radius: var(--card-border-radius);
+    color: var(--card-text-color);
+    overflow: hidden;
+    box-shadow: rgb(58 61 66 / 6%) 0px 1px 0px, rgb(0 0 0 / 5%) 0px 2px 8px -2px;
 }
-.card > .card-image {
 
-}
-.card > .card-delivery {
+.card>.card-image {}
 
-}
+.card>.card-delivery {}
