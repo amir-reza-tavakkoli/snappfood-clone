@@ -16,14 +16,14 @@ export const Button = ({
   rounding = "normal",
   variant = "faded",
   children,
-  ...rest
+  ...otherProps
 }: ButtonProps) => {
   return (
     <button
     className="button"
       data-rounding={rounding}
       data-variant={variant}
-      {...rest}
+      {...otherProps}
     >
       {children} {icon ? <span>{icon}</span> : null}
     </button>
