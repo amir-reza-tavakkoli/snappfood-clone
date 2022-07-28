@@ -34,12 +34,13 @@ export const Card = ({
   return (
     <article className="card" dir={dir}>
       <div className="card-image">
-        {img} <span className="card-store-icon">{storeIcon}</span> <span>{offer}</span>
+        {img} <span className="card-store-icon">{storeIcon}</span>{" "}
+        <span>{offer}</span>
       </div>
       <h3>{title}</h3>
       <small>
         <StarIcon />
-        {score}({scoreNumber}){" "}
+        {score}<span>({scoreNumber})</span>{" "}
       </small>
       <small>{categoriesString}</small>
       {deliveryOption ? (
