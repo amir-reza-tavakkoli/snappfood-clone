@@ -1,4 +1,4 @@
-import { ReactNode, useMemo } from "react"
+import type { ReactNode } from "react"
 import "./button.css"
 
 type DefaultButtonProps = JSX.IntrinsicElements["button"]
