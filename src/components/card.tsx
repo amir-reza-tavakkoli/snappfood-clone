@@ -40,7 +40,8 @@ export const Card = ({
       <h3>{title}</h3>
       <small>
         <StarIcon />
-        {score}<span>({scoreNumber})</span>{" "}
+        {score}
+        <span>({scoreNumber})</span>{" "}
       </small>
       <small>{categoriesString}</small>
       {deliveryOption ? (
