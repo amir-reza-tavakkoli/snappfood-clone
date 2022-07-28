@@ -1,74 +1,100 @@
 @import "../assets/base.css";
 
 .card {
-  --card-border-radius: 0.5rem;
-  --card-border-color: hsla(218, 6%, 24%, 0.06);
-  --card-color: hsl(0, 0%, 100%);
-  --card-border-width: 1px;
-  --card-text-color: hsl(218, 6%, 24%);
+    --card-border-radius: 0.5rem;
+    --card-border-color: hsla(218, 6%, 24%, 0.06);
+    --card-color: hsl(0, 0%, 100%);
+    --card-border-width: 1px;
+    --card-text-color: hsl(218, 6%, 24%);
 
-  cursor: pointer;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: var(--card-color);
-  border: solid var(--card-border-color) var(--card-border-width);
-  border-radius: var(--card-border-radius);
-  color: var(--card-text-color);
-  overflow: hidden;
-  box-shadow: rgb(58 61 66 / 6%) 0px 1px 0px, rgb(0 0 0 / 5%) 0px 2px 8px -2px;
+    cursor: pointer;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--card-color);
+    border: solid var(--card-border-color) var(--card-border-width);
+    border-radius: var(--card-border-radius);
+    color: var(--card-text-color);
+    overflow: hidden;
+    box-shadow: rgb(58 61 66 / 6%) 0px 1px 0px, rgb(0 0 0 / 5%) 0px 2px 8px -2px;
 }
 
-.card > h3 {
-  padding: 10px 0px;
+.card>h3 {
+    padding: 15px 0px 10px 0px;
 }
 
-.card > .card-image {
-  width: 100%;
-  height: 40%;
+.card>.card-image {
+    width: 100%;
+    height: 40%;
+    position: relative;
 }
 
-.card > .card-image > img {
-  width: 100%;
-  max-height: 40%;
+.card>.card-image>img {
+    width: 100%;
+    height: 100%;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
 }
 
-.card > .card-image > img:first-child {
-  width: 100%;
-  height: 100%;
+.card>.card-image>.card-store-icon {
+    position: absolute;
+    border-radius: 10px;
+    bottom: -10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.75rem;
+
 }
 
-.card > small:first-of-type {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 10px 0px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.card>.card-image>.card-store-icon>img {
+    box-shadow: rgb(58 61 66 / 6%) 0px 1px 0px, rgb(0 0 0 / 30%) 0px 8px 32px -16px;
+    border: 10px solid rgba(58, 61, 66, 0.06);
+    /* position: absolute; */
+    border-radius: 12px;
+    width: 25%;
+    height: 25%;
+    padding: 4px;
+    background-color: white;
 }
 
-.card > small:last-of-type {
-  color: hsl(206, 4%, 66%);
-  padding: 10px 0px;
+.card>.card-image>img:first-child {
+    width: 100%;
+    height: 100%;
 }
 
-.card > .card-delivery {
-  padding: 0.6875rem 0.875rem;
-  text-align: initial;
-  background-color: hsl(0, 0%, 100%);
-  border-radius: 4.5rem;
-  color: hsl(218, 6%, 24%);
-  box-shadow: hsla(218, 6%, 24%, 0.06) 0px 1px 0px,
-    hsla(0, 0%, 0%, 0.05) 0px 2px 8px -2px;
-  display: flex;
-  justify-content: center;
-  margin-bottom: 1.5rem;
-  align-items: center;
+.card>small:first-of-type {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.card > .card-delivery > svg {
-  margin: 5px;
+.card>small:last-of-type {
+    color: hsl(206, 4%, 66%);
+    padding: 10px 0px;
+}
+
+.card>.card-delivery {
+    padding: 0.6875rem 0.875rem;
+    text-align: initial;
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 4.5rem;
+    color: hsl(218, 6%, 24%);
+    box-shadow: hsla(218, 6%, 24%, 0.06) 0px 1px 0px,
+        hsla(0, 0%, 0%, 0.05) 0px 2px 8px -2px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    align-items: center;
+}
+
+.card>.card-delivery>svg {
+    margin: 5px;
 }
