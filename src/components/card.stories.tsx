@@ -3,14 +3,12 @@ import { DeliveryGuyIcon } from "./svg"
 import image from "../assets/img.webp"
 import storeIcon from "../assets/store-icon.webp"
 
-const storeIco = <img src={storeIcon} role="presentation"></img>
-
 export const faded = () => {
-  const img = <img src={image} alt=""/>
+  const storeIco = <img src={storeIcon} role="presentation"></img>
   return (
     <Card
       name="رستوران بگ میرزا"
-      storeImage={img}
+      storeImageSrc={image}
       storeIcon={storeIco}
       offer="۱۲%"
       delivery="پیک فروشنده"
