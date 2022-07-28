@@ -8,11 +8,12 @@ export const faded = () => (
   <Card
     title="رستوران بگ میرزا"
     categories={["کباب", "ایرانی", "خورشت"]}
-    score="4.7"
-    scoreNumber="3834"
-    delivery=":پیک فروشنده"
+    score="۳.۶"
+    scoreNumber="۱۲,۳۶۶"
+    delivery="پیک فروشنده"
     deliveryIcon={<DeliveryGuyIcon />}
-    deliveryPrice=" 7000 تومان"
-    img = {img}
-    ></Card>
-    )
+    deliveryPrice=" ۷,۰۰۰  تومان"
+    img={img}
+    dir= "rtl"
+  ></Card>
+)
