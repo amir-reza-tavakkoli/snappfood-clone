@@ -37,6 +37,15 @@
     border-top-left-radius: 12px;
     border-top-right-radius: 12px;
 }
+.card>.card-image > span:last-of-type {
+        padding: 0.25rem 0.75rem;
+        background-color: rgb(255, 255, 255);
+            border-top-left-radius: 1rem;
+            position: absolute;
+            right: 0px;
+            bottom: 0px;
+            color: rgb(224, 0, 150);
+}
 
 .card>.card-image>.card-store-icon {
     position: absolute;
