@@ -68,7 +68,7 @@
     border-radius: 12px;
     width: 25%;
     height: 25%;
-    padding: 4px;
+    padding: 2px;
     background-color: white;
 }
 
@@ -87,10 +87,16 @@
     justify-content: center;
     align-items: center;
 }
-
+.card>small:first-of-type > span:first-of-type {
+        color: rgb(166, 170, 173);
+    margin: 2px;
+}
+.card>small:first-of-type > svg:first-of-type {
+    margin: 4px;
+}
 .card>small:last-of-type {
     color: hsl(206, 4%, 66%);
-    padding: 10px 0px;
+    /* padding: 3px 0px; */
 }
 
 .card>.card-delivery {
