@@ -14,7 +14,7 @@ type CardProps = {
   offer?: string
   storeIcon?: ReactNode
   dir?: "ltr" | "rtl" | "auto"
-  defaultIcon: ReactNode
+  defaultIcon?: ReactNode
 }
 export const Card = ({
   img,
@@ -34,7 +34,7 @@ export const Card = ({
   return (
     <article className="card" dir={dir}>
       <div className="card-image">
-        {img} {storeIcon} <div>{offer}</div>
+        {img} <span className="card-store-icon">{storeIcon}</span> <div>{offer}</div>
       </div>
       <h3>{title}</h3>
       <small>
