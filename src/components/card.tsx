@@ -33,31 +33,45 @@ export const Card = ({
 }: CardProps) => {
   const categoriesString = categories?.join(", ")
   return (
-    <article className="card" dir={dir}>
+    <article className="card" dir={dir} aria-label={`an store, named ${name}`}>
       <div className="card-image">
         <img src={storeImageSrc} alt={`an image of ${name} store or market`} />
         {storeIcon ? (
           <span className="card-store-icon">{storeIcon}</span>
         ) : null}
-        {offer ? <span className="store-offer">{offer}</span> : null}
+        {offer ? (
+          <span className="store-offer">
+            <span className="nonvisual">currunt offer is:</span>
+            {offer}
+          </span>
+        ) : null}
       </div>
 
       <h3>{name}</h3>
 
-      <small>
+      <small
+        aria-label={`the store is rated at ${score} by ${scoreCount}`}
+        role="presentation"
+      >
         {starIcon}
         {score}
         <span className="score-count">({scoreCount})</span>{" "}
       </small>
 
-      <small>{categoriesString}</small>
+      <small>
+        <span className="nonvisual">types of foods in this store are:</span>
+        {categoriesString}
+      </small>
 
       {deliveryOption ? (
-        <p className="card-delivery">
+        <p
+          className="card-delivery"
+          aria-label={`deliveried via ${delivery} priced at ${deliveryOption}`}
+        >
           {deliveryIcon} {delivery} {deliveryOption}
         </p>
       ) : (
-        <p className="card-delivery">
+        <p className="card-delivery" aria-label="you can only reserve">
           {deliveryIcon} {delivery}
         </p>
       )}
