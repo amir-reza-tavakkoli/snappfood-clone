@@ -3,45 +3,45 @@ import "./card.css"
 import { StarIcon, TimeRemainingIcon } from "./svg"
 
 type CardProps = {
-  img?: ReactNode
-  title: string
+  name: string
+  storeImage: ReactNode
+  storeIcon: ReactNode
+  offer?: string
+  delivery?: string
+  deliveryOption?: string | undefined
   categories?: Array<string>
   score?: string
-  scoreNumber?: string
-  delivery?: string
-  deliveryOption?: string
+  scoreCount?: string
   deliveryIcon?: ReactNode
-  offer?: string
-  storeIcon?: ReactNode
   dir?: "ltr" | "rtl" | "auto"
-  defaultIcon?: ReactNode
+  starIcon? : ReactNode
 }
 export const Card = ({
-  img,
+  name,
+  storeImage,
   storeIcon,
-  title,
+  offer = undefined,
   delivery = "پیش سفارش",
-  deliveryIcon,
-  deliveryOption,
-  defaultIcon = <TimeRemainingIcon />,
-  categories,
-  score,
-  scoreNumber,
-  offer,
+  deliveryOption = undefined,
+  categories = [],
+  deliveryIcon = <TimeRemainingIcon role="presentation" />,
+  score = "جدید",
+  scoreCount = undefined,
   dir = "ltr",
+  starIcon = <StarIcon role="presentation" />,
 }: CardProps) => {
   const categoriesString = categories?.join(", ")
   return (
     <article className="card" dir={dir}>
       <div className="card-image">
-        {img} <span className="card-store-icon">{storeIcon}</span>{" "}
+        {storeImage} <span className="card-store-icon">{storeIcon}</span>{" "}
         <span>{offer}</span>
       </div>
-      <h3>{title}</h3>
+      <h3>{name}</h3>
       <small>
-        <StarIcon />
+        {starIcon}
         {score}
-        <span>({scoreNumber})</span>{" "}
+        <span>({scoreCount})</span>{" "}
       </small>
       <small>{categoriesString}</small>
       {deliveryOption ? (
@@ -50,7 +50,7 @@ export const Card = ({
         </p>
       ) : (
         <p className="card-delivery">
-          {defaultIcon} {delivery}
+          {deliveryIcon} {delivery}
         </p>
       )}
     </article>

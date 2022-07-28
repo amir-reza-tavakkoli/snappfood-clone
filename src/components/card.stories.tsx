@@ -3,21 +3,23 @@ import { DeliveryGuyIcon } from "./svg"
 import image from "../assets/img.webp"
 import storeIcon from "../assets/store-icon.webp"
 
-const img = <img src={image}></img>
-const storeIco = <img src={storeIcon}></img>
+const storeIco = <img src={storeIcon} role="presentation"></img>
 
-export const faded = () => (
-  <Card
-    title="رستوران بگ میرزا"
-    categories={["کباب", "ایرانی", "خورشت"]}
-    score="۳.۶"
-    offer="۱۲%"
-    scoreNumber="۱۲,۳۶۶"
-    storeIcon={storeIco}
-    delivery="پیک فروشنده"
-    deliveryIcon={<DeliveryGuyIcon />}
-    deliveryOption=" ۷,۰۰۰  تومان"
-    img={img}
-    dir="rtl"
-  ></Card>
-)
+export const faded = () => {
+  const img = <img src={image} alt=""/>
+  return (
+    <Card
+      name="رستوران بگ میرزا"
+      storeImage={img}
+      storeIcon={storeIco}
+      offer="۱۲%"
+      delivery="پیک فروشنده"
+      deliveryIcon={<DeliveryGuyIcon role="presentation" />}
+      deliveryOption=" ۷,۰۰۰  تومان"
+      categories={["کباب", "ایرانی", "خورشت"]}
+      score="۳.۶"
+      scoreCount="۱۲,۳۶۶"
+      dir="rtl"
+    ></Card>
+  )
+}
