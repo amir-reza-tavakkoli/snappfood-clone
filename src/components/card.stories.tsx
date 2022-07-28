@@ -24,14 +24,17 @@ export const card = () => {
 export const constraintedCard = () => {
   const storeIco = <img src={storeIcon} role="presentation"></img>
   return (
-    <div style={{
-      width: "350px", height: "300px"
-    }}>
+    <div
+      style={{
+        width: "350px",
+        height: "300px",
+      }}
+    >
       <Card
         name="رستوران بگ میرزا"
         storeImageSrc={image}
         storeIcon={storeIco}
-        offer="۱۲%"
+        offer="%۱۲"
         delivery="پیک فروشنده"
         deliveryIcon={<DeliveryGuyIcon role="presentation" />}
         deliveryOption=" ۷,۰۰۰  تومان"
