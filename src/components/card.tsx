@@ -5,7 +5,7 @@ import { StarIcon, TimeRemainingIcon } from "./svg"
 type CardProps = {
   name: string
   storeImageSrc: string
-  storeIcon: ReactNode
+  storeIcon?: ReactNode | undefined
   offer?: string
   delivery?: string
   deliveryOption?: string | undefined
@@ -20,7 +20,7 @@ type CardProps = {
 export const Card = ({
   name,
   storeImageSrc,
-  storeIcon,
+  storeIcon = undefined,
   offer = undefined,
   delivery = "پیش سفارش",
   deliveryOption = undefined,
@@ -34,10 +34,11 @@ export const Card = ({
   const categoriesString = categories?.join(", ")
   return (
     <article className="card" dir={dir}>
+
       <div className="card-image">
         <img src={storeImageSrc} alt={`an image of ${name} store or market`} />
-        <span className="card-store-icon">{storeIcon}</span>{" "}
-        {offer? <span className="store-offer">{offer}</span> : null}
+        {storeIcon? <span className="card-store-icon">{storeIcon}</span> : null}
+        {offer ? <span className="store-offer">{offer}</span> : null}
       </div>
 
       <h3>{name}</h3>
@@ -45,7 +46,7 @@ export const Card = ({
       <small>
         {starIcon}
         {score}
-        <span>({scoreCount})</span>{" "}
+        <span className="score-count">({scoreCount})</span>{" "}
       </small>
 
       <small>{categoriesString}</small>
