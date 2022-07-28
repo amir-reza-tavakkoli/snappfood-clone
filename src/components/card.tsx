@@ -34,10 +34,11 @@ export const Card = ({
   const categoriesString = categories?.join(", ")
   return (
     <article className="card" dir={dir}>
-
       <div className="card-image">
         <img src={storeImageSrc} alt={`an image of ${name} store or market`} />
-        {storeIcon? <span className="card-store-icon">{storeIcon}</span> : null}
+        {storeIcon ? (
+          <span className="card-store-icon">{storeIcon}</span>
+        ) : null}
         {offer ? <span className="store-offer">{offer}</span> : null}
       </div>
 
