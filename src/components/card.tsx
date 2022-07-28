@@ -13,6 +13,7 @@ type CardProps = {
   deliveryIcon?: ReactNode
   offer?: string
   icon?: ReactNode
+  dir?: "ltr" | "rtl" | "auto"
 }
 export const Card = ({
   img,
@@ -25,10 +26,11 @@ export const Card = ({
   score,
   scoreNumber,
   offer,
+  dir = "ltr",
 }: CardProps) => {
   const categoriesString = categories?.join(", ")
   return (
-    <article className="card">
+    <article className="card" dir={dir}>
       <div className="card-image">
         {img} {icon} <div>{offer}</div>
       </div>
@@ -39,8 +41,7 @@ export const Card = ({
       </small>
       <small>{categoriesString}</small>
       <p className="card-delivery">
-        {deliveryIcon}
-        {delivery} {deliveryPrice}
+        {deliveryIcon} {delivery} {deliveryPrice}
       </p>
     </article>
   )
