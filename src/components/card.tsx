@@ -16,6 +16,7 @@ type CardProps = {
   dir?: "ltr" | "rtl" | "auto"
   starIcon?: ReactNode
 }
+
 export const Card = ({
   name,
   storeImageSrc,
@@ -34,17 +35,21 @@ export const Card = ({
   return (
     <article className="card" dir={dir}>
       <div className="card-image">
-        <img src={storeImageSrc} alt={`an image of ${name} store of market`} />{" "}
+        <img src={storeImageSrc} alt={`an image of ${name} store or market`} />
         <span className="card-store-icon">{storeIcon}</span>{" "}
-        <span>{offer}</span>
+        {offer? <span className="store-offer">{offer}</span> : null}
       </div>
+
       <h3>{name}</h3>
+
       <small>
         {starIcon}
         {score}
         <span>({scoreCount})</span>{" "}
       </small>
+
       <small>{categoriesString}</small>
+
       {deliveryOption ? (
         <p className="card-delivery">
           {deliveryIcon} {delivery} {deliveryOption}
