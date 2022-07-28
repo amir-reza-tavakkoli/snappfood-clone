@@ -19,14 +19,13 @@ export const Button = ({
   className: extraClassName,
   ...otherProps
 }: ButtonProps) => {
-  const className = useMemo(
-    () => "button" + " " + `${extraClassName}`,
-    [extraClassName],
-  )
+
 
   return (
     <button
-      className={className}
+      className={
+        !extraClassName ? "button" : "button" + " " + `${extraClassName}`
+      }
       data-rounding={rounding}
       data-variant={variant}
       {...otherProps}
