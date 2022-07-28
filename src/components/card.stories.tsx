@@ -11,8 +11,9 @@ export const faded = () => (
     title="رستوران بگ میرزا"
     categories={["کباب", "ایرانی", "خورشت"]}
     score="۳.۶"
+    offer="۱۲%"
     scoreNumber="۱۲,۳۶۶"
-    storeIcon = {storeIco}
+    storeIcon={storeIco}
     delivery="پیک فروشنده"
     deliveryIcon={<DeliveryGuyIcon />}
     deliveryOption=" ۷,۰۰۰  تومان"
