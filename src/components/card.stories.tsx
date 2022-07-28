@@ -1,6 +1,6 @@
 import { Card } from "./card"
 import { DeliveryGuyIcon } from "./svg"
-import image from  "../assets/img.webp"
+import image from "../assets/img.webp"
 
 const img = <img src={image}></img>
 
@@ -14,6 +14,6 @@ export const faded = () => (
     deliveryIcon={<DeliveryGuyIcon />}
     deliveryPrice=" ۷,۰۰۰  تومان"
     img={img}
-    dir= "rtl"
+    dir="rtl"
   ></Card>
 )

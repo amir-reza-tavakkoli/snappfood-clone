@@ -1,6 +1,6 @@
 import { ReactNode } from "react"
 import "./card.css"
-import { StarIcon , TimeRemainingIcon } from "./svg"
+import { StarIcon, TimeRemainingIcon } from "./svg"
 
 type CardProps = {
   img?: ReactNode
@@ -14,7 +14,7 @@ type CardProps = {
   offer?: string
   icon?: ReactNode
   dir?: "ltr" | "rtl" | "auto"
-  defaultIcon : ReactNode
+  defaultIcon: ReactNode
 }
 export const Card = ({
   img,
@@ -23,7 +23,7 @@ export const Card = ({
   delivery = "پیش سفارش",
   deliveryIcon,
   deliveryOption,
-  defaultIcon = <TimeRemainingIcon/> ,
+  defaultIcon = <TimeRemainingIcon />,
   categories,
   score,
   scoreNumber,
