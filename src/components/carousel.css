@@ -1,0 +1,56 @@
+@import "../assets/base.css";
+
+.carousel {
+    width: 100%;
+    display: flex;
+    /* flex-direction: row; */
+    justify-content: flex-start;
+    align-items: center;
+    flex-grow: 0;
+    flex-shrink: 1;
+    padding-top: 1rem;
+    overflow-x: auto;
+    list-style: none;
+    color: hsl(220, 5%, 34%);
+    font-size: 0.75rem;
+}
+
+.carousel>li {flex-grow: 1;
+    flex-shrink: 1;}
+
+.carousel>li>a {}
+
+a {
+    color: #0060B6;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #00A0C6;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.carousel>li>a>figure>figcaption {
+            color: black;
+}
+.carousel>li>a>figure {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 1rem;
+    text-decoration: none;
+    color: inherit;
+}
+
+.carousel>li>a>figure>img {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 1rem;
+}
+
+:where(html[dir="rtl"] .carousel) {
+    direction: rtl;
+    flex-direction: row-reverse;
+}
