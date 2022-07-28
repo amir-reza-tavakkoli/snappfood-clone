@@ -12,13 +12,13 @@ type CardProps = {
   deliveryOption?: string
   deliveryIcon?: ReactNode
   offer?: string
-  icon?: ReactNode
+  storeIcon?: ReactNode
   dir?: "ltr" | "rtl" | "auto"
   defaultIcon: ReactNode
 }
 export const Card = ({
   img,
-  icon,
+  storeIcon,
   title,
   delivery = "پیش سفارش",
   deliveryIcon,
@@ -34,7 +34,7 @@ export const Card = ({
   return (
     <article className="card" dir={dir}>
       <div className="card-image">
-        {img} {icon} <div>{offer}</div>
+        {img} {storeIcon} <div>{offer}</div>
       </div>
       <h3>{title}</h3>
       <small>
