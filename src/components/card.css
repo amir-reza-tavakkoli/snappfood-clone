@@ -7,6 +7,16 @@
   --card-border-width: 1px;
   --card-text-color: hsl(218, 6%, 24%);
 
+  --card-inner-distance-0: 5px;
+  --card-inner-distance-1: 0.25rem;
+  --card-inner-distance-2: 0.5rem;
+  --card-inner-distance-3: 0.685rem;
+  --card-inner-distance-4: 0.75rem;
+  --card-inner-distance-5: 0.875rem;
+  --card-inner-distance-6: 1rem;
+  --card-inner-distance-7: 1.5rem;
+  --card-inner-distance-8: 2rem;
+
   cursor: pointer;
   width: 100%;
   display: flex;
@@ -17,12 +27,13 @@
   border: solid var(--card-border-color) var(--card-border-width);
   border-radius: var(--card-border-radius);
   color: var(--card-text-color);
-  overflow: hidden;
-  box-shadow: rgb(58 61 66 / 6%) 0px 1px 0px, rgb(0 0 0 / 5%) 0px 2px 8px -2px;
+  overflow-x: hidden;
+  box-shadow: hsla(218, 6%, 24%, 0.06) 0px 1px 0px,
+    hsla(0, 0%, 0%, 0.05) 0px 2px 8px -2px;
 }
 
 .card > h3:first-of-type {
-  padding: 15px 0px 10px 0px;
+  padding-top: var(--card-inner-distance-8);
 }
 
 .card > .card-image {
@@ -33,7 +44,7 @@
 
 .card > .card-image > img:first-of-type {
   width: 100%;
-  height: 40%;
+  height: 100%;
   aspect-ratio: 2/1;
   /* aspect-ratio: 3/1.65; */
   border-top-left-radius: 12px;
@@ -41,36 +52,36 @@
 }
 
 .card > .card-image > .store-offer {
-  padding: 0.25rem 0.75rem;
-  background-color: rgb(255, 255, 255);
+  padding: var(--card-inner-distance-1) var(--card-inner-distance-4);
+  background-color: hsl(0, 0%, 100%);
   border-top-left-radius: 1rem;
   position: absolute;
   right: 0px;
   bottom: 0px;
-  color: rgb(224, 0, 150);
+  color: hsl(320, 100%, 44%);
+  font-size: var(--card-inner-distance-5);
 }
 
 .card > .card-image > .card-store-icon {
   position: absolute;
   border-radius: 10px;
-  bottom: -10px;
+  bottom: -1.5rem;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 0.75rem;
+  border-radius: var(--card-inner-distance-4);
 }
 
 .card > .card-image > .card-store-icon > img {
-  box-shadow: rgb(58 61 66 / 6%) 0px 1px 0px,
-    rgb(0 0 0 / 30%) 0px 8px 32px -16px;
-  border: 10px solid rgba(58, 61, 66, 0.06);
-  /* position: absolute; */
+  box-shadow: hsla(218, 6%, 24%, 0.06) 0px 1px 0px,
+    hsla(0, 0%, 0%, 0.3) 0px 8px 32px -16px;
+  border: 4px solid hsla(218, 6%, 24%, 0.06);
   border-radius: 12px;
   width: 25%;
   height: 25%;
-  padding: 2px;
-  background-color: white;
+  /* padding: 5px; */
+  background-color: hsl(0, 0%, 100%);
 }
 
 .card > small:first-of-type {
@@ -84,22 +95,25 @@
 }
 
 .card > small:first-of-type > .score-count {
-  color: rgb(166, 170, 173);
-  margin: 2px;
+  color: hsl(206, 4%, 66%);
+  margin: var(--card-inner-distance-0);
 }
 
 .card > small:first-of-type > svg:first-child {
-  margin: 4px;
+  margin: var(--card-inner-distance-0);
 }
 
 .card > small:last-of-type {
+  font-size: var(--card-inner-distance-4);
   color: hsl(206, 4%, 66%);
-  /* padding: 3px 0px; */
+  margin-top: -0.5rem;
+  margin-bottom: var(--card-inner-distance-4);
 }
 
 .card > .card-delivery {
-  padding: 0.6875rem 0.875rem;
-  text-align: initial;
+  font-size: var(--card-inner-distance-4);
+  padding: var(--card-inner-distance-3) var(--card-inner-distance-5);
+  text-align: center;
   background-color: hsl(0, 0%, 100%);
   border-radius: 4.5rem;
   color: hsl(218, 6%, 24%);
@@ -107,10 +121,10 @@
     hsla(0, 0%, 0%, 0.05) 0px 2px 8px -2px;
   display: flex;
   justify-content: center;
-  margin-bottom: 1.5rem;
+  margin-bottom: var(--card-inner-distance-7);
   align-items: center;
 }
 
 .card > .card-delivery > svg {
-  margin: 5px;
+  margin: var(--card-inner-distance-0);
 }
