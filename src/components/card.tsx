@@ -1,6 +1,6 @@
 import { ReactNode } from "react"
 import "./card.css"
-import { StarIcon } from "./svg"
+import { StarIcon , TimeRemainingIcon } from "./svg"
 
 type CardProps = {
   img?: ReactNode
@@ -9,19 +9,21 @@ type CardProps = {
   score?: string
   scoreNumber?: string
   delivery?: string
-  deliveryPrice?: string
+  deliveryOption?: string
   deliveryIcon?: ReactNode
   offer?: string
   icon?: ReactNode
   dir?: "ltr" | "rtl" | "auto"
+  defaultIcon : ReactNode
 }
 export const Card = ({
   img,
   icon,
   title,
-  delivery,
+  delivery = "پیش سفارش",
   deliveryIcon,
-  deliveryPrice,
+  deliveryOption,
+  defaultIcon = <TimeRemainingIcon/> ,
   categories,
   score,
   scoreNumber,
@@ -40,9 +42,15 @@ export const Card = ({
         {score}({scoreNumber}){" "}
       </small>
       <small>{categoriesString}</small>
-      <p className="card-delivery">
-        {deliveryIcon} {delivery} {deliveryPrice}
-      </p>
+      {deliveryOption ? (
+        <p className="card-delivery">
+          {deliveryIcon} {delivery} {deliveryOption}
+        </p>
+      ) : (
+        <p className="card-delivery">
+          {defaultIcon} {delivery}
+        </p>
+      )}
     </article>
   )
 }
