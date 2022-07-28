@@ -1,7 +1,7 @@
 @import "variables.css";
 @font-face {
   font-family: "IRANSans";
-  src: url("IRANSans.ttf");
+  src: url("IRANSans.woff2");
 }
 
 *,
