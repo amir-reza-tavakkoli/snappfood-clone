@@ -13,3 +13,10 @@ const imageItemProps: ImageItemProps = {
 export const ImageItemStory = () => {
   return <ImageItem {...imageItemProps}></ImageItem>
 }
+export const ImageItemStoryConstrained = () => {
+  return (
+    <div style={{ width: "500px" }}>
+      <ImageItem {...imageItemProps}></ImageItem>
+    </div>
+  )
+}
