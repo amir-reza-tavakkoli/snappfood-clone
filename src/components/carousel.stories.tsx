@@ -1,15 +1,10 @@
 import { Carousel } from "./carousel"
 import type { item } from "./carousel"
 
-const item1: item = {
-  name: "رستوران",
-  src: "https://snappfood.ir/static/images/pin.svg",
-  key: 1,
-  href: "#",
-}
+
 const items: item[] = [
   {
-    name: " رستوران",
+    name: "ستوران",
     src: "https://snappfood.ir/static/images/pin.svg",
     key: 2,
     href: "#",
@@ -101,5 +96,5 @@ const items: item[] = [
 ]
 
 export const carousel = () => {
-  return <Carousel items={[item1, ...items]} />
+  return <Carousel items={[...items]} />
 }
