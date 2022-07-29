@@ -1,6 +1,6 @@
 @import "../assets/base.css";
 
-.carousel {
+:where(.carousel ){
     width: 100%;
     display: flex;
     /* flex-direction: row; */
