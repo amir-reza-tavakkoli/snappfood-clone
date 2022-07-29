@@ -1,10 +1,9 @@
-import type { ReactNode } from "react"
 import "./carousel.css"
 
 export type item = { name: string; src: string; href: string; key: number }
 
 type CarouselProps = {
-    items: item[]
+  items: item[]
 }
 
 export const Carousel = ({ items }: CarouselProps) => {
