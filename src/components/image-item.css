@@ -1,8 +1,8 @@
 @import "../assets/base.css";
 
 .image-item {
-    --image-item-background-color : hsl(0, 0%, 100%) ;
-    --image-item-color : hsl(218, 6%, 24%) ;
+    --image-item-background-color: hsl(0, 0%, 100%);
+    --image-item-color: hsl(218, 6%, 24%);
 }
 
 :where(.image-item) {
@@ -27,6 +27,7 @@
     position: absolute;
     right: 0px;
     bottom: 0px;
+    /* width: max-content; */
     padding: 0.25rem 1rem 0.25rem 0.8125rem;
     border-top-left-radius: 0.75rem;
     border-bottom-right-radius: 0.75rem;
@@ -35,12 +36,26 @@
     background-color: var(--image-item-background-color);
     line-height: 1.5rem;
     color: var(--image-item-color);
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row-reverse;
+}
 
+:where(.image-item>figcaption:first-of-type>span) {
+
+    width: 1em;
+    height: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 2px;
 }
 
 :where(html[dir="rtl"] .image-item>figcaption:first-of-type) {
     left: 0px;
     right: initial;
+    flex-direction: row;
     border-top-left-radius: initial;
     border-bottom-right-radius: initial;
     border-top-right-radius: 0.75rem;
