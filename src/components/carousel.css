@@ -1,41 +1,39 @@
 @import "../assets/base.css";
 
+.carousel {
+    --carousel-item-min-size: 44px;
+    --carousel-size-1: 1rem;
+    --carousel-size-2: 0.75rem;
+    --carousel-text-color: hsl(220, 5%, 34%);
+}
+
 :where(.carousel) {
     width: 100%;
     display: flex;
-    /* flex-direction: row; */
     justify-content: flex-start;
     align-items: center;
     flex-grow: 0;
     flex-shrink: 1;
-    padding-top: 1rem;
+    padding-top: var(--carousel-size-1);
     overflow-x: auto;
     list-style: none;
-    color: hsl(220, 5%, 34%);
-    font-size: 0.75rem;
+    color: var(--carousel-text-color);
+    font-size: var(--carousel-size-2);
 }
 
 .carousel>li {
     flex-grow: 1;
     flex-shrink: 1;
-    min-width: 88px;
+    min-width: calc(var(--carousel-item-min-size) * 2);
 }
 
-.carousel>li>a {}
-
-a {
-    color: #010101;
+.carousel>li>a {
+    color: var(--carousel-text-color);
     text-decoration: none;
-}
-
-a:hover {
-    color: #000000;
-    text-decoration: none;
-    cursor: pointer;
 }
 
 .carousel>li>a>figure>figcaption {
-    color: black;
+    color: var(--carousel-text-color);
 }
 
 .carousel>li>a>figure {
@@ -43,15 +41,15 @@ a:hover {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-bottom: 1rem;
+    padding-bottom: var(--carousel-size-1);
     text-decoration: none;
     color: inherit;
 }
 
 .carousel>li>a>figure>img {
-    width: 40px;
-    height: 40px;
-    margin-bottom: 1rem;
+    width: var(--carousel-item-min-size);
+    height: var(--carousel-item-min-size);
+    margin-bottom: var(--carousel-size-1);
 }
 
 :where(html[dir="rtl"] .carousel) {
