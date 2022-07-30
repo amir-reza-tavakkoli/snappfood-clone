@@ -1,5 +1,6 @@
 import { Button } from "./button"
 import { OrderIcon, LeftPinkFlashIcon, UserIconFaded } from "./svg"
+import "../base.css"
 
 export const WithDefaultVariant = () => <Button>پیتزا</Button>
 
