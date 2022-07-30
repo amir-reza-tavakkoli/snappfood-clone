@@ -20,9 +20,7 @@
 
   --font-size-1: 1rem;
 
-  --min-touchable-size : 44px;
-
-
+  --min-touchable-size: 44px;
 
   --global-svg-color: hsl(218, 6%, 24%);
 }
@@ -31,17 +29,9 @@
 *::before,
 *::after {
   margin: 0;
-  font-family: "IRANSans", system-ui,
-    -apple-system,
-    /* Firefox supports this but not yet `system-ui` */
-    Helvetica,
-    Roboto,
-    'Segoe UI',
-    sans-serif,
-    Arial,
-    'Apple Color Emoji',
-    'Segoe UI Emoji';
-  ;
+  font-family: "IRANSans", system-ui, -apple-system,
+    /* Firefox supports this but not yet `system-ui` */ Helvetica, Roboto,
+    "Segoe UI", sans-serif, Arial, "Apple Color Emoji", "Segoe UI Emoji";
 }
 
 html,
