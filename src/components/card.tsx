@@ -40,6 +40,11 @@ type x = {
   }
 }
 
+
+export const X;
+
+
+
 export const Card = ({
   name,
   storeImageSrc,
