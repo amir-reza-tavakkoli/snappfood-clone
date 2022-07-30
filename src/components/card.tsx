@@ -17,6 +17,29 @@ type CardProps = {
   starIcon?: ReactNode
 }
 
+type x = {
+  name: string
+  icons: {
+    image: string
+    icon: string
+  }
+
+  rating: {
+    value: number
+    count: number
+  }
+
+  offer: number
+  tags: string[]
+  delivery: {
+    type: string
+    price: {
+      value: string
+      curruncy: string
+    }
+  }
+}
+
 export const Card = ({
   name,
   storeImageSrc,
