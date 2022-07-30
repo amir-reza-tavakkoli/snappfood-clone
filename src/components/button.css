@@ -1,0 +1,111 @@
+@media (pointer: coarse) {
+  .button {
+    min-inline-size: var(--min-touchable-size);
+    min-block-size: var(--min-touchable-size);
+  }
+}
+
+.button {
+  --faded-button-color: hsl(218deg 6% 24% / 6%);
+  --faded-button-text-color: hsl(218deg 6% 24%);
+  --faded-button-hover-color: hsl(218deg 6% 24% / 12%);
+  --faded-button-active-color: hsla(210, 14%, 11%, 0.2);
+
+  --accent-button-color: hsl(321deg 100% 50%);
+  --accent-button-text-color: hsl(0, 0%, 100%);
+  --accent-button-hover-color: hsl(325deg 100% 61%);
+  --accent-button-active-color: hsl(320, 100%, 44%);
+
+  --primary-button-color: hsl(0, 0%, 100%);
+  --primary-button-text-color: hsl(220deg 5% 34%);
+  --primary-button-hover-color: hsl(240, 33%, 99%);
+
+  --button-border-width: 0.09375rem;
+  --normal-button-border-radius: 6px;
+  --rounded-button-border-radius: 48px;
+  --button-inline-padding: clamp(22px, 0.25em + 24px, 2em);
+  --button-block-padding: clamp(4px, 0.4em + 4px, 0.75em);
+  --button-svg-size: 1em;
+
+  font-size: var(--font-size-1);
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border-style: solid;
+  border-radius: var(--normal-button-border-radius);
+  border-width: var(--button-border-width);
+  padding-block-start: var(--button-block-padding);
+  padding-inline-end: var(--button-inline-padding);
+  padding-block-end: var(--button-block-padding);
+  padding-inline-start: var(--button-inline-padding);
+  min-inline-size: max-content;
+  inline-size: 100%;
+  min-block-size: fit-content;
+  /* block-size: var(--button-block-padding); */
+}
+
+.button[data-variant="faded"] {
+  color: var(--faded-button-text-color);
+  background-color: var(--faded-button-color);
+  border-color: var(--faded-button-color);
+  font-weight: 700;
+}
+
+.button[data-variant="faded"]:hover {
+  background-color: var(--faded-button-hover-color);
+  border-color: var(--faded-button-hover-color);
+}
+
+.button[data-variant="faded"]:active {
+  background-color: var(--faded-button-active-color);
+  border-color: var(--faded-button-active-color);
+}
+
+.button[data-variant="primary"] {
+  color: var(--primary-button-text-color);
+  background-color: var(--primary-button-color);
+  border-color: var(--primary-button-color);
+  font-weight: 400;
+}
+
+.button[data-variant="primary"]:hover {
+  background-color: var(--primary-button-hover-color);
+  border-color: var(--primary-button-hover-color);
+}
+
+.button[data-variant="primary"]:active {
+  background-color: var(--primary-button-active-color);
+  border-color: var(--primary-button-active-color);
+}
+
+.button[data-variant="accent"] {
+  font-weight: 700;
+  background-color: var(--accent-button-color);
+  border-color: var(--accent-button-color);
+  color: var(--accent-button-text-color);
+}
+
+.button[data-variant="accent"]:hover {
+  background-color: var(--accent-button-hover-color);
+  border-color: var(--accent-button-hover-color);
+}
+
+.button[data-variant="accent"]:active {
+  background-color: var(--accent-button-active-color);
+  border-color: var(--accent-button-active-color);
+}
+
+.button[data-rounding="full"] {
+  border-radius: var(--rounded-button-border-radius);
+}
+
+.button > span > svg {
+  /* color: var(--priamry-svg-color); */
+  inline-size: var(--button-svg-size);
+  block-size: var(--button-svg-size);
+  min-inline-size: fit-content;
+  margin-inline-start: calc(var(--button-svg-size) / 1.8);
+}
