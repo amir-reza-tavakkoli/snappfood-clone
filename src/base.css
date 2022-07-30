@@ -20,12 +20,9 @@
 
   --font-size-1: 1rem;
 
-  --button-border-width: 0.09375rem;
-  --normal-button-border-radius: 6px;
-  --rounded-button-border-radius: 48px;
-  --button-inline-padding: clamp(22px, 0.25em + 24px, 2em);
-  --button-block-padding: clamp(4px, 0.4em + 4px, 0.75em);
-  --button-svg-size: 1em;
+  --min-touchable-size : 44px;
+
+
 
   --global-svg-color: hsl(218, 6%, 24%);
 }
