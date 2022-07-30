@@ -1,6 +1,6 @@
 import { Button } from "./button"
 import { OrderIcon, UserIconFaded } from "./svg"
-import "../base.css"
+
 
 export const WithDefaultVariant = () => <Button>faded</Button>
 
