@@ -21,7 +21,7 @@ export const WithAccentVariantConstraintedIconRTL = () => (
   </div>
 )
 
-export const WithAccentRuondedIconRTL = () => (
+export const WithAccentRoundedIconRTL = () => (
   <div style={{ inlineSize: "40px" }}>
     <Button icon={<OrderIcon />} variant="accent" rounding="full">
       سفارش
