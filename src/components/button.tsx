@@ -22,7 +22,7 @@ export const Button = ({
   return (
     <button
       className={
-        !extraClassName ? "button" : "button" + " " + `${extraClassName}`
+        !extraClassName ? "button" : `button ${extraClassName}`
       }
       data-rounding={rounding}
       data-variant={variant}
