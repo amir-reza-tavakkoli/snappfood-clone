@@ -3,6 +3,7 @@
 @font-face {
   font-family: "IRANSans";
   src: url("IRANSans.woff2");
+  font-display:swap;
 }
 
 :root {
