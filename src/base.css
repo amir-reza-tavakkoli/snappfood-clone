@@ -34,7 +34,17 @@
 *::before,
 *::after {
   margin: 0;
-  font-family: "IRANSans";
+  font-family: "IRANSans", system-ui,
+    -apple-system,
+    /* Firefox supports this but not yet `system-ui` */
+    Helvetica,
+    Roboto,
+    'Segoe UI',
+    sans-serif,
+    Arial,
+    'Apple Color Emoji',
+    'Segoe UI Emoji';
+  ;
 }
 
 html,
