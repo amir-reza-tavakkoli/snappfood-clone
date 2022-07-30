@@ -1,5 +1,3 @@
-
-
 @media (pointer: coarse) {
   .button {
     min-inline-size: var(--min-touchable-size);
