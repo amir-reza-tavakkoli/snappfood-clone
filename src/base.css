@@ -56,6 +56,6 @@ body {
   white-space: nowrap !important;
 }
 
-ol,ul,dl,li {
+ol,ul,dl,dd,dt,li {
   list-style: none;
 }
