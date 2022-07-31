@@ -58,6 +58,8 @@ body {
 
 ol,ul,dl,dd,dt,li {
   list-style: none;
+  padding: 0px;
+  margin: 0px;
 }
 ol,li {
   display: inline;
