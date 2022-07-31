@@ -1,5 +1,5 @@
 import { Card } from "./card"
-import { ComponentProps } from "react"
+import type { ComponentProps } from "react"
 
 const cardProps: ComponentProps<typeof Card> = {
   name: "رستوران بگ میرزا",
