@@ -2,21 +2,6 @@ import type { ReactNode } from "react"
 import "./card.css"
 import { StarIcon, TimeRemainingIcon, DeliveryGuyIcon } from "./svg"
 
-// type  = {
-//   name: string
-//   storeImageSrc: string
-//   storeIcon?: ReactNode | undefined
-//   offer?: string
-//   delivery?: string
-//   deliveryOption?: string | undefined
-//   categories?: Array<string>
-//   score?: string
-//   scoreCount?: string
-//   deliveryIcon?: ReactNode
-//   dir?: "ltr" | "rtl" | "auto"
-//   starIcon?: ReactNode
-// }
-
 export type CardProps = {
   name: string
   type?: string
