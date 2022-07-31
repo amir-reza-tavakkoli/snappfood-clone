@@ -1,5 +1,4 @@
 import { Card } from "./card"
-import { DeliveryGuyIcon } from "./svg"
 import storeIcon from "../assets/store-icon.webp"
 
 const cardProps = {
