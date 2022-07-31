@@ -14,7 +14,7 @@ export const Carousel = ({ items }: CarouselProps) => {
           <li key={item.key}>
             <a href={item.href}>
               <figure>
-                <img src={item.src}></img>
+                <img src={item.src} alt={item.name}></img>
                 <figcaption>{item.name}</figcaption>
               </figure>
             </a>
