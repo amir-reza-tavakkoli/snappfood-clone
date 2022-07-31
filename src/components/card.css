@@ -36,6 +36,7 @@
   font-size: var(--card-inner-distance-6-1);
   padding-top: var(--card-inner-distance-9);
   text-align: center;
+  margin-bottom: 0.5rem;
   font-weight: 700;
 }
 
@@ -45,17 +46,17 @@
   position: relative;
 }
 
-.card > .card-image > [data-field="image"] > img:first-of-type {
+.card > .card-image > [data-field="image"] > img {
   width: 100%;
   height: 100%;
   aspect-ratio: 2/1;
-  /* aspect-ratio: 3/1.65; */
   border-top-left-radius: 12px;
   border-top-right-radius: 12px;
 }
 
 .card > .card-image > .store-offer {
-  padding: var(--card-inner-distance-1) var(--card-inner-distance-4);
+  padding: calc( var(--card-inner-distance-1) + 2.5px ) var(--card-inner-distance-4);
+
   background-color: hsl(0, 0%, 100%);
   border-top-left-radius: 1rem;
   position: absolute;
@@ -88,19 +89,26 @@
 }
 
 .card > [data-field="rating"] > dl {
-  padding: 10px 0px;
+  padding: 10px 0px 0px 0px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.card > [data-field="rating"] > dl > .score-count {
+.card>[data-field="rating"]>dl dd {
+  font-size: 0.75rem;
+}
+.card>[data-field="rating"]>dl dd:first-of-type {
+  font-weight: 700;
+}
+
+.card > [data-field="rating"]  dl  .score-count {
   color: hsl(206, 4%, 66%);
   margin: var(--card-inner-distance-0);
 }
 
 .card > [data-field="rating"] > dl svg:first-of-type {
-  margin: var(--card-inner-distance-0);
+  margin: 0 var(--card-inner-distance-0) var(--card-inner-distance-0) var(--card-inner-distance-0);
   width: 12px;
   height: 12px;
 }
