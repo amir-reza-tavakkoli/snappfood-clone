@@ -102,15 +102,15 @@ export const Card = ({
           {delivery.price ? (
             <dd className="card-delivery">
               <>
-                {<DeliveryGuyIcon role="presentation" />} {delivery.price.value}{" "}
-                {delivery.type}{" "}
+                {<DeliveryGuyIcon role="presentation" />} {delivery.type}{" "}
+                {delivery.price.value}
                 <span className="nonvisual">{delivery.price.curruncy}</span>
               </>
             </dd>
           ) : (
             <dd className="card-delivery">
               <>
-                {<TimeRemainingIcon />} {delivery.types}
+                {<TimeRemainingIcon />} {delivery.type}
               </>
             </dd>
           )}
@@ -119,65 +119,3 @@ export const Card = ({
     </dl>
   )
 }
-
-// export const Card = ({
-//   name,
-//   storeImageSrc,
-//   storeIcon = undefined,
-//   offer = undefined,
-//   delivery = "پیش سفارش",
-//   deliveryOption = undefined,
-//   categories = [],
-//   deliveryIcon = <TimeRemainingIcon role="presentation" />,
-//   score = "جدید",
-//   scoreCount = undefined,
-//   dir = "ltr",
-//   starIcon = <StarIcon role="presentation" />,
-// }: CardProps) => {
-//   const categoriesString = categories?.join(", ")
-//   return (
-//     <article className="card" dir={dir} aria-label={`an store, named ${name}`}>
-//       <div className="card-image">
-//         <img src={storeImageSrc} alt={`an image of ${name} store or market`} />
-//         {storeIcon ? (
-//           <span className="card-store-icon">{storeIcon}</span>
-//         ) : null}
-//         {offer ? (
-//           <span className="store-offer">
-//             <span className="nonvisual">currunt offer is:</span>
-//             {offer}
-//           </span>
-//         ) : null}
-//       </div>
-
-//       <h3>{name}</h3>
-
-//       <small
-//         aria-label={`the store is rated at ${score} by ${scoreCount}`}
-//         role="presentation"
-//       >
-//         {starIcon}
-//         {score}
-//         <span className="score-count">({scoreCount})</span>{" "}
-//       </small>
-
-//       <small>
-//         <span className="nonvisual">types of foods in this store are:</span>
-//         {categoriesString}
-//       </small>
-
-//       {deliveryOption ? (
-//         <p
-//           className="card-delivery"
-//           aria-label={`deliveried via ${delivery} priced at ${deliveryOption}`}
-//         >
-//           {deliveryIcon} {delivery} {deliveryOption}
-//         </p>
-//       ) : (
-//         <p className="card-delivery" aria-label="you can only reserve">
-//           {deliveryIcon} {delivery}
-//         </p>
-//       )}
-//     </article>
-//   )
-// }
