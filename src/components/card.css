@@ -148,6 +148,9 @@
   padding: 2px;
   margin-bottom: -5px;
 }
+.card .card-delivery>div.faded {
+background-color :hsl(216, 14%, 93%); ;
+}
 
 .card .card-delivery svg:first-of-type {
   margin: var(--card-inner-distance-0);

@@ -127,9 +127,10 @@ export const Card = ({
           ) : (
             <>
               <dt className="nonvisual">Type:</dt>
-              <dd className="card-delivery">
+              <dd className="card-delivery faded">
                 <>
-                  {<TimeRemainingIcon role="presentation" />} {delivery.type}
+                  {<TimeRemainingIcon role="presentation" />}
+                  <span >{delivery.type}</span>
                 </>
               </dd>
             </>
