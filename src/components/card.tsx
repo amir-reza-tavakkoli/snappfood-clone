@@ -52,7 +52,7 @@ export const Card = ({
         {offer ? (
           <>
             <dt className="nonvisual">Currunt offer is:</dt>
-            <dd className="store-offer">{` ${offer} %`}</dd>
+            <dd className="store-offer">{` ${offer}%`}</dd>
           </>
         ) : null}
       </div>
