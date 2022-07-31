@@ -96,5 +96,5 @@ const items: item[] = [
 ]
 
 export const carousel = () => {
-  return <Carousel items={[...items]} />
+  return <Carousel items={items} />
 }
