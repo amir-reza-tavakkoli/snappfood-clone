@@ -130,7 +130,7 @@
 .card .card-delivery svg {
   margin: var(--card-inner-distance-0);
 }
-/* 
+
 :where(html[dir = "rtl"] .card) {
   direction: rtl;
-} */
+}
