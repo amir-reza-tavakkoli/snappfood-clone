@@ -55,7 +55,8 @@
 }
 
 .card > .card-image > .store-offer {
-  padding: calc( var(--card-inner-distance-1) + 2.5px ) var(--card-inner-distance-4);
+  padding: calc(var(--card-inner-distance-1) + 2.5px)
+    var(--card-inner-distance-4);
 
   background-color: hsl(0, 0%, 100%);
   border-top-left-radius: 1rem;
@@ -95,25 +96,26 @@
   align-items: center;
 }
 
-.card>[data-field="rating"]>dl > dd {
+.card > [data-field="rating"] > dl > dd {
   font-size: var(--card-inner-distance-4);
 }
-.card>[data-field="rating"]>dl > dd:first-of-type {
+.card > [data-field="rating"] > dl > dd:first-of-type {
   font-weight: 700;
 }
 
-.card > [data-field="rating"] > dl >  .score-count {
+.card > [data-field="rating"] > dl > .score-count {
   color: hsl(206, 4%, 66%);
   margin: var(--card-inner-distance-0);
 }
 
 .card > [data-field="rating"] > dl > svg:first-of-type {
-  margin: 0 var(--card-inner-distance-0) var(--card-inner-distance-0) var(--card-inner-distance-0);
+  margin: 0 var(--card-inner-distance-0) var(--card-inner-distance-0)
+    var(--card-inner-distance-0);
   width: 12px;
   height: 12px;
 }
 
-.card >dd[data-field="category"] > .categories {
+.card > dd[data-field="category"] > .categories {
   font-size: var(--card-inner-distance-4);
   color: hsl(206, 4%, 66%);
   margin-top: -0.5rem;
@@ -142,7 +144,7 @@
   justify-content: center;
   align-items: flex-start;
 }
-.card .card-delivery>div > span {
+.card .card-delivery > div > span {
   padding: 2px;
   margin-bottom: -5px;
 }
@@ -151,6 +153,6 @@
   margin: var(--card-inner-distance-0);
 }
 
-:where(html[dir = "rtl"] .card) {
+:where(html[dir="rtl"] .card) {
   direction: rtl;
 }
