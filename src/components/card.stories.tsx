@@ -21,7 +21,7 @@ const cardProps: ComponentProps<typeof Card> = {
     type: "پیک فروشنده",
     price: {
       value: 7000,
-      curruncy: "Rials",
+      curruncy: "تومان",
     },
   },
 }
