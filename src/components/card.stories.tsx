@@ -1,28 +1,32 @@
 import { Card } from "./card"
 import { DeliveryGuyIcon } from "./svg"
-import image from "../assets/img.webp"
 import storeIcon from "../assets/store-icon.webp"
 
-export const card = () => {
-  const storeIco = <img src={storeIcon} role="presentation"></img>
-  return (
-    <Card
-      name="رستوران بگ میرزا"
-      storeImageSrc={image}
-      storeIcon={storeIco}
-      offer="۱۲%"
-      delivery="پیک فروشنده"
-      deliveryIcon={<DeliveryGuyIcon role="presentation" />}
-      deliveryOption=" ۷,۰۰۰  تومان"
-      categories={["کباب", "ایرانی", "خورشت"]}
-      score="۳.۶"
-      scoreCount="۱۲,۳۶۶"
-      dir="rtl"
-    ></Card>
-  )
+const cardProps = {
+  name: "رستوران بگ میرزا",
+  icons: {
+    icon: <img src={storeIcon} />,
+    image: "https://cdn.snappfood.ir/300x200/cdn/vendor_sub_types/7/01.jpg",
+  },
+  rating: {
+    value: 3.6,
+    count: 12366,
+  },
+  tags: ["کباب", "ایرانی", "خورشت"],
+  offer: 12,
+  delivery: {
+    type: "پیک فروشنده",
+    price: {
+      value: 7000,
+      curruncy: "Rials",
+    },
+  },
 }
-export const constraintedCard = () => {
-  const storeIco = <img src={storeIcon} role="presentation"></img>
+
+export const card = () => {
+  return <Card {...cardProps}></Card>
+}
+export const cardAndConstrainted = () => {
   return (
     <div
       style={{
@@ -30,19 +34,7 @@ export const constraintedCard = () => {
         height: "300px",
       }}
     >
-      <Card
-        name="رستوران بگ میرزا"
-        storeImageSrc={image}
-        storeIcon={storeIco}
-        offer="%۱۲"
-        delivery="پیک فروشنده"
-        deliveryIcon={<DeliveryGuyIcon role="presentation" />}
-        deliveryOption=" ۷,۰۰۰  تومان"
-        categories={["کباب", "ایرانی", "خورشت"]}
-        score="۳.۶"
-        scoreCount="۱۲,۳۶۶"
-        dir="rtl"
-      ></Card>
+      <Card {...cardProps}></Card>
     </div>
   )
 }
