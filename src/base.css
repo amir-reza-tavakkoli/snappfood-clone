@@ -56,11 +56,17 @@ body {
   white-space: nowrap !important;
 }
 
-ol,ul,dl,dd,dt,li {
+ol,
+ul,
+dl,
+dd,
+dt,
+li {
   list-style: none;
   padding: 0px;
   margin: 0px;
 }
-ol,li {
+ol,
+li {
   display: inline;
 }

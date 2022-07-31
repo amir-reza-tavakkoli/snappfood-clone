@@ -1,17 +1,19 @@
 import { Card } from "./card"
 import { ComponentProps } from "react"
 
-const cardProps : ComponentProps<typeof Card> = {
+const cardProps: ComponentProps<typeof Card> = {
   name: "رستوران بگ میرزا",
   type: "رستوران",
   icons: {
-    icon: <img src="https://cdn.snappfood.ir/media/cache/vendor_logo/uploads/images/vendors/logos/623209826af52.jpg" />,
+    icon: (
+      <img src="https://cdn.snappfood.ir/media/cache/vendor_logo/uploads/images/vendors/logos/623209826af52.jpg" />
+    ),
     image: "https://cdn.snappfood.ir/300x200/cdn/vendor_sub_types/7/01.jpg",
   },
   rating: {
     value: 3.6,
     count: 12366,
-    range: 5
+    range: 5,
   },
   tags: ["کباب", "ایرانی", "خورشت"],
   offer: 12,

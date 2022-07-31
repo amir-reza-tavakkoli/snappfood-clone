@@ -42,7 +42,15 @@ export type CardProps = {
   }
 }
 
-export const Card = ({ name, icons, rating,type, offer, tags, delivery }: CardProps) => {
+export const Card = ({
+  name,
+  icons,
+  rating,
+  type,
+  offer,
+  tags,
+  delivery,
+}: CardProps) => {
   return (
     <dl className="card">
       <div className="card-image">
@@ -70,25 +78,30 @@ export const Card = ({ name, icons, rating,type, offer, tags, delivery }: CardPr
       </dd>
 
       <dt className="nonvisual">type is:</dt>
-      <dd className="nonvisual">{type }</dd>
+      <dd className="nonvisual">{type}</dd>
 
       <dt className="nonvisual">Rating</dt>
-      {rating ? <dd data-field="rating">
-        <dl>
-          {<StarIcon role="presentation" />}
-          <dt className="nonvisual">Stars</dt>
-          <dd>{rating.value}<span className="nonvisual">/ {rating.range}</span></dd>
-          <dt className="nonvisual">Count</dt>
-          <dd className="score-count">( {rating.count} )</dd>
-        </dl>
-      </dd> : null}
+      {rating ? (
+        <dd data-field="rating">
+          <dl>
+            {<StarIcon role="presentation" />}
+            <dt className="nonvisual">Stars</dt>
+            <dd>
+              {rating.value}
+              <span className="nonvisual">/ {rating.range}</span>
+            </dd>
+            <dt className="nonvisual">Count</dt>
+            <dd className="score-count">( {rating.count} )</dd>
+          </dl>
+        </dd>
+      ) : null}
 
       <dt className="nonvisual">Categories</dt>
       {tags ? (
         <dd data-field="category">
           <ol className="categories">
             {tags.map((tag, index, array) =>
-              index == (array.length - 1) ? (
+              index == array.length - 1 ? (
                 <li key={index}>{tag}</li>
               ) : (
                 <li key={index}>{`${tag}, `}</li>
@@ -104,7 +117,9 @@ export const Card = ({ name, icons, rating,type, offer, tags, delivery }: CardPr
           {delivery.price ? (
             <dd className="card-delivery">
               <>
-                {<DeliveryGuyIcon role="presentation" />} {delivery.price.value} {delivery.type} <span className="nonvisual">{delivery.price.curruncy }</span>
+                {<DeliveryGuyIcon role="presentation" />} {delivery.price.value}{" "}
+                {delivery.type}{" "}
+                <span className="nonvisual">{delivery.price.curruncy}</span>
               </>
             </dd>
           ) : (
