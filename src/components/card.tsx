@@ -112,12 +112,15 @@ export const Card = ({
               <dt className="nonvisual">Type / Price:</dt>
               <>
                 <dd className="card-delivery">
-                  {<DeliveryGuyIcon role="presentation" />} {delivery.type}{" "}
-                  {delivery.price.value}
-                </dd>
-                <dt className="nonvisual">Curruncy:</dt>
-                <dd className="nonvisual">
-                  {delivery.price.curruncy ?? "Unknown curruncy"}
+                  {<DeliveryGuyIcon role="presentation" />}
+                  <div>
+                    <span>{delivery.type} </span>
+
+                    <span>{delivery.price.value} </span>
+
+                    <span>{delivery.price.curruncy ?? "Unknown curruncy"}</span>
+                  </div>
+                  <dt className="nonvisual">Curruncy:</dt>
                 </dd>
               </>
             </>
