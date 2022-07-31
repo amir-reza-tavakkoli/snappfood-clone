@@ -1,4 +1,4 @@
-import { ReactNode } from "react"
+import type { ReactNode } from "react"
 import "./card.css"
 import { StarIcon, TimeRemainingIcon } from "./svg"
 
@@ -41,7 +41,7 @@ type x = {
 }
 
 
-export const X;
+// export const X;
 
 
 
