@@ -51,7 +51,39 @@
 
   --min-touchable-size: 44px;
 
-  --global-svg-color: hsl(218, 6%, 24%);
+  --text-color: hsl(218, 6%, 24%);
+  --text-color-2: hsl(220deg 5% 34%);
+  --text-color-3: hsl(214, 13%, 11%);
+  --priamry-color: hsl(0, 0%, 100%);
+  --priamry-color-2: hsl(210, 20%, 98%);
+  --faded-color: hsl(206, 4%, 66%);
+  --faded-color-2: hsl(216deg 14% 93%);
+  --accent-color: hsl(321deg 100% 50%);
+  --accent-color-2: hsl(325deg 100% 61%);
+  --accent-color-3: hsl(320, 100%, 44%);
+  --action-color: hsl(152, 100%, 36%);
+  --action-color-2: hsl(150, 100%, 26%);
+  --action-color-3: hsl(152, 78%, 44%);
+  --warning-color-1: hsl(48, 96%, 52%);
+  --warning-color-2: hsl(40, 100%, 31%);
+  --swarning-color-3: hsl(48, 100%, 62%);
+  --error-color-1: hsl(350, 95%, 57%);
+  --error-color-2: hsl(350, 100%, 44%);
+  --error-color-3: hsl(350, 100%, 62%);
+
+  --box-shadow-1: hsla(218, 6%, 24%, 0.06) 0px 1px 0px,
+    hsla(0, 0%, 0%, 0.05) 0px 2px 8px -2px;
+  --box-shadow-2: hsla(218, 6%, 24%, 0.06) 0px 1px 0px,
+    hsla(0, 0%, 0%, 0.3) 0px 8px 32px -16px;
+  --box-shadow-3: hsla(218, 6%, 24%, 0.06) 0px 1px 0px,
+    hsla(0, 0%, 0%, 0.3) 0px 8px 32px -16px;
+  --box-shadow-4: hsla(0, 0%, 0%, 0.08) 0px 2px 8px,
+    hsla(0, 0%, 0%, 0.16) 0px 8px 32px;
+  --box-shadow-5: inset 0px 1px 6px rgba(0, 0, 0, 0.04);
+
+  --primary-button-hover-color: hsl(240, 33%, 99%);
+  --faded-button-active-color: hsla(210, 14%, 11%, 0.2);
+
 }
 
 *,
