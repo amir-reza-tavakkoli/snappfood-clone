@@ -8,18 +8,46 @@
 
 :root {
   --radius-round: 1e5px;
-  --gray-0-hsl: 210 17% 98%;
-  --gray-1-hsl: 210 17% 95%;
-  --gray-2-hsl: 210 16% 93%;
-  --gray-3-hsl: 210 14% 89%;
-  --gray-4-hsl: 210 14% 83%;
-  --gray-5-hsl: 210 11% 71%;
-  --gray-6-hsl: 210 7% 56%;
-  --gray-7-hsl: 210 9% 31%;
-  --gray-8-hsl: 210 10% 23%;
-  --gray-9-hsl: 210 11% 15%;
 
-  --font-size-1: 1rem;
+  --length-1: 0.0625rem;
+  --length-2: 0.125rem;
+  --length-4: 0.25rem;
+  --length-8: 0.5rem;
+  --length-10: 0.625rem;
+  --length-12: 0.75rem;
+  --length-14: 0.875rem;
+  --length-16: 1rem;
+  --length-20: 1.25rem;
+  --length-24: 1.5rem;
+  --length-28: 1.75rem;
+  --length-32: 2rem;
+  --length-48: 3rem;
+  --length-64: 4rem;
+  --length-80: 5rem;
+
+  --border-1: 0.5px;
+  --border-2: 1px;
+  --border-3: 1.5px;
+  --border-4: 2px;
+  --border-6: 3px;
+
+  --size-1: 2px;
+  --size-2: 4px;
+  --size-3: 6px;
+  --size-4: 8px;
+  --size-5: 10px;
+  --size-6: 12px;
+  --size-8: 16px;
+  --size-10: 20px;
+  --size-12: 24px;
+  --size-16: 32px;
+  --size-24: 48px;
+  --size-32: 64px;
+
+  --weight-1: 300;
+  --weight-2: normal;
+  --weight-3: 500;
+  --weight-4: bold;
 
   --min-touchable-size: 44px;
 
