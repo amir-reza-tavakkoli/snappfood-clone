@@ -27,7 +27,7 @@ const cardProps: ComponentProps<typeof VendorCard> = {
 export const card = () => {
   return <VendorCard {...cardProps}></VendorCard>
 }
-export const cardAndConstrainted = () => {
+export const cardAndConstrained = () => {
   return (
     <div
       style={{
@@ -38,7 +38,7 @@ export const cardAndConstrainted = () => {
     </div>
   )
 }
-export const cardAndConstraintedAndRTL = () => {
+export const cardAndConstrainedAndRTL = () => {
   return (
     <div
       dir="rtl"
