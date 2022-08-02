@@ -107,16 +107,16 @@ export const VendorCard = ({
       ) : null}
 
       <dt className="nonvisual">Delivery</dt>
-      <dd>
+      <dd data-field="delivery">
         <dl>
           {delivery.price ? (
             <>
               <dt className="nonvisual">Type / Price:</dt>
               <>
-                <dd data-field="delivery">
+                <dd data-field="delivery type" className="_delivery">
                   {<DeliveryGuyIcon role="presentation" />}
                   <div>
-                    <span data-field="delivery type">{delivery.type} </span>
+                    <span>{delivery.type} </span>
 
                     <span data-field="delivery price">
                       {delivery.price.value ?? ""}{" "}
@@ -133,7 +133,7 @@ export const VendorCard = ({
           ) : (
             <>
               <dt className="nonvisual">Type</dt>
-              <dd data-field="delivery">
+              <dd data-field="delivery" className="_delivery">
                 <>
                   {<TimeRemainingIcon role="presentation" />}
                   <span data-field="delivery type">{delivery.type}</span>
