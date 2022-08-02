@@ -6,7 +6,7 @@ export type VendorCardProps = {
   name: string
   type?: string
   image: string
-  logo?: ReactNode
+  logo?: ReactNode | string
 
   rating?: {
     value?: number | string
@@ -73,7 +73,11 @@ export const VendorCard = ({
           <img src={image} alt={name} />
           {logo ? (
             <span className="_card-store-icon" role="presentation">
-              {logo}
+              {typeof logo === "string" ? (
+                <img src={logo} alt="" role="presentation" />
+              ) : (
+                <>{logo}</>
+              )}
             </span>
           ) : null}
         </dd>
