@@ -10,15 +10,10 @@
   color: var(--color-text);
   overflow-inline: hidden;
   box-shadow: var(--box-shadow-light);
-  cursor: pointer;
 }
 
 .vendor-card > dd[data-field] {
   order: 10;
-}
-
-.vendor-card:hover {
-  box-shadow: var(--box-shadow-normal);
 }
 
 .vendor-card [data-field="name"] {
