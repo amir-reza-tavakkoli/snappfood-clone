@@ -42,12 +42,11 @@
 
 .card>.card-image>.store-offer {
   padding: calc(var(--length-4) + var(--length-2)) var(--length-12);
-
   background-color: var(--color-primary);
   border-start-start-radius: var(--length-10);
   position: absolute;
-  right: 0px;
-  bottom: 0px;
+  inset-inline-end: 0px;
+  inset-block-end: 0px;
   color: var(--color-accent-3);
   font-size: var(--length-14);
 }
@@ -55,7 +54,7 @@
 .card>.card-image>[data-field="image"]>.card-store-icon {
   position: absolute;
   border-radius: var(--length-10);
-  bottom: calc(var(--length-16) * -1);
+  inset-block-end: calc(var(--length-16) * -1);
   inline-size: 100%;
   display: flex;
   justify-content: center;
@@ -77,7 +76,6 @@
   justify-content: center;
   align-items: center;
   margin-block-end: calc(var(--length-4) * -1);
-
 }
 
 .card>[data-field="rating"]>dl>dd {
