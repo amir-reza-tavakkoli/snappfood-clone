@@ -40,6 +40,31 @@ export const VendorCard = ({
     <dl className="card">
       <dt className="nonvisual">Name</dt>
       <dd data-field="name">{name}</dd>
+
+      {type ? (
+        <>
+          <dt className="nonvisual">Type</dt>
+          <dd className="nonvisual">{type}</dd>{" "}
+        </>
+      ) : null}
+
+      {tags ? (
+        <>
+          <dt className="nonvisual">Categories</dt>
+          <dd data-field="category">
+            <ol className="categories">
+              {tags.map((tag, index, array) =>
+                index == array.length - 1 ? (
+                  <li key={index}>{tag}</li>
+                ) : (
+                  <li key={index}>{`${tag}, `}</li>
+                ),
+              )}
+            </ol>
+          </dd>
+        </>
+      ) : null}
+
       <div className="card-image">
         <dt className="nonvisual">Image</dt>
         <dd data-field="image">
@@ -58,13 +83,6 @@ export const VendorCard = ({
           </>
         ) : null}
       </div>
-
-      {type ? (
-        <>
-          <dt className="nonvisual">Type</dt>
-          <dd className="nonvisual">{type}</dd>{" "}
-        </>
-      ) : null}
 
       {rating ? (
         <>
@@ -85,23 +103,6 @@ export const VendorCard = ({
           </dd>
         </>
       ) : null}
-      {tags ? (
-        <>
-          <dt className="nonvisual">Categories</dt>
-          <dd data-field="category">
-            <ol className="categories">
-              {tags.map((tag, index, array) =>
-                index == array.length - 1 ? (
-                  <li key={index}>{tag}</li>
-                ) : (
-                  <li key={index}>{`${tag}, `}</li>
-                ),
-              )}
-            </ol>
-          </dd>
-        </>
-      ) : null}
-
 
       <dt className="nonvisual">Delivery</dt>
       <dd>
