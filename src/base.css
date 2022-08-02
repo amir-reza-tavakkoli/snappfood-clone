@@ -32,19 +32,6 @@
   --border-thick: 1.5px;
   --border-extra-thick: 3px;
 
-  --size-1: 2px;
-  --size-2: 4px;
-  --size-3: 6px;
-  --size-4: 8px;
-  --size-5: 10px;
-  --size-6: 12px;
-  --size-8: 16px;
-  --size-10: 20px;
-  --size-12: 24px;
-  --size-16: 32px;
-  --size-24: 48px;
-  --size-32: 64px;
-
   --size-min-touchable: 44px;
 
   --color-text: hsl(218, 6%, 24%);
