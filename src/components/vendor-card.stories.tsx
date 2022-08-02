@@ -32,7 +32,6 @@ export const cardAndConstrainted = () => {
     <div
       style={{
         width: "350px",
-        height: "300px",
       }}
     >
       <VendorCard {...cardProps}></VendorCard>
@@ -45,7 +44,6 @@ export const cardAndConstraintedAndRTL = () => {
       dir="rtl"
       style={{
         width: "350px",
-        height: "300px",
       }}
     >
       <VendorCard {...cardProps}></VendorCard>
