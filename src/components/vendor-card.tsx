@@ -67,7 +67,7 @@ export const VendorCard = ({
         </>
       ) : null}
 
-      <div className="card-image">
+      <div className="_card-image">
         <dt className="nonvisual">Image</dt>
         <dd data-field="image">
           <img src={image} alt={name} />

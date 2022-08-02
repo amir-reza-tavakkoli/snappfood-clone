@@ -13,7 +13,7 @@
   cursor: pointer;
 }
 
-.card>* {
+.card>dd[data-field] {
   order: 10;
 }
 
@@ -30,14 +30,14 @@
   order: 1;
 }
 
-.card>.card-image {
+.card>._card-image {
   position: relative;
   inline-size: 100%;
   block-size: 40%;
   order: 0;
 }
 
-.card>.card-image>[data-field="image"]>img {
+.card>._card-image>[data-field="image"]>img {
   inline-size: 100%;
   block-size: 100%;
   border-start-start-radius: var(--length-12);
@@ -46,7 +46,7 @@
   object-fit: cover;
 }
 
-.card>.card-image>[data-field="offer"] {
+.card>._card-image>[data-field="offer"] {
   position: absolute;
   padding: calc(var(--length-4) + var(--length-2)) var(--length-12);
   border-start-start-radius: var(--length-10);
@@ -57,7 +57,7 @@
   font-size: var(--length-14);
 }
 
-.card>.card-image>[data-field="image"]>._card-store-icon {
+.card>._card-image>[data-field="image"]>._card-store-icon {
   position: absolute;
   display: flex;
   justify-content: center;
@@ -67,7 +67,7 @@
   border-radius: var(--length-12);
 }
 
-.card>.card-image>[data-field="image"]>._card-store-icon>img {
+.card>._card-image>[data-field="image"]>._card-store-icon>img {
   inline-size: 25%;
   block-size: 25%;
   border: var(--length-4) solid var(--color-faded-4);
