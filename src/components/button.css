@@ -6,21 +6,6 @@
 }
 
 .button {
-  --faded-button-color: hsl(218deg 6% 24% / 6%);
-  --faded-button-text-color: hsl(218deg 6% 24%);
-  --faded-button-hover-color: hsl(218deg 6% 24% / 12%);
-  --faded-button-active-color: hsla(210, 14%, 11%, 0.2);
-
-  --accent-button-color: hsl(321deg 100% 50%);
-  --accent-button-text-color: hsl(0, 0%, 100%);
-  --accent-button-hover-color: hsl(325deg 100% 61%);
-  --accent-button-active-color: hsl(320, 100%, 44%);
-
-  --primary-button-color: hsl(0, 0%, 100%);
-  --primary-button-text-color: hsl(220deg 5% 34%);
-  --primary-button-hover-color: hsl(240, 33%, 99%);
-
-  --button-border-width: 0.09375rem;
   --normal-button-border-radius: 6px;
   --rounded-button-border-radius: 48px;
   --button-inline-padding: clamp(22px, 0.25em + 24px, 2em);
@@ -36,7 +21,7 @@
   align-items: center;
   border-style: solid;
   border-radius: var(--normal-button-border-radius);
-  border-width: var(--button-border-width);
+  border-width: var(--border-thick);
   padding-block-start: var(--button-block-padding);
   padding-inline-end: var(--button-inline-padding);
   padding-block-end: var(--button-block-padding);
@@ -48,32 +33,32 @@
 }
 
 .button[data-variant="faded"] {
-  color: var(--faded-button-text-color);
-  background-color: var(--faded-button-color);
-  border-color: var(--faded-button-color);
+  color: var(--text-color);
+  background-color: var(--color-faded-4);
+  border-color: var(--color-faded-4);
   font-weight: 700;
 }
 
 .button[data-variant="faded"]:hover {
-  background-color: var(--faded-button-hover-color);
-  border-color: var(--faded-button-hover-color);
+  background-color: var(--color-faded-5);
+  border-color: var(--color-faded-5);
 }
 
 .button[data-variant="faded"]:active {
-  background-color: var(--faded-button-active-color);
-  border-color: var(--faded-button-active-color);
+  background-color: var(--color-faded-3);
+  border-color: var(--color-faded-3);
 }
 
 .button[data-variant="primary"] {
-  color: var(--primary-button-text-color);
-  background-color: var(--primary-button-color);
-  border-color: var(--primary-button-color);
+  color: var(--text-color-2);
+  background-color: var(--color-priamry);
+  border-color: var(--color-priamry);
   font-weight: 400;
 }
 
 .button[data-variant="primary"]:hover {
-  background-color: var(--primary-button-hover-color);
-  border-color: var(--primary-button-hover-color);
+  background-color: var(--color-primary-3);
+  border-color: var(--color-primary-3);
 }
 
 .button[data-variant="primary"]:active {
@@ -83,19 +68,19 @@
 
 .button[data-variant="accent"] {
   font-weight: 700;
-  background-color: var(--accent-button-color);
-  border-color: var(--accent-button-color);
-  color: var(--accent-button-text-color);
+  background-color: var(--color-accent);
+  border-color: var(--color-accent);
+  color: var(--color-priamry);
 }
 
 .button[data-variant="accent"]:hover {
-  background-color: var(--accent-button-hover-color);
-  border-color: var(--accent-button-hover-color);
+  background-color: var(--color-accent-2);
+  border-color: var(--color-accent-2);
 }
 
 .button[data-variant="accent"]:active {
-  background-color: var(--accent-button-active-color);
-  border-color: var(--accent-button-active-color);
+  background-color: var(--color-accent-3);
+  border-color: var(--color-accent-3);
 }
 
 .button[data-rounding="full"] {
