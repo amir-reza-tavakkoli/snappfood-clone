@@ -1,8 +1,8 @@
 import type { ReactNode } from "react"
-import "./card.css"
+import "./vendor-card.css"
 import { StarIcon, TimeRemainingIcon, DeliveryGuyIcon } from "./svg"
 
-export type CardProps = {
+export type VendorCardProps = {
   name: string
   type?: string
   image: string
@@ -12,7 +12,7 @@ export type CardProps = {
     value?: number | string
     range?: number
     count?: number
-    type? : string
+    type?: string
   }
 
   offer?: number
@@ -26,7 +26,7 @@ export type CardProps = {
   }
 }
 
-export const Card = ({
+export const VendorCard = ({
   name,
   icon,
   image,
@@ -35,7 +35,7 @@ export const Card = ({
   offer,
   tags,
   delivery,
-}: CardProps) => {
+}: VendorCardProps) => {
   return (
     <dl className="card">
       <div className="card-image">
@@ -58,9 +58,7 @@ export const Card = ({
       </div>
 
       <dt className="nonvisual">Name</dt>
-      <dd data-field="name">
-        {name}
-      </dd>
+      <dd data-field="name">{name}</dd>
 
       {type ? (
         <>
@@ -130,7 +128,7 @@ export const Card = ({
               <dd className="card-delivery faded">
                 <>
                   {<TimeRemainingIcon role="presentation" />}
-                  <span >{delivery.type}</span>
+                  <span>{delivery.type}</span>
                 </>
               </dd>
             </>

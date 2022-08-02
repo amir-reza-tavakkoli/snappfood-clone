@@ -1,13 +1,13 @@
-import { Card } from "./card"
+import { VendorCard } from "./vendor-card"
 import type { ComponentProps } from "react"
 
-const cardProps: ComponentProps<typeof Card> = {
-  name: "رستوران بگ میرزا",
+const cardProps: ComponentProps<typeof VendorCard> = {
+  name: "نان قندی و یوخه پزی چهار فصل",
   type: "رستوران",
-    icon: (
-      <img src="https://cdn.snappfood.ir/media/cache/vendor_logo/uploads/images/vendors/logos/623209826af52.jpg" />
-    ),
-    image: "https://cdn.snappfood.ir/300x200/cdn/vendor_sub_types/7/01.jpg",
+  icon: (
+    <img src="https://cdn.snappfood.ir/media/cache/vendor_logo/uploads/images/vendors/logos/623209826af52.jpg" />
+  ),
+  image: "https://cdn.snappfood.ir/300x200/cdn/vendor_sub_types/7/01.jpg",
   rating: {
     value: 3.6,
     count: 12366,
@@ -25,7 +25,7 @@ const cardProps: ComponentProps<typeof Card> = {
 }
 
 export const card = () => {
-  return <Card {...cardProps}></Card>
+  return <VendorCard {...cardProps}></VendorCard>
 }
 export const cardAndConstrainted = () => {
   return (
@@ -35,7 +35,7 @@ export const cardAndConstrainted = () => {
         height: "300px",
       }}
     >
-      <Card {...cardProps}></Card>
+      <VendorCard {...cardProps}></VendorCard>
     </div>
   )
 }
@@ -48,7 +48,7 @@ export const cardAndConstraintedAndRTL = () => {
         height: "300px",
       }}
     >
-      <Card {...cardProps}></Card>
+      <VendorCard {...cardProps}></VendorCard>
     </div>
   )
 }
