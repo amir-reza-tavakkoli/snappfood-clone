@@ -5,10 +5,8 @@ import { StarIcon, TimeRemainingIcon, DeliveryGuyIcon } from "./svg"
 export type CardProps = {
   name: string
   type?: string
-  icons: {
-    image: string
-    icon?: ReactNode
-  }
+  image: string
+  icon?: ReactNode
 
   rating?: {
     value?: number | string
@@ -29,7 +27,8 @@ export type CardProps = {
 
 export const Card = ({
   name,
-  icons,
+  icon,
+  image,
   rating,
   type,
   offer,
@@ -41,10 +40,10 @@ export const Card = ({
       <div className="card-image">
         <dt className="nonvisual">Image of the place</dt>
         <dd data-field="image">
-          <img src={icons.image} alt={name} />
-          {icons.icon ? (
+          <img src={image} alt={name} />
+          {icon ? (
             <span className="card-store-icon" role="presentation">
-              {icons.icon}
+              {icon}
             </span>
           ) : null}
         </dd>
