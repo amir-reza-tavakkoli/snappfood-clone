@@ -15,13 +15,13 @@ export type VendorCardProps = {
     type?: string
   }
 
-  offer?: number
+  discount?: number
   tags?: string[]
   delivery: {
-    type: string
+    method: string
     price?: {
       value?: number
-      curruncy?: string
+      currency?: string
     }
   }
 }
@@ -32,7 +32,7 @@ export const VendorCard = ({
   image,
   rating,
   type,
-  offer,
+  discount,
   tags,
   delivery,
 }: VendorCardProps) => {
@@ -78,10 +78,10 @@ export const VendorCard = ({
           ) : null}
         </dd>
 
-        {offer ? (
+        {discount ? (
           <>
             <dt className="nonvisual">Offer</dt>
-            <dd data-field="offer">{` ${offer}%`}</dd>
+            <dd data-field="discount">{` ${discount}%`}</dd>
           </>
         ) : null}
       </div>
@@ -111,19 +111,19 @@ export const VendorCard = ({
         <dl>
           {delivery.price ? (
             <>
-              <dt className="nonvisual">Type / Price:</dt>
+              <dt className="nonvisual">Method / Price:</dt>
               <>
-                <dd data-field="delivery type" className="_delivery">
+                <dd data-field="delivery method" className="_delivery">
                   {<DeliveryGuyIcon role="presentation" />}
                   <div>
-                    <span>{delivery.type} </span>
+                    <span>{delivery.method} </span>
 
                     <span data-field="delivery price">
                       {delivery.price.value ?? ""}{" "}
                     </span>
 
-                    <span data-field="delivery curruncy">
-                      {delivery.price.curruncy ?? ""}
+                    <span data-field="delivery currency">
+                      {delivery.price.currency ?? ""}
                     </span>
                   </div>
                   <dt className="nonvisual">Curruncy</dt>
@@ -136,7 +136,7 @@ export const VendorCard = ({
               <dd data-field="delivery" className="_delivery faded">
                 <>
                   {<TimeRemainingIcon role="presentation" />}
-                  <span data-field="delivery type">{delivery.type}</span>
+                  <span data-field="delivery method">{delivery.method}</span>
                 </>
               </dd>
             </>

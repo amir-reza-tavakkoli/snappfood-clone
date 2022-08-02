@@ -41,7 +41,7 @@
   object-fit: cover;
 }
 
-.vendor-card [data-field="offer"] {
+.vendor-card [data-field="discount"] {
   position: absolute;
   padding-block: var(--length-6);
   padding-inline: var(--length-12);

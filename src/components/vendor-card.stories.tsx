@@ -14,12 +14,12 @@ const cardProps: ComponentProps<typeof VendorCard> = {
     range: 5,
   },
   tags: ["کباب", "ایرانی", "خورشت"],
-  offer: 12,
+  discount: 12,
   delivery: {
-    type: "پیک فروشنده",
+    method: "پیک فروشنده",
     price: {
       value: 7000,
-      curruncy: "تومان",
+      currency: "تومان",
     },
   },
 }
