@@ -18,7 +18,7 @@
   justify-content: center;
   align-items: center;
   border-style: solid;
-  border-radius: var(--size-3);
+  border-radius: var(--length-3);
   border-width: var(--border-thick);
   padding-block-start: var(--button-block-padding);
   padding-inline-end: var(--button-inline-padding);
@@ -81,7 +81,7 @@
 }
 
 .button[data-rounding="full"] {
-  border-radius: var(--size-24);
+  border-radius: var(--length-48);
 }
 
 .button>span>svg {
