@@ -7,23 +7,64 @@
 }
 
 :root {
-  --radius-round: 1e5px;
-  --gray-0-hsl: 210 17% 98%;
-  --gray-1-hsl: 210 17% 95%;
-  --gray-2-hsl: 210 16% 93%;
-  --gray-3-hsl: 210 14% 89%;
-  --gray-4-hsl: 210 14% 83%;
-  --gray-5-hsl: 210 11% 71%;
-  --gray-6-hsl: 210 7% 56%;
-  --gray-7-hsl: 210 9% 31%;
-  --gray-8-hsl: 210 10% 23%;
-  --gray-9-hsl: 210 11% 15%;
+  --length-1: 0.0625rem;
+  --length-2: 0.125rem;
+  --length-3: 0.1875rem;
+  --length-4: 0.25rem;
+  --length-6: 0.375rem;
+  --length-8: 0.5rem;
+  --length-10: 0.625rem;
+  --length-12: 0.75rem;
+  --length-14: 0.875rem;
+  --length-16: 1rem;
+  --length-20: 1.25rem;
+  --length-24: 1.5rem;
+  --length-28: 1.75rem;
+  --length-32: 2rem;
+  --length-48: 3rem;
+  --length-64: 4rem;
+  --length-80: 5rem;
 
-  --font-size-1: 1rem;
+  --border-thin: 0.5px;
+  --border-normal: 1px;
+  --border-thick: 1.5px;
+  --border-extra-thick: 3px;
 
-  --min-touchable-size: 44px;
+  --color-text: hsl(218, 6%, 24%);
+  --color-text-2: hsl(220deg 5% 34%);
+  --color-text-3: hsl(214, 13%, 11%);
+  --color-primary: hsl(0, 0%, 100%);
+  --color-primary-2: hsl(200, 9%, 94%);
+  --color-primary-3: hsl(240, 33%, 99%);
+  --color-faded: hsl(206, 4%, 66%);
+  --color-faded-2: hsl(216deg 14% 93%);
+  --color-faded-3: hsla(210, 14%, 11%, 0.2);
+  --color-faded-4: hsla(218, 6%, 24%, 0.06);
+  --color-faded-5: hsla(218, 6%, 24%, 0.12);
+  --color-faded-6: hsla(210, 14%, 11%, 0.2);
+  --color-faded-7: hsla(210, 20%, 98%, 0.06);
+  --color-accent: hsl(321deg 100% 50%);
+  --color-accent-2: hsl(325deg 100% 61%);
+  --color-accent-3: hsl(320, 100%, 44%);
+  --color-action: hsl(152, 100%, 36%);
+  --color-action-2: hsl(150, 100%, 26%);
+  --color-action-3: hsl(152, 78%, 44%);
+  --color-warning: hsl(48, 96%, 52%);
+  --color-warning-2: hsl(40, 100%, 31%);
+  --color-warning-3: hsl(48, 100%, 62%);
+  --color-error: hsl(350, 95%, 57%);
+  --color-error-2: hsl(350, 100%, 44%);
+  --color-error-3: hsl(350, 100%, 62%);
 
-  --global-svg-color: hsl(218, 6%, 24%);
+  --box-shadow-light: hsla(218, 6%, 24%, 0.06) 0px 1px 0px,
+    hsla(0, 0%, 0%, 0.05) 0px 2px 8px -2px;
+  --box-shadow-normal: hsla(218, 6%, 24%, 0.06) 0px 1px 0px,
+    hsla(0, 0%, 0%, 0.3) 0px 8px 32px -16px;
+  --box-shadow-thick: hsla(218, 6%, 24%, 0.06) 0px 1px 0px,
+    hsla(0, 0%, 0%, 0.3) 0px 8px 32px -16px;
+  --box-shadow-extra-thick: hsla(0, 0%, 0%, 0.08) 0px 2px 8px,
+    hsla(0, 0%, 0%, 0.16) 0px 8px 32px;
+  --box-shadow-inset: inset 0px 1px 6px rgba(0, 0, 0, 0.04);
 }
 
 *,
@@ -31,7 +72,8 @@
 *::after {
   margin: 0;
   font-family: "IRANSans", system-ui, -apple-system,
-    /* Firefox supports this but not yet `system-ui` */ Helvetica, Roboto,
+    /* Firefox supports this but not yet `system-ui` */
+    Helvetica, Roboto,
     "Segoe UI", sans-serif, Arial, "Apple Color Emoji", "Segoe UI Emoji";
 }
 
