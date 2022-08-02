@@ -6,8 +6,6 @@
 }
 
 .button {
-  --normal-button-border-radius: 6px;
-  --rounded-button-border-radius: 48px;
   --button-inline-padding: clamp(22px, 0.25em + 24px, 2em);
   --button-block-padding: clamp(4px, 0.4em + 4px, 0.75em);
   --button-svg-size: 1em;
@@ -20,7 +18,7 @@
   justify-content: center;
   align-items: center;
   border-style: solid;
-  border-radius: var(--normal-button-border-radius);
+  border-radius: var(--size-3);
   border-width: var(--border-thick);
   padding-block-start: var(--button-block-padding);
   padding-inline-end: var(--button-inline-padding);
@@ -29,7 +27,6 @@
   min-inline-size: max-content;
   inline-size: 100%;
   min-block-size: fit-content;
-  /* block-size: var(--button-block-padding); */
 }
 
 .button[data-variant="faded"] {
@@ -84,11 +81,10 @@
 }
 
 .button[data-rounding="full"] {
-  border-radius: var(--rounded-button-border-radius);
+  border-radius: var(--size-24);
 }
 
 .button > span > svg {
-  /* color: var(--priamry-svg-color); */
   inline-size: var(--button-svg-size);
   block-size: var(--button-svg-size);
   min-inline-size: fit-content;
