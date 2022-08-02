@@ -48,7 +48,8 @@
 
 .vendor-card [data-field="offer"] {
   position: absolute;
-  padding: calc(var(--length-4) + var(--length-2)) var(--length-12);
+  padding-block: var(--length-6);
+  padding-inline: var(--length-12);
   border-start-start-radius: var(--length-10);
   inset-inline-end: 0px;
   inset-block-end: 0px;
@@ -96,8 +97,8 @@
 }
 
 .vendor-card [data-field="rating"] ._score-count {
-  margin: var(--length-6);
-  margin-block-start: var(--length-6);
+  margin-block: var(--length-6);
+  margin-inline: var(--length-6);
   color: var(--color-faded);
 }
 
@@ -143,7 +144,8 @@
 }
 
 .vendor-card ._delivery > div > span {
-  padding: var(--length-2);
+  padding-inline: var(--length-2);
+  padding-block: var(--length-2);
   margin-block-end: calc(var(--length-4) * -1);
 }
 
@@ -152,7 +154,8 @@
 }
 
 .vendor-card ._delivery svg:first-of-type {
-  margin: var(--length-6);
+  margin-inline: var(--length-6);
+  margin-block: var(--length-6);
 }
 
 :where(html[dir="rtl"] .vendor-card) {
