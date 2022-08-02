@@ -59,7 +59,7 @@ export const Card = ({
 
       <dt className="nonvisual">Name</dt>
       <dd data-field="name">
-        <h3>{name}</h3>
+        {name}
       </dd>
 
       {type ? (
