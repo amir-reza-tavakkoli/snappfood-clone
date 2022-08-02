@@ -133,7 +133,7 @@ export const VendorCard = ({
           ) : (
             <>
               <dt className="nonvisual">Type</dt>
-              <dd data-field="delivery" className="_delivery">
+              <dd data-field="delivery" className="_delivery faded">
                 <>
                   {<TimeRemainingIcon role="presentation" />}
                   <span data-field="delivery type">{delivery.type}</span>
