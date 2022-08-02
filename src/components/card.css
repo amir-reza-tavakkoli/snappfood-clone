@@ -37,6 +37,7 @@
   aspect-ratio: 2/1;
   border-top-left-radius: var(--length-12);
   border-top-right-radius: var(--length-12);
+  object-fit: cover;
 }
 
 .card>.card-image>.store-offer {
@@ -95,7 +96,7 @@
 }
 
 .card>[data-field="rating"]>dl>svg:first-of-type {
-  margin: 0 var(--length-6) var(--length-6) var(--length-6);
+  margin: 0 var(--length-4) var(--length-4) var(--length-4);
   width: var(--length-12);
   height: var(--length-12);
 }
@@ -103,7 +104,6 @@
 .card>dd[data-field="category"]>.categories {
   font-size: var(--length-12);
   color: var(--color-faded);
-  /* margin-top: calc(var(--length-8) * -1); */
   margin-bottom: var(--length-12);
 }
 
