@@ -37,7 +37,7 @@ export const VendorCard = ({
   delivery,
 }: VendorCardProps) => {
   return (
-    <dl className="card">
+    <dl className="vendor-card">
       <dt className="nonvisual">Name</dt>
       <dd data-field="name">{name}</dd>
 
