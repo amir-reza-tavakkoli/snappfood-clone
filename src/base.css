@@ -7,8 +7,6 @@
 }
 
 :root {
-  --radius-round: 1e5px;
-
   --length-1: 0.0625rem;
   --length-2: 0.125rem;
   --length-3: 0.1875rem;
