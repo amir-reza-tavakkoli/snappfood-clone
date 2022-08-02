@@ -1,159 +1,145 @@
 .card {
-  --card-border-radius: 0.5rem;
-  --card-border-color: hsla(218, 6%, 24%, 0.06);
-  --card-color: hsl(0, 0%, 100%);
-  --card-border-width: 1px;
-  --card-text-color: hsl(218, 6%, 24%);
-
-  --card-inner-distance-0: 5px;
-  --card-inner-distance-1: 0.25rem;
-  --card-inner-distance-2: 0.5rem;
-  --card-inner-distance-3: 0.685rem;
-  --card-inner-distance-4: 0.75rem;
-  --card-inner-distance-5: 0.875rem;
-  --card-inner-distance-6: 1rem;
-  --card-inner-distance-6-1: 1.125rem;
-  --card-inner-distance-7: 1.5rem;
-  --card-inner-distance-8: 2rem;
-  --card-inner-distance-9: 2.5rem;
-
   cursor: pointer;
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: var(--card-color);
-  border: solid var(--card-border-color) var(--card-border-width);
-  border-radius: var(--card-border-radius);
-  color: var(--card-text-color);
+  background-color: var(--color-primary);
+  border: solid var(--color-faded-4) var(--border-normal);
+  border-radius: var(--length-8);
+  color: var(--color-text);
   overflow-x: hidden;
-  box-shadow: hsla(218, 6%, 24%, 0.06) 0px 1px 0px,
-    hsla(0, 0%, 0%, 0.05) 0px 2px 8px -2px;
+  box-shadow: var(--box-shadow-light);
 }
 
-.card > [data-field="name"] > h3:first-of-type {
-  font-size: var(--card-inner-distance-6-1);
-  padding-top: var(--card-inner-distance-9);
+.card:hover {
+  box-shadow: var(--box-shadow-normal);
+}
+
+.card>[data-field="name"]>h3:first-of-type {
+  font-size: var(--length-16-1);
+  padding-top: calc(var(--length-32) + var(--length-8));
   text-align: center;
-  margin-bottom: var(--card-inner-distance-2);
+  margin-bottom: var(--length-8);
   font-weight: 700;
 }
 
-.card > .card-image {
+.card>.card-image {
   width: 100%;
   height: 40%;
   position: relative;
 }
 
-.card > .card-image > [data-field="image"] > img {
+.card>.card-image>[data-field="image"]>img {
   width: 100%;
   height: 100%;
   aspect-ratio: 2/1;
-  border-top-left-radius: 12px;
-  border-top-right-radius: 12px;
+  border-top-left-radius: var(--length-12);
+  border-top-right-radius: var(--length-12);
 }
 
-.card > .card-image > .store-offer {
-  padding: calc(var(--card-inner-distance-1) + 2.5px)
-    var(--card-inner-distance-4);
+.card>.card-image>.store-offer {
+  padding: calc(var(--length-4) + var(--length-2)) var(--length-12);
 
-  background-color: hsl(0, 0%, 100%);
-  border-top-left-radius: 1rem;
+  background-color: var(--color-primary);
+  border-top-left-radius: var(--length-10);
   position: absolute;
   right: 0px;
   bottom: 0px;
-  color: hsl(320, 100%, 44%);
-  font-size: var(--card-inner-distance-5);
+  color: var(--color-accent-3);
+  font-size: var(--length-14);
 }
 
-.card > .card-image > [data-field="image"] > .card-store-icon {
+.card>.card-image>[data-field="image"]>.card-store-icon {
   position: absolute;
-  border-radius: 10px;
-  bottom: -1.5rem;
+  border-radius: var(--length-10);
+
+  bottom: calc(var(--length-16) * -1.5);
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: var(--card-inner-distance-4);
+  border-radius: var(--length-12);
 }
 
-.card > .card-image > [data-field="image"] > .card-store-icon > img {
-  box-shadow: hsla(218, 6%, 24%, 0.06) 0px 1px 0px,
-    hsla(0, 0%, 0%, 0.3) 0px 8px 32px -16px;
-  border: 4px solid hsla(218, 6%, 24%, 0.06);
-  border-radius: 12px;
+.card>.card-image>[data-field="image"]>.card-store-icon>img {
+  box-shadow: var(--box-shadow-normal);
+  border: var(--length-4) solid var(--color-faded-4);
+  border-radius: var(--length-12);
   width: 25%;
   height: 25%;
   /* padding: 5px; */
-  background-color: hsl(0, 0%, 100%);
+  background-color: var(--color-primary);
 }
 
-.card > [data-field="rating"] > dl {
-  padding: 10px 0px 0px 0px;
+.card>[data-field="rating"]>dl {
+  padding: var(--length-10) 0px 0px 0px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.card > [data-field="rating"] > dl > dd {
-  font-size: var(--card-inner-distance-4);
+.card>[data-field="rating"]>dl>dd {
+  font-size: var(--length-12);
 }
-.card > [data-field="rating"] > dl > dd:first-of-type {
+
+.card>[data-field="rating"]>dl>dd:first-of-type {
   font-weight: 700;
 }
 
-.card > [data-field="rating"] > dl > .score-count {
-  color: hsl(206, 4%, 66%);
-  margin: var(--card-inner-distance-0);
+.card>[data-field="rating"]>dl>.score-count {
+  color: var(--color-faded);
+  margin: var(--length-6);
 }
 
-.card > [data-field="rating"] > dl > svg:first-of-type {
-  margin: 0 var(--card-inner-distance-0) var(--card-inner-distance-0)
-    var(--card-inner-distance-0);
-  width: 12px;
-  height: 12px;
+.card>[data-field="rating"]>dl>svg:first-of-type {
+  margin: 0 var(--length-6) var(--length-6) var(--length-6);
+  width: var(--length-12);
+  height: var(--length-12);
 }
 
-.card > dd[data-field="category"] > .categories {
-  font-size: var(--card-inner-distance-4);
-  color: hsl(206, 4%, 66%);
-  margin-top: -0.5rem;
-  margin-bottom: var(--card-inner-distance-4);
+.card>dd[data-field="category"]>.categories {
+  font-size: var(--length-12);
+  color: var(--color-faded);
+  margin-top: calc(var(--length-8) * -1);
+  margin-bottom: var(--length-12);
 }
 
 .card .card-delivery {
-  font-size: var(--card-inner-distance-4);
-  line-height: 1rem;
-  padding: var(--card-inner-distance-3) var(--card-inner-distance-5);
+  font-size: var(--length-12);
+  line-height: calc(var(--length-16) * 1.125);
+  padding: var(--length-10) var(--length-14);
   text-align: center;
-  background-color: hsl(0, 0%, 100%);
-  border-radius: 4.5rem;
-  color: hsl(218, 6%, 24%);
-  box-shadow: hsla(218, 6%, 24%, 0.06) 0px 1px 0px,
-    hsla(0, 0%, 0%, 0.05) 0px 2px 8px -2px;
+  background-color: var(--color-primary);
+  border-radius: calc(var(--length-16) * 4.5);
+  color: var(--color-text);
+  box-shadow: var(--box-shadow-light);
   display: flex;
   justify-content: center;
-  margin-bottom: var(--card-inner-distance-7);
-  margin-top: var(--card-inner-distance-7);
+  margin-bottom: var(--length-24);
+  margin-top: var(--length-24);
   align-items: center;
 }
 
-.card .card-delivery > div {
+.card .card-delivery>div {
   display: flex;
   justify-content: center;
   align-items: flex-start;
 }
-.card .card-delivery > div > span {
-  padding: 2px;
-  margin-bottom: -5px;
+
+.card .card-delivery>div>span {
+  padding: var(--length-2);
+  margin-bottom: calc(var(--length-4) * -1);
 }
+
 .card .card-delivery.faded {
-background-color :hsl(216, 14%, 93%); ;
+  background-color: var(--color-faded-2);
+  ;
 }
 
 .card .card-delivery svg:first-of-type {
-  margin: var(--card-inner-distance-0);
+  margin: var(--length-6);
 }
 
 :where(html[dir="rtl"] .card) {
