@@ -107,8 +107,8 @@
   block-size: var(--length-12);
   margin-block-start: 0;
   margin-block-end: var(--length-4);
-  margin-inline-start: var(--length-4);
-  margin-inline-end: var(--length-4);
+  margin-inline: var(--length-4);
+
 }
 
 .vendor-card dd[data-field="category"] > ._categories {
@@ -123,12 +123,9 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding-block-start: var(--length-10);
-  padding-block-end: var(--length-10);
-  padding-inline-start: var(--length-14);
-  padding-inline-end: var(--length-14);
-  margin-block-start: var(--length-24);
-  margin-block-end: var(--length-24);
+  padding-block: var(--length-10);
+  padding-inline: var(--length-14);
+  margin-block: var(--length-24);
   background-color: var(--color-primary);
   font-size: var(--length-12);
   line-height: var(--length-20);
