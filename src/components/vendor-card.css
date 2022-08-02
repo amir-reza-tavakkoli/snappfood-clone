@@ -28,13 +28,13 @@
 .vendor-card > ._card-image {
   position: relative;
   inline-size: 100%;
-  block-size: 40%;
+  /* block-size: 40%; */
   order: 0;
 }
 
 .vendor-card [data-field="image"] > img {
   inline-size: 100%;
-  block-size: 100%;
+  /* block-size: 100%; */
   border-start-start-radius: var(--length-12);
   border-start-end-radius: var(--length-12);
   aspect-ratio: 2/1;
@@ -65,7 +65,7 @@
 
 .vendor-card [data-field="image"] > ._card-store-icon > img {
   inline-size: 25%;
-  block-size: 25%;
+  /* block-size: 25%; */
   border: var(--length-4) solid var(--color-faded-4);
   border-radius: var(--length-12);
   background-color: var(--color-primary);
@@ -99,7 +99,7 @@
 
 .vendor-card [data-field="rating"] > dl > svg:first-of-type {
   inline-size: var(--length-12);
-  block-size: var(--length-12);
+  /* block-size: var(--length-12); */
   margin-block-start: 0;
   margin-block-end: var(--length-4);
   margin-inline: var(--length-4);
