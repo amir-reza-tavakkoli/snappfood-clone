@@ -21,9 +21,7 @@ export const Button = ({
 }: ButtonProps) => {
   return (
     <button
-      className={
-        !extraClassName ? "button" : "button" + " " + `${extraClassName}`
-      }
+      className={!extraClassName ? "button" : `button ${extraClassName}`}
       data-rounding={rounding}
       data-variant={variant}
       {...otherProps}
