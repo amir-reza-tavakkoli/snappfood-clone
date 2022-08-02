@@ -12,6 +12,7 @@ export type CardProps = {
     value?: number | string
     range?: number
     count?: number
+    type? : string
   }
 
   offer?: number
@@ -38,7 +39,7 @@ export const Card = ({
   return (
     <dl className="card">
       <div className="card-image">
-        <dt className="nonvisual">Image of the place</dt>
+        <dt className="nonvisual">Image</dt>
         <dd data-field="image">
           <img src={image} alt={name} />
           {icon ? (
@@ -50,20 +51,20 @@ export const Card = ({
 
         {offer ? (
           <>
-            <dt className="nonvisual">Currunt offer is:</dt>
+            <dt className="nonvisual">Offer</dt>
             <dd className="store-offer">{` ${offer}%`}</dd>
           </>
         ) : null}
       </div>
 
-      <dt className="nonvisual">Name is:</dt>
+      <dt className="nonvisual">Name</dt>
       <dd data-field="name">
         <h3>{name}</h3>
       </dd>
 
       {type ? (
         <>
-          <dt className="nonvisual">type is:</dt>
+          <dt className="nonvisual">Type</dt>
           <dd className="nonvisual">{type}</dd>{" "}
         </>
       ) : null}
@@ -74,7 +75,7 @@ export const Card = ({
           <dd data-field="rating">
             <dl>
               {<StarIcon role="presentation" />}
-              <dt className="nonvisual">Stars</dt>
+              <dt className="nonvisual">{rating.type}</dt>
               <dd>
                 {rating.value ?? "Unknown rating"}
                 <span className="nonvisual">
@@ -119,13 +120,13 @@ export const Card = ({
 
                     <span>{delivery.price.curruncy ?? "Unknown curruncy"}</span>
                   </div>
-                  <dt className="nonvisual">Curruncy:</dt>
+                  <dt className="nonvisual">Curruncy</dt>
                 </dd>
               </>
             </>
           ) : (
             <>
-              <dt className="nonvisual">Type:</dt>
+              <dt className="nonvisual">Type</dt>
               <dd className="card-delivery faded">
                 <>
                   {<TimeRemainingIcon role="presentation" />}
