@@ -18,8 +18,8 @@
 }
 
 .card>[data-field="name"]>h3:first-of-type {
-  font-size: var(--length-16-1);
-  padding-top: calc(var(--length-32) + var(--length-8));
+  font-size: calc(var(--length-16) + var(--length-2));
+  padding-top: var(--length-32);
   text-align: center;
   margin-bottom: var(--length-8);
   font-weight: 700;
@@ -54,8 +54,7 @@
 .card>.card-image>[data-field="image"]>.card-store-icon {
   position: absolute;
   border-radius: var(--length-10);
-
-  bottom: calc(var(--length-16) * -1.5);
+  bottom: calc(var(--length-16) * -1);
   width: 100%;
   display: flex;
   justify-content: center;
@@ -74,10 +73,11 @@
 }
 
 .card>[data-field="rating"]>dl {
-  padding: var(--length-10) 0px 0px 0px;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: calc(var(--length-4) * -1);
+
 }
 
 .card>[data-field="rating"]>dl>dd {
@@ -91,6 +91,7 @@
 .card>[data-field="rating"]>dl>.score-count {
   color: var(--color-faded);
   margin: var(--length-6);
+  margin-top: var(--length-6);
 }
 
 .card>[data-field="rating"]>dl>svg:first-of-type {
@@ -102,7 +103,7 @@
 .card>dd[data-field="category"]>.categories {
   font-size: var(--length-12);
   color: var(--color-faded);
-  margin-top: calc(var(--length-8) * -1);
+  /* margin-top: calc(var(--length-8) * -1); */
   margin-bottom: var(--length-12);
 }
 
@@ -135,7 +136,6 @@
 
 .card .card-delivery.faded {
   background-color: var(--color-faded-2);
-  ;
 }
 
 .card .card-delivery svg:first-of-type {
