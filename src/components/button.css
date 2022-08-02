@@ -1,7 +1,7 @@
 @media (pointer: coarse) {
   .button {
-    min-inline-size: var(--min-touchable-size);
-    min-block-size: var(--min-touchable-size);
+    min-inline-size: var(--length-48);
+    min-block-size: var(--length-48);
   }
 }
 
@@ -48,8 +48,8 @@
 
 .button[data-variant="primary"] {
   color: var(--color-text-2);
-  background-color: var(--color-priamry);
-  border-color: var(--color-priamry);
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
   font-weight: 400;
 }
 
@@ -67,7 +67,7 @@
   font-weight: 700;
   background-color: var(--color-accent);
   border-color: var(--color-accent);
-  color: var(--color-priamry);
+  color: var(--color-primary);
 }
 
 .button[data-variant="accent"]:hover {
