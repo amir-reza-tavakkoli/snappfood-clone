@@ -7,14 +7,12 @@ export type VendorCardProps = {
   type?: string
   image: string
   logo?: ReactNode | string
-
   rating?: {
     value?: number | string
     range?: number
     count?: number
     type?: string
   }
-
   discount?: number
   tags?: string[]
   delivery: {

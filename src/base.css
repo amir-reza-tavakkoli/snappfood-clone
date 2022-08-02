@@ -1,4 +1,4 @@
-@import '../node_modules/sanitize.css/sanitize.css';
+@import "../node_modules/sanitize.css/sanitize.css";
 
 @font-face {
   font-family: "IRANSans";
@@ -67,22 +67,18 @@
   --box-shadow-inset: inset 0px 1px 6px rgba(0, 0, 0, 0.04);
 }
 
-:where(*,
-*::before,
-*::after) {
+:where(*, *::before, *::after) {
   margin: 0;
   font-family: "IRANSans", system-ui, -apple-system,
     /* Firefox supports this but not yet `system-ui` */ Helvetica, Roboto,
     "Segoe UI", sans-serif, Arial, "Apple Color Emoji", "Segoe UI Emoji";
 }
 
-:where(html,
-body) {
+:where(html, body) {
   height: 100%;
 }
 
-:where(#root,
-#__next) {
+:where(#root, #__next) {
   isolation: isolate;
 }
 
@@ -97,17 +93,11 @@ body) {
   white-space: nowrap !important;
 }
 
-:where(ol,
-ul,
-dl,
-dd,
-dt,
-li) {
+:where(ol, ul, dl, dd, dt, li) {
   list-style: none;
   padding: 0px;
   margin: 0px;
 }
-:where(ol,
-li ){
+:where(ol, li) {
   display: inline;
 }
