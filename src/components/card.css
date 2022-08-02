@@ -1,16 +1,16 @@
 .card {
-  cursor: pointer;
-  inline-size: 100%;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: var(--color-primary);
+  flex-direction: column;
+  inline-size: 100%;
   border: solid var(--color-faded-4) var(--border-normal);
   border-radius: var(--length-8);
+  background-color: var(--color-primary);
   color: var(--color-text);
   overflow-inline: hidden;
   box-shadow: var(--box-shadow-light);
+  cursor: pointer;
 }
 
 .card:hover {
@@ -18,57 +18,56 @@
 }
 
 .card>[data-field="name"] {
-  font-size: calc(var(--length-16) + var(--length-2));
   padding-block-start: var(--length-32);
-  text-align: center;
   margin-block-end: var(--length-8);
+  text-align: center;
+  font-size: calc(var(--length-16) + var(--length-2));
   font-weight: 700;
 }
 
 .card>.card-image {
+  position: relative;
   inline-size: 100%;
   block-size: 40%;
-  position: relative;
 }
 
 .card>.card-image>[data-field="image"]>img {
   inline-size: 100%;
   block-size: 100%;
-  aspect-ratio: 2/1;
   border-start-start-radius: var(--length-12);
   border-start-end-radius: var(--length-12);
+  aspect-ratio: 2/1;
   object-fit: cover;
 }
 
 .card>.card-image>.store-offer {
-  padding: calc(var(--length-4) + var(--length-2)) var(--length-12);
-  background-color: var(--color-primary);
-  border-start-start-radius: var(--length-10);
   position: absolute;
+  padding: calc(var(--length-4) + var(--length-2)) var(--length-12);
+  border-start-start-radius: var(--length-10);
   inset-inline-end: 0px;
   inset-block-end: 0px;
+  background-color: var(--color-primary);
   color: var(--color-accent-3);
   font-size: var(--length-14);
 }
 
 .card>.card-image>[data-field="image"]>.card-store-icon {
   position: absolute;
-  border-radius: var(--length-10);
-  inset-block-end: calc(var(--length-16) * -1);
-  inline-size: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  inline-size: 100%;
+  inset-block-end: calc(var(--length-16) * -1);
   border-radius: var(--length-12);
 }
 
 .card>.card-image>[data-field="image"]>.card-store-icon>img {
-  box-shadow: var(--box-shadow-normal);
-  border: var(--length-4) solid var(--color-faded-4);
-  border-radius: var(--length-12);
   inline-size: 25%;
   block-size: 25%;
+  border: var(--length-4) solid var(--color-faded-4);
+  border-radius: var(--length-12);
   background-color: var(--color-primary);
+  box-shadow: var(--box-shadow-normal);
 }
 
 .card>[data-field="rating"]>dl {
@@ -87,44 +86,43 @@
 }
 
 .card>[data-field="rating"]>dl>.score-count {
-  color: var(--color-faded);
   margin: var(--length-6);
   margin-block-start: var(--length-6);
+  color: var(--color-faded);
 }
 
 .card>[data-field="rating"]>dl>svg:first-of-type {
-  margin: 0 var(--length-4) var(--length-4) var(--length-4);
+  inline-size: var(--length-12);
+  block-size: var(--length-12);
   margin-block-start: 0;
   margin-block-end: var(--length-4);
   margin-inline-start: var(--length-4);
   margin-inline-end: var(--length-4);
-  inline-size: var(--length-12);
-  block-size: var(--length-12);
 }
 
 .card>dd[data-field="category"]>.categories {
+  margin-block-end: var(--length-12);
   font-size: var(--length-12);
   color: var(--color-faded);
-  margin-block-end: var(--length-12);
 }
 
 .card .card-delivery {
-  font-size: var(--length-12);
-  line-height: calc(var(--length-16) * 1.125);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
   padding-block-start: var(--length-10);
   padding-block-end: var(--length-10);
   padding-inline-start: var(--length-14);
   padding-inline-end: var(--length-14);
-  text-align: center;
+  margin-block-start: var(--length-24);
+  margin-block-end: var(--length-24);
   background-color: var(--color-primary);
+  font-size: var(--length-12);
+  line-height: calc(var(--length-16) * 1.125);
   border-radius: calc(var(--length-16) * 4.5);
   color: var(--color-text);
   box-shadow: var(--box-shadow-light);
-  display: flex;
-  justify-content: center;
-  margin-block-start: var(--length-24);
-  margin-block-end: var(--length-24);
-  align-items: center;
 }
 
 .card .card-delivery>div {
