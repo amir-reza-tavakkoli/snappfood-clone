@@ -41,7 +41,7 @@
 
 :where(.carousel ._link > img) {
     width: var(--length-48);
-    height: var(--length-48);
+    aspect-ratio: 1/1;
     margin-bottom: var(--length-16);
 }
 
