@@ -1,6 +1,6 @@
 @import "../assets/base.css";
 
-.carousel {
+:where(.carousel ){
     --carousel-item-min-size: 44px;
     --carousel-size-1: 1rem;
     --carousel-size-2: 0.75rem;
@@ -21,22 +21,22 @@
     font-size: var(--carousel-size-2);
 }
 
-.carousel>li {
+:where(.carousel>li ){
     flex-grow: 1;
     flex-shrink: 1;
     min-width: calc(var(--carousel-item-min-size) * 2);
 }
 
-.carousel>li>a {
+:where(.carousel>li>a ){
     color: var(--carousel-text-color);
     text-decoration: none;
 }
 
-.carousel>li>a>figure>figcaption {
+:where(.carousel>li>a>figure>figcaption ){
     color: var(--carousel-text-color);
 }
 
-.carousel>li>a>figure {
+:where(.carousel>li>a>figure ){
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -46,7 +46,7 @@
     color: inherit;
 }
 
-.carousel>li>a>figure>img {
+:where(.carousel>li>a>figure>img ){
     width: var(--carousel-item-min-size);
     height: var(--carousel-item-min-size);
     margin-bottom: var(--carousel-size-1);
