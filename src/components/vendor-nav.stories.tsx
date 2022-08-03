@@ -3,7 +3,7 @@ import { VendorNav } from "./vendor-nav"
 import type { ComponentProps } from "react"
 
 const items: ComponentProps<typeof VendorNav> = {
-  type: "food",
+  type: "foods",
   items: [
     {
       name: "فست فود",
