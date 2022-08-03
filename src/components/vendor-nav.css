@@ -44,6 +44,6 @@
 }
 
 :where(html[dir="rtl"] .vendor-nav ._items) {
-  flex-direction: row-reverse;
+  flex-direction: row;
   direction: rtl;
 }
