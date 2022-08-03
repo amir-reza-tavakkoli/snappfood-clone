@@ -9,15 +9,15 @@ type CarouselProps = {
 
 export const Carousel = ({ items, type }: CarouselProps) => {
   return (
-    <nav>
-      <p className="nonvisual">{ type }</p>
-      <ul className="carousel">
+    <nav className="carousel">
+      <p className="nonvisual" aria-label="type">{type}</p>
+      <ul className="_items">
         {items.map((item, index, array) => {
           return (
             <li key={item.key ?? index}>
               <a href={item.href ?? "#"} className="_link">
                 <div>
-                  {item.src ?<img src={item.src} alt={item.name}></img> : null}
+                  {item.src ? <img src={item.src} alt={item.name}></img> : null}
                   <span className="_name">{item.name}</span>
                 </div>
               </a>
