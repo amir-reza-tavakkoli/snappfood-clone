@@ -80,6 +80,6 @@ const items: ComponentProps<typeof VendorNav> = {
   ],
 }
 
-export const vendorNav = () => {
+export const defaultVendorNav = () => {
   return <VendorNav {...items} />
 }
