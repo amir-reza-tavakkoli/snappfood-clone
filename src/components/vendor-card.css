@@ -13,7 +13,7 @@
 }
 
 :where(.vendor-card > dd) {
-  order: 10;
+  order: 12;
 }
 
 :where(.vendor-card ._name) {
