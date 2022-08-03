@@ -9,7 +9,7 @@ type CarouselProps = {
 
 export const Carousel = ({ items, type }: CarouselProps) => {
   return (
-    <nav className="carousel">
+    <nav className="vendor-nav">
       <p className="nonvisual" aria-label="type">{type}</p>
       <ul className="_items">
         {items.map((item, index, array) => {

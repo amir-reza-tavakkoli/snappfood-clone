@@ -1,6 +1,6 @@
 @import "../base.css";
 
-:where(._items) {
+:where(.vendor-nav ._items) {
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -12,23 +12,23 @@
     overflow-x: auto;
 }
 
-:where(._items > li) {
+:where(.vendor-nav ._items > li) {
     flex-grow: 1;
     flex-shrink: 1;
     min-inline-size: var(--length-80);
 }
 
-:where(._items ._link) {
+:where(.vendor-nav ._items ._link) {
     text-decoration: none;
 }
 
-:where(._items ._name) {
+:where(.vendor-nav ._items ._name) {
     color: var(--color-text-2);
     line-height: var(--length-16);
     font-weight: 400;
 }
 
-:where(._items ._link > div) {
+:where(.vendor-nav ._items ._link > div) {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -36,14 +36,14 @@
     padding-block-end: var(--length-16);
 }
 
-:where(._items ._link  img) {
+:where(.vendor-nav ._items ._link  img) {
     inline-size: var(--length-48);
     max-inline-size: var(--length-48);
     margin-block-end: var(--length-16);
     aspect-ratio: 1/1;
 }
 
-:where(html[dir="rtl"] ._items) {
+:where(html[dir="rtl"] .vendor-nav ._items) {
     flex-direction: row-reverse;
     direction: rtl;
 }
