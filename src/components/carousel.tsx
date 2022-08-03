@@ -1,22 +1,23 @@
 import "./carousel.css"
 
-export type item = { name: string; src: string; href: string; key: number }
+export type item = { name: string; src?: string; href?: string; key: number }
 
 type CarouselProps = {
   type: string
   items: item[]
 }
 
-export const Carousel = ({ items }: CarouselProps) => {
+export const Carousel = ({ items, type }: CarouselProps) => {
   return (
     <nav>
+      <p className="nonvisual">{ type }</p>
       <ul className="carousel">
         {items.map((item, index, array) => {
           return (
-            <li key={item.key}>
-              <a href={item.href} className="_link">
+            <li key={item.key ?? index}>
+              <a href={item.href ?? "#"} className="_link">
                 <div>
-                  <img src={item.src} alt={item.name}></img>
+                  {item.src ?<img src={item.src} alt={item.name}></img> : null}
                   <span className="_name">{item.name}</span>
                 </div>
               </a>
