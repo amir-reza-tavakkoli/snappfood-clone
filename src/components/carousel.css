@@ -1,11 +1,4 @@
-@import "../assets/base.css";
-
-:where(.carousel ){
-    --carousel-item-min-size: 44px;
-    --carousel-size-1: 1rem;
-    --carousel-size-2: 0.75rem;
-    --carousel-text-color: hsl(220, 5%, 34%);
-}
+@import "../base.css";
 
 :where(.carousel) {
     width: 100%;
@@ -14,42 +7,42 @@
     align-items: center;
     flex-grow: 0;
     flex-shrink: 1;
-    padding-top: var(--carousel-size-1);
+    padding-top: var(--length-16);
     overflow-x: auto;
     list-style: none;
-    color: var(--carousel-text-color);
-    font-size: var(--carousel-size-2);
+    color: var(--color-text-2);
+    font-size: var(--length-12);
 }
 
-:where(.carousel>li ){
+:where(.carousel > li) {
     flex-grow: 1;
     flex-shrink: 1;
-    min-width: calc(var(--carousel-item-min-size) * 2);
+    min-width: var(--length-80);
 }
 
-:where(.carousel>li>a ){
-    color: var(--carousel-text-color);
+:where(.carousel ._link) {
+    color: var(--color-text-2);
     text-decoration: none;
 }
 
-:where(.carousel>li>a>figure>figcaption ){
-    color: var(--carousel-text-color);
+:where(.carousel ._name) {
+    color: var(--color-text-2);
 }
 
-:where(.carousel>li>a>figure ){
+:where(.carousel ._link > div) {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-bottom: var(--carousel-size-1);
+    padding-bottom: var(--length-16);
     text-decoration: none;
     color: inherit;
 }
 
-:where(.carousel>li>a>figure>img ){
-    width: var(--carousel-item-min-size);
-    height: var(--carousel-item-min-size);
-    margin-bottom: var(--carousel-size-1);
+:where(.carousel ._link > img) {
+    width: var(--length-48);
+    height: var(--length-48);
+    margin-bottom: var(--length-16);
 }
 
 :where(html[dir="rtl"] .carousel) {
