@@ -11,7 +11,7 @@
     box-shadow: var(--box-shadow-normal);
 }
 
-:where(.image-item>img) {
+:where(.image-item > img) {
     inline-size: 100%;
     block-size: 100%;
     object-fit: cover;
@@ -40,19 +40,20 @@
 }
 
 :where(.image-item ._title > span) {
-    inline-size: 1em;
-    aspect-ratio: 1/1;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-inline: var(--length-2);
-    margin-block: 0px;
+    inline-size: var(--length-16);
+    margin-inline-end: var(--length-3);
+    margin-block-end: 0px;
+    margin-block-start: var(--length-2);
+    aspect-ratio: 1/1;
 }
 
 :where(html[dir="rtl"] .image-item ._title) {
+    flex-direction: row;
     inset-inline-start: 0px;
     inset-inline-end: initial;
-    flex-direction: row;
     border-start-start-radius: initial;
     border-end-end-radius: initial;
     border-start-end-radius: var(--length-12);
