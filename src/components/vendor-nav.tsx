@@ -10,7 +10,9 @@ type VendorNavProps = {
 export const VendorNav = ({ items, type }: VendorNavProps) => {
   return (
     <nav className="vendor-nav">
-      <p className="nonvisual" aria-label="type">{type}</p>
+      <p className="nonvisual" aria-label="type">
+        {type}
+      </p>
       <ul className="_items">
         {items.map((item, index, array) => {
           return (
