@@ -1,63 +1,60 @@
-@import "../assets/base.css";
-
-.image-item {
-    --image-item-background-color: hsl(0, 0%, 100%);
-    --image-item-color: hsl(218, 6%, 24%);
-}
+@import "../base.css";
 
 :where(.image-item) {
     position: relative;
     inline-size: 100%;
-    padding: 0.1875rem;
-    background-color: var(--image-item-background-color);
-    border: 1px solid var(--image-item-background-color);
-    border-radius: 0.75rem;
-    box-shadow: hsla(218, 6%, 24%, 0.06) 0px 1px 0px, hsla(0, 0%, 0%, 0.3) 0px 8px 32px -16px;
-    cursor: pointer;
+    padding-inline: var(--length-3);
+    padding-block: var(--length-3);
+    border: var(--length-1) solid var(--color-primary);
+    border-radius: var(--length-12);
+    background-color: var(--color-primary);
+    box-shadow: var(--box-shadow-normal);
 }
 
-:where(.image-item>img:first-of-type) {
+:where(.image-item>img) {
     inline-size: 100%;
     block-size: 100%;
     object-fit: cover;
-    border-radius: 0.75rem;
+    border-radius: var(--length-12);
 }
 
-:where(.image-item>figcaption:first-of-type) {
+:where(.image-item ._title) {
     position: absolute;
-    right: 0px;
-    bottom: 0px;
-    /* width: max-content; */
-    padding: 0.25rem 1rem 0.25rem 0.8125rem;
-    border-top-left-radius: 0.75rem;
-    border-bottom-right-radius: 0.75rem;
-    font-weight: 400;
-    font-size: 1rem;
-    background-color: var(--image-item-background-color);
-    line-height: 1.5rem;
-    color: var(--image-item-color);
     display: inline-flex;
     justify-content: center;
     align-items: center;
     flex-direction: row-reverse;
+    inset-inline-end: 0px;
+    inset-block-end: 0px;
+    padding-block-start: var(--length-4);
+    padding-inline-end: var(--length-16);
+    padding-block-end: var(--length-4);
+    padding-inline-start: var(--length-14);
+    border-start-start-radius: var(--length-12);
+    border-end-end-radius: var(--length-12);
+    font-size: var(--length-16);
+    font-weight: 400;
+    color: var(--color-text);
+    background-color: var(--color-primary);
+    line-height: var(--length-24);
 }
 
-:where(.image-item>figcaption:first-of-type>span) {
-
-    width: 1em;
-    height: 1em;
+:where(.image-item ._title > span) {
+    inline-size: 1em;
+    aspect-ratio: 1/1;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0px 2px;
+    margin-inline: var(--length-2);
+    margin-block: 0px;
 }
 
-:where(html[dir="rtl"] .image-item>figcaption:first-of-type) {
-    left: 0px;
-    right: initial;
+:where(html[dir="rtl"] .image-item ._title) {
+    inset-inline-start: 0px;
+    inset-inline-end: initial;
     flex-direction: row;
-    border-top-left-radius: initial;
-    border-bottom-right-radius: initial;
-    border-top-right-radius: 0.75rem;
-    border-bottom-left-radius: 0.75rem;
+    border-start-start-radius: initial;
+    border-end-end-radius: initial;
+    border-start-end-radius: var(--length-12);
+    border-end-start-radius: var(--length-12);
 }
