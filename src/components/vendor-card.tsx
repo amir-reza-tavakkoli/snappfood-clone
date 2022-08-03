@@ -63,7 +63,7 @@ export const VendorCard = ({
         </>
       ) : null}
 
-      <div className="_image-wrapper">
+      <div className="_images">
         <dt className="nonvisual">Image</dt>
         <dd className="_image">
           <img src={image} alt={name} />

@@ -27,7 +27,7 @@
   order: 1;
 }
 
-:where(.vendor-card ._image-wrapper) {
+:where(.vendor-card ._images) {
   position: relative;
   inline-size: 100%;
   /* block-size: 40%; */
