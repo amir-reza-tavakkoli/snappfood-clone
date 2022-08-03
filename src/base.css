@@ -98,6 +98,7 @@
   padding: 0px;
   margin: 0px;
 }
+
 :where(ol, li) {
   display: inline;
 }
