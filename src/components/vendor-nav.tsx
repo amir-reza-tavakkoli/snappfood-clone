@@ -1,13 +1,13 @@
-import "./carousel.css"
+import "./vendor-nav.css"
 
 export type item = { name: string; src?: string; href?: string; key: number }
 
-type CarouselProps = {
+type VendorNavProps = {
   type: string
   items: item[]
 }
 
-export const Carousel = ({ items, type }: CarouselProps) => {
+export const VendorNav = ({ items, type }: VendorNavProps) => {
   return (
     <nav className="vendor-nav">
       <p className="nonvisual" aria-label="type">{type}</p>

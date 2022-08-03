@@ -1,8 +1,8 @@
-import { Carousel } from "./carousel"
+import { VendorNav } from "./vendor-nav"
 
 import type { ComponentProps } from "react"
 
-const items: ComponentProps<typeof Carousel> = {
+const items: ComponentProps<typeof VendorNav> = {
   type: "food",
   items: [
     {
@@ -80,6 +80,6 @@ const items: ComponentProps<typeof Carousel> = {
   ],
 }
 
-export const carousel = () => {
-  return <Carousel {...items} />
+export const vendorNav = () => {
+  return <VendorNav {...items} />
 }
