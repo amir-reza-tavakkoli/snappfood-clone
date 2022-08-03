@@ -1,5 +1,5 @@
-import { VendorCard } from "./vendor-card"
 import type { ComponentProps } from "react"
+import { VendorCard } from "./vendor-card"
 
 const cardProps: ComponentProps<typeof VendorCard> = {
   name: "نان قندی و یوخه پزی چهار فصل",
@@ -28,23 +28,14 @@ export const vendorCard = () => {
 
 export const vendorCardAndConstrained = () => {
   return (
-    <div
-      style={{
-        width: "350px",
-      }}
-    >
+    <div style={{ width: "350px" }}>
       <VendorCard {...cardProps}></VendorCard>
     </div>
   )
 }
 export const vendorCardAndConstrainedAndRTL = () => {
   return (
-    <div
-      dir="rtl"
-      style={{
-        width: "350px",
-      }}
-    >
+    <div dir="rtl" style={{ width: "350px" }}>
       <VendorCard {...cardProps}></VendorCard>
     </div>
   )

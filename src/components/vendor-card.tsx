@@ -112,7 +112,7 @@ export const VendorCard = ({
               <dt className="nonvisual">Method / Price:</dt>
               <>
                 <dd className="_delivery">
-                  {<DeliveryGuyIcon role="presentation" />}
+                  <DeliveryGuyIcon role="presentation" />
                   <div>
                     <span>{delivery.method} </span>
 
@@ -129,7 +129,7 @@ export const VendorCard = ({
               <dt className="nonvisual">Type</dt>
               <dd className="_delivery faded">
                 <>
-                  {<TimeRemainingIcon role="presentation" />}
+                  <TimeRemainingIcon role="presentation" />
                   <span>{delivery.method}</span>
                 </>
               </dd>
