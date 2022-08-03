@@ -1,13 +1,10 @@
 import { ImageItem } from "./image-item"
-import type { ImageItemProps } from "./image-item"
-import { LeftPinkFlashIcon } from "./svg"
+import { ComponentProps } from "react";
 
-const defaultIcon = <LeftPinkFlashIcon />
-
-const imageItemProps: ImageItemProps = {
+const imageItemProps: ComponentProps<typeof ImageItem>  = {
   src: "https://cdn.snappfood.ir/uploads/images/tags/website_image_irani_1.jpg",
+  type : "غذا",
   title: "ایرانی",
-  icon: defaultIcon,
 }
 
 export const ImageItemStory = () => {
