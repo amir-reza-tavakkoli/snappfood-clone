@@ -7,11 +7,11 @@ const imageItemProps: ComponentProps<typeof ImageItem> = {
   title: "ایرانی",
 }
 
-export const ImageItemStory = () => {
+export const imageItemDefault = () => {
   return <ImageItem {...imageItemProps}></ImageItem>
 }
 
-export const ImageItemStoryConstrained = () => {
+export const Constrained = () => {
   return (
     <div style={{ width: "500px" }}>
       <ImageItem {...imageItemProps}></ImageItem>
