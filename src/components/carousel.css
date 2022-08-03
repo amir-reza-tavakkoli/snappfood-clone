@@ -1,32 +1,31 @@
 @import "../base.css";
 
 :where(.carousel) {
-    width: 100%;
     display: flex;
     justify-content: flex-start;
     align-items: center;
     flex-grow: 0;
     flex-shrink: 1;
-    padding-top: var(--length-16);
-    overflow-x: auto;
-    list-style: none;
-    color: var(--color-text-2);
+    inline-size: 100%;
+    padding-block-start: var(--length-16);
     font-size: var(--length-12);
+    overflow-x: auto;
 }
 
 :where(.carousel > li) {
     flex-grow: 1;
     flex-shrink: 1;
-    min-width: var(--length-80);
+    min-inline-size: var(--length-80);
 }
 
 :where(.carousel ._link) {
-    color: var(--color-text-2);
     text-decoration: none;
 }
 
 :where(.carousel ._name) {
     color: var(--color-text-2);
+    line-height: var(--length-16);
+    font-weight: 400;
 }
 
 :where(.carousel ._link > div) {
@@ -34,18 +33,17 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-bottom: var(--length-16);
-    text-decoration: none;
-    color: inherit;
+    padding-block-end: var(--length-16);
 }
 
-:where(.carousel ._link > img) {
-    width: var(--length-48);
+:where(.carousel ._link img) {
+    inline-size: var(--length-48);
+    max-inline-size: var(--length-48);
+    margin-block-end: var(--length-16);
     aspect-ratio: 1/1;
-    margin-bottom: var(--length-16);
 }
 
 :where(html[dir="rtl"] .carousel) {
-    direction: rtl;
     flex-direction: row-reverse;
+    direction: rtl;
 }
