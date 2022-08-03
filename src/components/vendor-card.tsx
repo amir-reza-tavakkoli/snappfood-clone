@@ -63,12 +63,12 @@ export const VendorCard = ({
         </>
       ) : null}
 
-      <div className="_card-image">
+      <div className="_image-wrapper">
         <dt className="nonvisual">Image</dt>
         <dd className="_image">
           <img src={image} alt={name} />
           {logo ? (
-            <span className="_card-store-icon" role="presentation">
+            <span className="_logo" role="presentation">
               {typeof logo === "string" ? (
                 <img src={logo} alt="" role="presentation" />
               ) : (
@@ -98,7 +98,7 @@ export const VendorCard = ({
                 <span className="nonvisual">/ {rating.range ?? "unknown"}</span>
               </dd>
               <dt className="nonvisual">Count</dt>
-              <dd className="_score-count">( {rating.count ?? ""} )</dd>
+              <dd className="_rating-count">( {rating.count ?? ""} )</dd>
             </dl>
           </dd>
         </>
