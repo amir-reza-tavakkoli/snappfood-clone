@@ -4,9 +4,7 @@ import type { ComponentProps } from "react"
 const cardProps: ComponentProps<typeof VendorCard> = {
   name: "نان قندی و یوخه پزی چهار فصل",
   type: "رستوران",
-  icon: (
-    <img src="https://cdn.snappfood.ir/media/cache/vendor_logo/uploads/images/vendors/logos/623209826af52.jpg" />
-  ),
+  logo: "https://cdn.snappfood.ir/media/cache/vendor_logo/uploads/images/vendors/logos/623209826af52.jpg",
   image: "https://cdn.snappfood.ir/300x200/cdn/vendor_sub_types/7/01.jpg",
   rating: {
     value: 3.6,
@@ -14,38 +12,37 @@ const cardProps: ComponentProps<typeof VendorCard> = {
     range: 5,
   },
   tags: ["کباب", "ایرانی", "خورشت"],
-  offer: 12,
+  discount: 12,
   delivery: {
-    type: "پیک فروشنده",
+    method: "پیک فروشنده",
     price: {
       value: 7000,
-      curruncy: "تومان",
+      currency: "تومان",
     },
   },
 }
 
-export const card = () => {
+export const vendorCard = () => {
   return <VendorCard {...cardProps}></VendorCard>
 }
-export const cardAndConstrainted = () => {
+
+export const vendorCardAndConstrained = () => {
   return (
     <div
       style={{
         width: "350px",
-        height: "300px",
       }}
     >
       <VendorCard {...cardProps}></VendorCard>
     </div>
   )
 }
-export const cardAndConstraintedAndRTL = () => {
+export const vendorCardAndConstrainedAndRTL = () => {
   return (
     <div
       dir="rtl"
       style={{
         width: "350px",
-        height: "300px",
       }}
     >
       <VendorCard {...cardProps}></VendorCard>

@@ -6,54 +6,50 @@ export type VendorCardProps = {
   name: string
   type?: string
   image: string
-  icon?: ReactNode
-
+  logo?: ReactNode | string
   rating?: {
     value?: number | string
     range?: number
     count?: number
     type?: string
   }
-
-  offer?: number
+  discount?: number
   tags?: string[]
   delivery: {
-    type: string
+    method: string
     price?: {
       value?: number
-      curruncy?: string
+      currency?: string
     }
   }
 }
 
 export const VendorCard = ({
   name,
-  icon,
+  logo,
   image,
   rating,
   type,
-  offer,
+  discount,
   tags,
   delivery,
 }: VendorCardProps) => {
   return (
-    <dl className="card">
+    <dl className="vendor-card">
       <dt className="nonvisual">Name</dt>
-      <dd data-field="name">{name}</dd>
+      <dd className="_name">{name}</dd>
 
       {type ? (
         <>
           <dt className="nonvisual">Type</dt>
-          <dd className="nonvisual" data-field="type">
-            {type}
-          </dd>{" "}
+          <dd className="nonvisual">{type}</dd>{" "}
         </>
       ) : null}
 
       {tags ? (
         <>
           <dt className="nonvisual">Categories</dt>
-          <dd data-field="category">
+          <dd>
             <ol className="_categories">
               {tags.map((tag, index, array) =>
                 index === array.length - 1 ? (
@@ -67,21 +63,25 @@ export const VendorCard = ({
         </>
       ) : null}
 
-      <div className="_card-image">
+      <div className="_image-wrapper">
         <dt className="nonvisual">Image</dt>
-        <dd data-field="image">
+        <dd className="_image">
           <img src={image} alt={name} />
-          {icon ? (
-            <span className="_card-store-icon" role="presentation">
-              {icon}
+          {logo ? (
+            <span className="_logo" role="presentation">
+              {typeof logo === "string" ? (
+                <img src={logo} alt="" role="presentation" />
+              ) : (
+                <>{logo}</>
+              )}
             </span>
           ) : null}
         </dd>
 
-        {offer ? (
+        {discount ? (
           <>
             <dt className="nonvisual">Offer</dt>
-            <dd data-field="offer">{` ${offer}%`}</dd>
+            <dd className="_discount">{` ${discount}%`}</dd>
           </>
         ) : null}
       </div>
@@ -89,42 +89,36 @@ export const VendorCard = ({
       {rating ? (
         <>
           <dt className="nonvisual">Rating</dt>
-          <dd data-field="rating">
+          <dd className="_rating">
             <dl>
               {<StarIcon role="presentation" />}
               <dt className="nonvisual">{rating.type}</dt>
-              <dd data-field="rating value range">
+              <dd>
                 {rating.value ?? "Unknown"}
                 <span className="nonvisual">/ {rating.range ?? "unknown"}</span>
               </dd>
               <dt className="nonvisual">Count</dt>
-              <dd className="_score-count" data-field="rating count">
-                ( {rating.count ?? ""} )
-              </dd>
+              <dd className="_rating-count">( {rating.count ?? ""} )</dd>
             </dl>
           </dd>
         </>
       ) : null}
 
       <dt className="nonvisual">Delivery</dt>
-      <dd data-field="delivery">
+      <dd>
         <dl>
           {delivery.price ? (
             <>
-              <dt className="nonvisual">Type / Price:</dt>
+              <dt className="nonvisual">Method / Price:</dt>
               <>
-                <dd data-field="delivery type" className="_delivery">
+                <dd className="_delivery">
                   {<DeliveryGuyIcon role="presentation" />}
                   <div>
-                    <span>{delivery.type} </span>
+                    <span>{delivery.method} </span>
 
-                    <span data-field="delivery price">
-                      {delivery.price.value ?? ""}{" "}
-                    </span>
+                    <span>{delivery.price.value ?? ""} </span>
 
-                    <span data-field="delivery curruncy">
-                      {delivery.price.curruncy ?? ""}
-                    </span>
+                    <span>{delivery.price.currency ?? ""}</span>
                   </div>
                   <dt className="nonvisual">Curruncy</dt>
                 </dd>
@@ -133,10 +127,10 @@ export const VendorCard = ({
           ) : (
             <>
               <dt className="nonvisual">Type</dt>
-              <dd data-field="delivery" className="_delivery faded">
+              <dd className="_delivery faded">
                 <>
                   {<TimeRemainingIcon role="presentation" />}
-                  <span data-field="delivery type">{delivery.type}</span>
+                  <span>{delivery.method}</span>
                 </>
               </dd>
             </>
