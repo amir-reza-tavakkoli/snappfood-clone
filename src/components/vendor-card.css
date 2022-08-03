@@ -43,7 +43,7 @@
 
 :where(.vendor-card ._discount) {
   position: absolute;
-  padding-block: var(--length-4);
+  padding-block: var(--length-2);
   padding-inline: var(--length-12);
   border-start-start-radius: var(--length-10);
   inset-inline-end: 0px;
