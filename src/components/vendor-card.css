@@ -1,5 +1,5 @@
 :where(.vendor-card) {
-  --far-away:1000;
+  --far-away: 1000;
 
   display: flex;
   justify-content: center;
@@ -27,7 +27,7 @@
   order: 1;
 }
 
-:where(.vendor-card  ._image-wrapper) {
+:where(.vendor-card ._image-wrapper) {
   position: relative;
   inline-size: 100%;
   /* block-size: 40%; */
@@ -45,7 +45,7 @@
 
 :where(.vendor-card ._discount) {
   position: absolute;
-  padding-block: var(--length-6);
+  padding-block: var(--length-4);
   padding-inline: var(--length-12);
   border-start-start-radius: var(--length-10);
   inset-inline-end: 0px;
@@ -65,7 +65,7 @@
   border-radius: var(--length-12);
 }
 
-:where(.vendor-card  ._logo > img),
+:where(.vendor-card ._logo > img),
 :where(.vendor-card ._logo > svg) {
   inline-size: 25%;
   /* block-size: 25%; */
