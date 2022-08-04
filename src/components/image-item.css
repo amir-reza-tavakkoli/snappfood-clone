@@ -19,16 +19,6 @@
   border-radius: var(--length-12);
 }
 
-/* :where(html[dir="rtl"] .image-item ._title) {
-    flex-direction: row;
-    inset-inline-start: 0px;
-    inset-inline-end: initial;
-    border-start-start-radius: initial;
-    border-end-end-radius: initial;
-    border-start-end-radius: var(--length-12);
-    border-end-start-radius: var(--length-12);
-} */
-
 :where(.image-item ._title) {
   position: absolute;
   display: inline-flex;

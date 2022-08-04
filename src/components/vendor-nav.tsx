@@ -16,11 +16,7 @@ type VendorNavProps = {
 export const VendorNav = ({ items, type }: VendorNavProps) => {
   return (
     <nav className="vendor-nav">
-      {type ? (
-        <p className="nonvisual">
-          {type}
-        </p>
-      ) : null}
+      {type ? <p className="nonvisual">{type}</p> : null}
       <ul className="_items">
         {items.map((item, index, array) => {
           return (
