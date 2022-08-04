@@ -2,7 +2,7 @@ import { VendorNav } from "./vendor-nav"
 
 import type { ComponentProps } from "react"
 
-const items: ComponentProps<typeof VendorNav> = {
+const props: ComponentProps<typeof VendorNav> = {
   type: "foods",
   items: [
     {
@@ -80,6 +80,19 @@ const items: ComponentProps<typeof VendorNav> = {
   ],
 }
 
-export const defaultVendorNav = () => {
-  return <VendorNav {...items} />
+export const DefaultVendorNav = () => {
+  return <VendorNav {...props} />
+}
+
+export const WithoutImages = () => {
+  const noImages = props.items.map((item) => {
+    item.src = undefined
+    return item
+  })
+
+  const x :ComponentProps<typeof VendorNav> = {
+    items : noImages
+  }
+
+  return <VendorNav {...x} />
 }
