@@ -1,7 +1,6 @@
 @media (pointer: coarse) {
   .button {
     min-inline-size: var(--length-48);
-    min-block-size: var(--length-48);
   }
 }
 
@@ -10,7 +9,7 @@
   --button-block-padding: clamp(4px, 0.4em + 4px, 0.75em);
   --button-svg-size: 1em;
 
-  font-size: var(--font-size-1);
+  font-size: var(--length-14);
   border: none;
   cursor: pointer;
   display: inline-flex;
@@ -84,9 +83,9 @@
   border-radius: var(--length-48);
 }
 
-.button>span>svg {
+.button > span > svg {
   inline-size: var(--button-svg-size);
-  block-size: var(--button-svg-size);
+  aspect-ratio: 1/1;
   min-inline-size: fit-content;
-  margin-inline-start: calc(var(--button-svg-size) / 1.8);
+  margin-inline-start: var(--length-20);
 }

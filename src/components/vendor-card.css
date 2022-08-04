@@ -1,6 +1,4 @@
 :where(.vendor-card) {
-  --far-away: 1000;
-
   display: flex;
   justify-content: center;
   align-items: center;
@@ -15,7 +13,7 @@
 }
 
 :where(.vendor-card > dd) {
-  order: 10;
+  order: 12;
 }
 
 :where(.vendor-card ._name) {
@@ -27,7 +25,7 @@
   order: 1;
 }
 
-:where(.vendor-card ._image-wrapper) {
+:where(.vendor-card ._images) {
   position: relative;
   inline-size: 100%;
   /* block-size: 40%; */
@@ -35,6 +33,7 @@
 }
 
 :where(.vendor-card ._image > img) {
+  display: inline-block;
   inline-size: 100%;
   /* block-size: 100%; */
   border-start-start-radius: var(--length-12);
@@ -45,7 +44,7 @@
 
 :where(.vendor-card ._discount) {
   position: absolute;
-  padding-block: var(--length-4);
+  padding-block: var(--length-2);
   padding-inline: var(--length-12);
   border-start-start-radius: var(--length-10);
   inset-inline-end: 0px;
@@ -67,6 +66,7 @@
 
 :where(.vendor-card ._logo > img),
 :where(.vendor-card ._logo > svg) {
+  display: inline-block;
   inline-size: 25%;
   /* block-size: 25%; */
   border: var(--length-4) solid var(--color-faded-4);
