@@ -19,21 +19,31 @@
   border-radius: var(--length-12);
 }
 
+/* :where(html[dir="rtl"] .image-item ._title) {
+    flex-direction: row;
+    inset-inline-start: 0px;
+    inset-inline-end: initial;
+    border-start-start-radius: initial;
+    border-end-end-radius: initial;
+    border-start-end-radius: var(--length-12);
+    border-end-start-radius: var(--length-12);
+} */
+
 :where(.image-item ._title) {
   position: absolute;
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  flex-direction: row-reverse;
+  /* flex-direction: row-reverse; */
   max-inline-size: 75%;
-  inset-inline-end: 0px;
+  inset-inline-start: 0px;
   inset-block-end: 0px;
   padding-block-start: var(--length-4);
-  padding-inline-end: var(--length-16);
+  padding-inline-end: var(--length-12);
   padding-block-end: var(--length-4);
   padding-inline-start: var(--length-14);
-  border-start-start-radius: var(--length-12);
-  border-end-end-radius: var(--length-12);
+  border-start-end-radius: var(--length-12);
+  /* border-end-end-radius: var(--length-12); */
   font-size: var(--length-16);
   font-weight: 400;
   color: var(--color-text);
@@ -48,22 +58,22 @@
   align-items: center;
   inline-size: var(--length-16);
   margin-block-end: 0px;
-  padding-inline-end: var(--length-2);
+  padding-inline-end: var(--length-8);
   margin-block-start: var(--length-2);
   aspect-ratio: 1/1;
   transition: all 200ms ease-in-out 0s;
+  transform: rotate(180deg);
 }
 
 :where(.image-item ._title > span:hover) {
-  transform: translateX(calc(var(--length-2) * -1));
+  transform: none;
+  transform: rotate(180deg) translateX(calc(var(--length-2) * -1));
 }
 
-/* :where(html[dir="rtl"] .image-item ._title) {
-    flex-direction: row;
-    inset-inline-start: 0px;
-    inset-inline-end: initial;
-    border-start-start-radius: initial;
-    border-end-end-radius: initial;
-    border-start-end-radius: var(--length-12);
-    border-end-start-radius: var(--length-12);
-} */
+:where(html[dir="rtl"] .image-item ._title > span) {
+  transform: none;
+}
+
+:where(html[dir="rtl"] .image-item ._title > span:hover) {
+  transform: translateX(calc(var(--length-2) * -1));
+}
