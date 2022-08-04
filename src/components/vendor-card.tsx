@@ -37,7 +37,8 @@ export const VendorCard = ({
   return (
     <dl className="vendor-card">
       <dt className="nonvisual">Name</dt>
-      <dd className="_name">{name}</dd>
+      {name ? <dd className="_name">{name}</dd> : <dd className="nonvisual">Unknown</dd>}
+
 
       {type ? (
         <>
@@ -80,7 +81,7 @@ export const VendorCard = ({
 
         {discount ? (
           <>
-            <dt className="nonvisual">Offer</dt>
+            <dt className="nonvisual">Discount</dt>
             <dd className="_discount">{` ${discount}%`}</dd>
           </>
         ) : null}
@@ -92,13 +93,21 @@ export const VendorCard = ({
           <dd className="_rating">
             <dl>
               {<StarIcon role="presentation" />}
-              <dt className="nonvisual">{rating.type}</dt>
+              <dt className="nonvisual">Type</dt>
+              <dd className="nonvisual">{rating.type ?? "Stars"}</dd>
+              <dt className="nonvisual">Value</dt>
               <dd>
-                {rating.value ?? "Unknown"}
-                <span className="nonvisual">/ {rating.range ?? "unknown"}</span>
+                {rating.value ?? "new"}
+                {rating.range ? (
+                  <span className="nonvisual">/ {rating.range}</span>
+                ) : null}
               </dd>
-              <dt className="nonvisual">Count</dt>
-              <dd className="_rating-count">( {rating.count ?? ""} )</dd>
+              {rating.count ? (
+                <>
+                  <dt className="nonvisual">Count</dt>
+                  <dd className="_rating-count">( {rating.count} )</dd>{" "}
+                </>
+              ) : null}
             </dl>
           </dd>
         </>
@@ -107,7 +116,7 @@ export const VendorCard = ({
       <dt className="nonvisual">Delivery</dt>
       <dd>
         <dl>
-          {delivery.price ? (
+          {delivery.price && delivery.method ? (
             <>
               <dt className="nonvisual">Method / Price:</dt>
               <>
@@ -115,18 +124,20 @@ export const VendorCard = ({
                   <DeliveryGuyIcon role="presentation" />
                   <div>
                     <span>{delivery.method} </span>
-
-                    <span>{delivery.price.value ?? ""} </span>
-
-                    <span>{delivery.price.currency ?? ""}</span>
+                    {delivery.price.value ? (
+                      <span>{delivery.price.value} </span>
+                    ) : null}
+                    {delivery.price.currency ? (
+                      <span>{delivery.price.currency ?? ""}</span>
+                    ) : null}
                   </div>
-                  <dt className="nonvisual">Curruncy</dt>
+                  <dt className="nonvisual">Currency</dt>
                 </dd>
               </>
             </>
           ) : (
             <>
-              <dt className="nonvisual">Type</dt>
+              <dt className="nonvisual">Method</dt>
               <dd className="_delivery faded">
                 <>
                   <TimeRemainingIcon role="presentation" />
