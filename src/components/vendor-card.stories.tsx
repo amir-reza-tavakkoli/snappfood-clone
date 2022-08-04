@@ -32,6 +32,11 @@ export const WithoutImage = () => {
   return <VendorCard {...props}></VendorCard>
 }
 
+export const WithBadImage = () => {
+  const props = { ...cardProps, image: "noSuchImage.com" }
+  return <VendorCard {...props}></VendorCard>
+}
+
 export const DefaultCard = () => {
   return <VendorCard {...cardProps}></VendorCard>
 }
@@ -89,7 +94,7 @@ export const WithoutDiscount = () => {
   return <VendorCard {...props}></VendorCard>
 }
 
-export const WitTagsOverflow = () => {
+export const WithTagsOverflow = () => {
   const props = {
     ...cardProps,
     tags: [
@@ -99,10 +104,21 @@ export const WitTagsOverflow = () => {
   return <VendorCard {...props}></VendorCard>
 }
 
-export const WitNameOverflow = () => {
+export const WithNameOverflow = () => {
   const props = {
     ...cardProps,
     name: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+  }
+  return <VendorCard {...props}></VendorCard>
+}
+
+export const WithDeliveryOverflow = () => {
+  const props = {
+    ...cardProps,
+    delivery: {
+      method:
+        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+    },
   }
   return <VendorCard {...props}></VendorCard>
 }

@@ -73,7 +73,13 @@ export const VendorCard = ({
         <dt className="nonvisual">Image</dt>
         <dd className="_image">
           <>
-            {typeof image === "string" ? <img src={image} alt={name} /> : image}
+            {image && typeof image === "string" ? (
+              <img src={image} alt={name} />
+            ) : image ? (
+              image
+            ) : (
+              <div className="_image-replace" />
+            )}
             {logo ? (
               <span className="_logo" role="presentation">
                 {typeof logo === "string" ? (
