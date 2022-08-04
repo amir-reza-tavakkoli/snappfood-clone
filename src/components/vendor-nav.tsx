@@ -3,16 +3,16 @@ import "./vendor-nav.css"
 export type item = { name: string; src?: string; href?: string; key: number }
 
 type VendorNavProps = {
-  type: string
+  type?: string
   items: item[]
 }
 
 export const VendorNav = ({ items, type }: VendorNavProps) => {
   return (
     <nav className="vendor-nav">
-      <p className="nonvisual" aria-label="type">
+      {type ? <p className="nonvisual" aria-label="type">
         {type}
-      </p>
+      </p> : null}
       <ul className="_items">
         {items.map((item, index, array) => {
           return (
