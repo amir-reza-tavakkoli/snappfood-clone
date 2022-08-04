@@ -37,6 +37,7 @@
 }
 
 :where(.vendor-nav ._items ._link img) {
+  display: inline-block;
   inline-size: var(--length-48);
   max-inline-size: var(--length-48);
   margin-block-end: var(--length-16);
