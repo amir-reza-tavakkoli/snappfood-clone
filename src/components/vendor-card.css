@@ -46,8 +46,8 @@
   position: absolute;
   padding-block: var(--length-2);
   padding-inline: var(--length-12);
-  border-start-start-radius: var(--length-10);
-  inset-inline-end: 0px;
+  border-start-end-radius: var(--length-10);
+  inset-inline-start: 0px;
   inset-block-end: 0px;
   background-color: var(--color-primary);
   color: var(--color-accent-3);
