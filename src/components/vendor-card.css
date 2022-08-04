@@ -111,6 +111,11 @@
   font-size: var(--length-12);
   color: var(--color-faded);
   order: 2;
+  text-align: center;
+}
+
+:where(.vendor-card ._categories *) {
+  text-align: center;
 }
 
 :where(.vendor-card ._delivery) {
