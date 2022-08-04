@@ -73,17 +73,17 @@ export const VendorCard = ({
         <dt className="nonvisual">Image</dt>
         <dd className="_image">
           <>
-          {typeof image === "string" ? <img src={image} alt={name} /> : image}
-          {logo ? (
-            <span className="_logo" role="presentation">
-              {typeof logo === "string" ? (
-                <img src={logo} alt="" role="presentation" />
-              ) : (
-                <>{logo}</>
-              )}
-            </span>
-          ) : null}
-        </>
+            {typeof image === "string" ? <img src={image} alt={name} /> : image}
+            {logo ? (
+              <span className="_logo" role="presentation">
+                {typeof logo === "string" ? (
+                  <img src={logo} alt="" role="presentation" />
+                ) : (
+                  <>{logo}</>
+                )}
+              </span>
+            ) : null}
+          </>
         </dd>
 
         {discount ? (
