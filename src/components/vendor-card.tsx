@@ -102,7 +102,7 @@ export const VendorCard = ({
               {<StarIcon role="presentation" />}
               <dt className="nonvisual">Value</dt>
               <dd aria-label="Stars">
-                {rating.value ?? "new"}
+                {rating.value ?? "New"}
                 {rating.range ? (
                   <span className="nonvisual">/ {rating.range}</span>
                 ) : null}
