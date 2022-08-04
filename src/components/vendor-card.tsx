@@ -11,7 +11,6 @@ export type VendorCardProps = {
     value?: number | string
     range?: number
     count?: number
-    type?: string
   }
   discount?: number
   tags?: string[]
@@ -93,8 +92,6 @@ export const VendorCard = ({
           <dd className="_rating">
             <dl>
               {<StarIcon role="presentation" />}
-              <dt className="nonvisual">Type</dt>
-              <dd className="nonvisual">{rating.type ?? "Stars"}</dd>
               <dt className="nonvisual">Value</dt>
               <dd>
                 {rating.value ?? "new"}
