@@ -5,13 +5,12 @@ import { StarIcon, TimeRemainingIcon, DeliveryGuyIcon } from "./svg"
 export type VendorCardProps = {
   name: string
   type?: string
-  image: string
+  image: ReactNode | string
   logo?: ReactNode | string
   rating?: {
     value?: number | string
     range?: number
     count?: number
-    type?: string
   }
   discount?: number
   tags?: string[]
@@ -37,7 +36,14 @@ export const VendorCard = ({
   return (
     <dl className="vendor-card">
       <dt className="nonvisual">Name</dt>
-      <dd className="_name">{name}</dd>
+      {name ? (
+        <dd className="_name">{name}</dd>
+      ) : (
+        <>
+          <dd className="nonvisual">Unknown</dd>
+          <div className="_name"></div>
+        </>
+      )}
 
       {type ? (
         <>
@@ -66,21 +72,29 @@ export const VendorCard = ({
       <div className="_images">
         <dt className="nonvisual">Image</dt>
         <dd className="_image">
-          <img src={image} alt={name} />
-          {logo ? (
-            <span className="_logo" role="presentation">
-              {typeof logo === "string" ? (
-                <img src={logo} alt="" role="presentation" />
-              ) : (
-                <>{logo}</>
-              )}
-            </span>
-          ) : null}
+          <>
+            {image && typeof image === "string" ? (
+              <img src={image} alt={name} />
+            ) : image ? (
+              image
+            ) : (
+              <div className="_image-replace" />
+            )}
+            {logo ? (
+              <span className="_logo" role="presentation">
+                {typeof logo === "string" ? (
+                  <img src={logo} alt="" role="presentation" />
+                ) : (
+                  <>{logo}</>
+                )}
+              </span>
+            ) : null}
+          </>
         </dd>
 
         {discount ? (
           <>
-            <dt className="nonvisual">Offer</dt>
+            <dt className="nonvisual">Discount</dt>
             <dd className="_discount">{` ${discount}%`}</dd>
           </>
         ) : null}
@@ -92,51 +106,63 @@ export const VendorCard = ({
           <dd className="_rating">
             <dl>
               {<StarIcon role="presentation" />}
-              <dt className="nonvisual">{rating.type}</dt>
-              <dd>
-                {rating.value ?? "Unknown"}
-                <span className="nonvisual">/ {rating.range ?? "unknown"}</span>
+              <dt className="nonvisual">Value</dt>
+              <dd aria-label="Stars">
+                {rating.value ?? "New"}
+                {rating.range ? (
+                  <span className="nonvisual">/ {rating.range}</span>
+                ) : null}
               </dd>
-              <dt className="nonvisual">Count</dt>
-              <dd className="_rating-count">( {rating.count ?? ""} )</dd>
+              {rating.count ? (
+                <>
+                  <dt className="nonvisual">Count</dt>
+                  <dd className="_rating-count">( {rating.count} )</dd>{" "}
+                </>
+              ) : null}
             </dl>
           </dd>
         </>
       ) : null}
 
-      <dt className="nonvisual">Delivery</dt>
-      <dd>
-        <dl>
-          {delivery.price ? (
-            <>
-              <dt className="nonvisual">Method / Price:</dt>
-              <>
-                <dd className="_delivery">
-                  <DeliveryGuyIcon role="presentation" />
-                  <div>
-                    <span>{delivery.method} </span>
-
-                    <span>{delivery.price.value ?? ""} </span>
-
-                    <span>{delivery.price.currency ?? ""}</span>
-                  </div>
-                  <dt className="nonvisual">Curruncy</dt>
-                </dd>
-              </>
-            </>
-          ) : (
-            <>
-              <dt className="nonvisual">Type</dt>
-              <dd className="_delivery faded">
+      {delivery ? (
+        <>
+          <dt className="nonvisual">Delivery</dt>
+          <dd>
+            <dl>
+              {delivery.price && delivery.method ? (
                 <>
-                  <TimeRemainingIcon role="presentation" />
-                  <span>{delivery.method}</span>
+                  <dt className="nonvisual">Method / Price:</dt>
+                  <>
+                    <dd className="_delivery">
+                      <DeliveryGuyIcon role="presentation" />
+                      <div>
+                        <span>{delivery.method} </span>
+                        {delivery.price.value ? (
+                          <span>{delivery.price.value} </span>
+                        ) : null}
+                        {delivery.price.currency ? (
+                          <span>{delivery.price.currency ?? ""}</span>
+                        ) : null}
+                      </div>
+                      <dt className="nonvisual">Currency</dt>
+                    </dd>
+                  </>
                 </>
-              </dd>
-            </>
-          )}
-        </dl>
-      </dd>
+              ) : (
+                <>
+                  <dt className="nonvisual">Method</dt>
+                  <dd className="_delivery faded">
+                    <>
+                      <TimeRemainingIcon role="presentation" />
+                      <span>{delivery.method}</span>
+                    </>
+                  </dd>
+                </>
+              )}
+            </dl>
+          </dd>
+        </>
+      ) : null}
     </dl>
   )
 }
