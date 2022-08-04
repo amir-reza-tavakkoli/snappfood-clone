@@ -4,14 +4,14 @@ import { LeftPinkFlashIcon } from "./svg"
 export type ImageItemProps = {
   title: string
   type?: string
-  src: string
+  image: string
 }
 
-export const ImageItem = ({ title, src, type }: ImageItemProps) => {
+export const ImageItem = ({ title, image, type }: ImageItemProps) => {
   return (
     <figure className="image-item">
       {type ? <p className="nonvisual">{type}</p> : null}
-      <img src={src} alt={title} />
+      <img src={image} alt={title} />
       <figcaption className="_title">
         {title}{" "}
         <span role="presentation">

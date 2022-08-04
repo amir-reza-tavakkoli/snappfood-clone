@@ -2,7 +2,8 @@ import { ImageItem } from "./image-item"
 import { ComponentProps } from "react"
 
 const imageItemProps: ComponentProps<typeof ImageItem> = {
-  src: "https://cdn.snappfood.ir/uploads/images/tags/website_image_irani_1.jpg",
+  image:
+    "https://cdn.snappfood.ir/uploads/images/tags/website_image_irani_1.jpg",
   type: "غذا",
   title: "ایرانی",
 }
@@ -35,12 +36,12 @@ export const WithOverflowingName = () => {
 }
 
 export const WithoutImage = () => {
-  const props = { ...imageItemProps, src: undefined }
+  const props = { ...imageItemProps, image: undefined }
   return <ImageItem {...props}></ImageItem>
 }
 
 export const WithBadImage = () => {
-  const props = { ...imageItemProps, src: "noSuchUrl.com" }
+  const props = { ...imageItemProps, image: "noSuchUrl.com" }
   return <ImageItem {...props}></ImageItem>
 }
 
