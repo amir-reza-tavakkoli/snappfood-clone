@@ -42,6 +42,10 @@
   object-fit: cover;
 }
 
+:where(.vendor-card ._image ._image-replace) {
+  aspect-ratio: 2/1;
+}
+
 :where(.vendor-card ._discount) {
   position: absolute;
   padding-block: var(--length-2);
