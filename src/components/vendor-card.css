@@ -110,7 +110,7 @@
   color: var(--color-faded);
 }
 
-:where(.vendor-card ._rating > dl > svg:first-of-type) {
+:where(.vendor-card ._rating ._star-icon svg) {
   inline-size: var(--length-12);
   /* block-size: var(--length-12); */
   margin-block-start: 0;

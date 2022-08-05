@@ -105,7 +105,8 @@ export const VendorCard = ({
           <dt className="nonvisual">Rating</dt>
           <dd className="_rating">
             <dl>
-              {<StarIcon role="presentation" />}
+              <dt className="nonvisual" role="presentation"></dt>
+              <dd role="presentation" className="_star-icon">{<StarIcon role="presentation" />}</dd>
               <dt className="nonvisual">Value</dt>
               <dd aria-label="Stars">
                 {rating.value ?? "New"}
@@ -145,7 +146,7 @@ export const VendorCard = ({
                         ) : null}
                       </div>
                     </dd>
-                      <dt className="nonvisual">Currency</dt>
+                    <dt className="nonvisual">Currency</dt>
                   </>
                 </>
               ) : (
