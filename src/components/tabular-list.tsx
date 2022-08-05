@@ -6,6 +6,7 @@ type TabularListProps = {
   items: {
     name: string
     href?: string
+    key?: number
   }[]
 }
 
@@ -13,13 +14,13 @@ export const TabularList = ({ title, type, items }: TabularListProps) => {
   return (
     <ul className="tabular-list">
       <>
-        <h3>
-          {title} <span className="nonvisual"> {type}</span>{" "}
-        </h3>
+        <p>
+          {title} <span className="nonvisual">{type}</span>{" "}
+        </p>
         <div>
           {items.map((item, index, array) => {
             return (
-              <li key={index}>
+              <li key={item.key ?? index} className="_item">
                 {item.href ? <a href={item.href}>{item.name}</a> : item.name}
               </li>
             )
