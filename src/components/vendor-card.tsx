@@ -144,8 +144,8 @@ export const VendorCard = ({
                           <span>{delivery.price.currency ?? ""}</span>
                         ) : null}
                       </div>
-                      <dt className="nonvisual">Currency</dt>
                     </dd>
+                      <dt className="nonvisual">Currency</dt>
                   </>
                 </>
               ) : (
