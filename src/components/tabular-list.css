@@ -14,8 +14,9 @@
 }
 
 :where(.tabular-list ._list) {
+  --length-item-min : 150px;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(var(--length-item-min), 1fr));
   inline-size: 100%;
   margin: calc(var(--length-4) * -1);
 }
