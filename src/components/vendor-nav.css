@@ -26,6 +26,8 @@
   color: var(--color-text-2);
   line-height: var(--length-16);
   font-weight: 400;
+  max-inline-size: 75%;
+  overflow-wrap: break-word;
 }
 
 :where(.vendor-nav ._items ._link > div) {

@@ -24,7 +24,7 @@ export const VendorNav = ({ items, type }: VendorNavProps) => {
               <a href={item.href ?? "#"} className="_link">
                 <div>
                   {item.image && typeof item.image === "string" ? (
-                    <img src={item.image} alt={item.name}></img>
+                    <img src={item.image} alt=""></img>
                   ) : item.image ? (
                     item.image
                   ) : null}
