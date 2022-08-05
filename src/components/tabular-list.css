@@ -13,7 +13,7 @@
   color: var(--color-text);
 }
 
-:where(.tabular-list ._list > div) {
+:where(.tabular-list ._list) {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
   inline-size: 100%;

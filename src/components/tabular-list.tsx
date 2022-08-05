@@ -17,17 +17,13 @@ export const TabularList = ({ title, type, items }: TabularListProps) => {
         {title} <span className="nonvisual">{type}</span>{" "}
       </p>
       <ul className="_list">
-        <>
-          <div>
-            {items.map((item, index, array) => {
-              return (
-                <li key={item.key ?? index} className="_item">
-                  {item.href ? <a href={item.href}>{item.name}</a> : item.name}
-                </li>
-              )
-            })}
-          </div>
-        </>
+        {items.map((item, index, array) => {
+          return (
+            <li key={item.key ?? index} className="_item">
+              {item.href ? <a href={item.href}>{item.name}</a> : item.name}
+            </li>
+          )
+        })}
       </ul>
     </article>
   )
