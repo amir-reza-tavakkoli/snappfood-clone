@@ -1,7 +1,7 @@
-import type { ComponentProps } from "react";
-import { TabularList } from "./tabular-list";
+import type { ComponentProps } from "react"
+import { TabularList } from "./tabular-list"
 
-const props : ComponentProps<typeof TabularList> = {
+const props: ComponentProps<typeof TabularList> = {
   title: "اسنپ‌فود در شهرهای ایران",
   type: "cities",
   items: [
@@ -31,7 +31,5 @@ const props : ComponentProps<typeof TabularList> = {
 }
 
 export const TabularListDefault = () => {
-    return (
-        <TabularList {...props}></TabularList>
-    )
+  return <TabularList {...props}></TabularList>
 }
