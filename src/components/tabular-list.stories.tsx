@@ -33,3 +33,11 @@ const props: ComponentProps<typeof TabularList> = {
 export const TabularListDefault = () => {
   return <TabularList {...props}></TabularList>
 }
+
+export const OverflowingText = () => {
+  const items = props.items.map((item, index, array) => {
+    return {...item, name:item.name.repeat(5)}
+  })
+  const newProps = {...props, items}
+  return <TabularList {...newProps}></TabularList>
+}
