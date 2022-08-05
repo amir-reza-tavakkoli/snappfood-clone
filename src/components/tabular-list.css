@@ -13,7 +13,7 @@
   color: var(--color-text);
 }
 
-:where(.tabular-list > div) {
+:where(.tabular-list ._list > div) {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
   inline-size: 100%;
@@ -21,8 +21,6 @@
 }
 
 :where(.tabular-list ._item) {
-  /* max-inline-size: 33%;
-   min-inline-size: 8%; */
   padding-inline: var(--length-6);
   padding-block: var(--length-6);
   font-weight: 400;
@@ -37,8 +35,4 @@
 :where(.tabular-list a) {
   text-decoration: none;
   color: inherit;
-}
-
-:where(html[dir="rtl"] .tabular-list) {
-  flex-direction: row-reverse;
 }
