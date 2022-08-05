@@ -28,7 +28,7 @@
   line-height: var(--length-12);
   margin-inline: 0px;
   margin-block: 0px;
-  color: var(--color-faded);
+  color: var(--color-faded-8);//WCAG AA 4.5 contrast ration violation fixed
   text-align: start;
 }
 
