@@ -837,3 +837,16 @@ export const UserIconFaded = ({ ...props }) => (
     ></path>
   </svg>
 )
+
+export const LeftGrayFlash = ({ ...props }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={5}
+    height="1rem"
+    viewBox="0 0 9 16"
+    fill="var(--sf-inactive-dark)"
+    {...props}
+  >
+    <path d="M8.705 15.295a.998.998 0 00.001-1.41L2.83 8l5.876-5.885A.998.998 0 007.295.705L.707 7.293a1 1 0 000 1.414l6.588 6.588a.998.998 0 001.41 0z" />
+  </svg>
+)
