@@ -13,7 +13,7 @@ type ListBoxProps = {
 export const ListBox = ({ title, items }: ListBoxProps) => {
   let selected: string | undefined
   const listItems = items.map((item, index, array) => {
-    const id = `ListBox + ${item.name} + ${index}`
+    const id = `ListBox${item.key}${index}`
     return (
       <li
         role="option"
