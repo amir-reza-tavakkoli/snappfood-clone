@@ -21,7 +21,10 @@ export const BreadCrumbs = ({ title, item }: BreadCrumbsProps) => {
     while (item) {
       items.push(
         <li key={item.key}>
-          <a href={item.href} aria-current={item && item.successor ? undefined : "page"}>
+          <a
+            href={item.href}
+            aria-current={item && item.successor ? undefined : "page"}
+          >
             {" "}
             {item.name}{" "}
           </a>
@@ -30,6 +33,7 @@ export const BreadCrumbs = ({ title, item }: BreadCrumbsProps) => {
           ) : null}
         </li>,
       )
+
       if (item) {
         item = item.successor
       }
