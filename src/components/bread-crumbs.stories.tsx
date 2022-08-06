@@ -40,15 +40,13 @@ const rtlProps: ComponentProps<typeof BreadCrumbs> = {
 }
 
 export const BreadCrumbsDefault = () => {
-    return (
-      <BreadCrumbs {...props}></BreadCrumbs>
-  )
+  return <BreadCrumbs {...props}></BreadCrumbs>
 }
 
 export const DefaultRTL = () => {
-    return (
-      <html dir="rtl">
-        <BreadCrumbs {...rtlProps}></BreadCrumbs>
-      </html>
-    )
+  return (
+    <html dir="rtl">
+      <BreadCrumbs {...rtlProps}></BreadCrumbs>
+    </html>
+  )
 }
