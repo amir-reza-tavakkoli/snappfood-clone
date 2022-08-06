@@ -4,8 +4,8 @@ import { StarIcon, TimeRemainingIcon, DeliveryGuyIcon } from "./svg"
 
 export type VendorCardProps = {
   name: string
+  image: string
   type?: string
-  image: ReactNode | string
   logo?: ReactNode | string
   rating?: {
     value?: number | string
@@ -36,14 +36,7 @@ export const VendorCard = ({
   return (
     <dl className="vendor-card">
       <dt className="nonvisual">Name</dt>
-      {name ? (
-        <dd className="_name">{name}</dd>
-      ) : (
-        <>
-          <dd className="nonvisual">Unknown</dd>
-          <div className="_name"></div>
-        </>
-      )}
+      {name ? <dd className="_name">{name}</dd> : null}
 
       {type ? (
         <>
@@ -73,13 +66,7 @@ export const VendorCard = ({
         <dt className="nonvisual">Image</dt>
         <dd className="_image">
           <>
-            {image && typeof image === "string" ? (
-              <img src={image} alt={name} />
-            ) : image ? (
-              image
-            ) : (
-              <div className="_image-replace" />
-            )}
+            {image ? <img src={image} alt={`${name}  ${type}`} /> : null}
             {logo ? (
               <span className="_logo" role="presentation">
                 {typeof logo === "string" ? (
@@ -106,7 +93,9 @@ export const VendorCard = ({
           <dd className="_rating">
             <dl>
               <dt className="nonvisual" role="presentation"></dt>
-              <dd role="presentation" className="_star-icon">{<StarIcon role="presentation" />}</dd>
+              <dd role="presentation" className="_star-icon">
+                {<StarIcon role="presentation" />}
+              </dd>
               <dt className="nonvisual">Value</dt>
               <dd aria-label="Stars">
                 {rating.value ?? "New"}
