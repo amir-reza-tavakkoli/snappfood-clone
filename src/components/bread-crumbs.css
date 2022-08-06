@@ -1,0 +1,35 @@
+:where(.bread-crumbs) {
+  margin-block-start: var(--length-24);
+  padding-inline-start: var(--length-20);
+  inline-size: 100%;
+}
+:where(.bread-crumbs ol > li a) {
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+  margin-inline-start: var(--length-8);
+}
+
+:where(.bread-crumbs ol > li) {
+  text-align: center;
+  font-weight: 400;
+  font-size: var(--length-12);
+  line-height: var(--length-12);
+  color: var(--color-faded);
+}
+
+:where(.bread-crumbs ol > li:last-of-type) {
+  color: var(--color-text-2);
+}
+
+:where(.bread-crumbs ol > li svg) {
+  margin-inline-start: var(--length-4);
+  margin-block-end: calc(var(--length-2) * -1);
+  inline-size: var(--length-6);
+  fill: var(--color-faded);
+  transform: rotate(180deg);
+}
+
+:where(html[dir="rtl"] .bread-crumbs ol > li svg) {
+  transform: none;
+}
