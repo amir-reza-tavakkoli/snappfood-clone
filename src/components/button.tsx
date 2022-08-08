@@ -27,7 +27,12 @@ export const Button = ({
       data-variant={variant}
       {...otherProps}
     >
-      {children} {icon ? <span><Icon {...icon} /></span> : null}
+      <span>{children}</span>{" "}
+      {icon ? (
+        <span>
+          <Icon {...icon} />
+        </span>
+      ) : null}
     </button>
   )
 }
