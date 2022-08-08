@@ -1,12 +1,11 @@
-import type { ReactNode } from "react"
 import "./vendor-card.css"
-import { StarIcon, TimeRemainingIcon, DeliveryGuyIcon } from "./svg"
+import { Icon } from "./icon"
 
 export type VendorCardProps = {
   name: string
   image: string
   type?: string
-  logo?: ReactNode | string
+  logo?: string
   rating?: {
     value?: number | string
     range?: number
@@ -36,7 +35,7 @@ export const VendorCard = ({
   return (
     <dl className="vendor-card">
       <dt className="nonvisual">Name</dt>
-      {name ? <dd className="_name">{name}</dd> : null}
+      <dd className="_name">{name ?? null}</dd>
 
       {type ? (
         <>
@@ -65,18 +64,12 @@ export const VendorCard = ({
       <div className="_images">
         <dt className="nonvisual">Image</dt>
         <dd className="_image">
-          <>
-            {image ? <img src={image} alt={`${name}  ${type}`} /> : null}
-            {logo ? (
-              <span className="_logo" role="presentation">
-                {typeof logo === "string" ? (
-                  <img src={logo} alt="" role="presentation" />
-                ) : (
-                  <>{logo}</>
-                )}
-              </span>
-            ) : null}
-          </>
+          {<img src={image} alt={`${name}  ${type}`} /> ?? null}
+          {logo ? (
+            <span className="_logo" role="presentation">
+              <img src={logo} alt="" role="presentation" />
+            </span>
+          ) : null}
         </dd>
 
         {discount ? (
@@ -94,15 +87,20 @@ export const VendorCard = ({
             <dl>
               <dt className="nonvisual" role="presentation"></dt>
               <dd role="presentation" className="_star-icon">
-                {<StarIcon role="presentation" />}
+                {<Icon name="star" role="presentation" />}
               </dd>
-              <dt className="nonvisual">Value</dt>
-              <dd aria-label="Stars">
-                {rating.value ?? "New"}
-                {rating.range ? (
-                  <span className="nonvisual">/ {rating.range}</span>
-                ) : null}
-              </dd>
+              {rating.value ? (
+                <>
+                  <dt className="nonvisual">Value</dt>
+                  <dd aria-label="Stars">{rating.value}</dd>{" "}
+                </>
+              ) : null}
+              {rating.range ? (
+                <>
+                  <dd className="nonvisual">Range</dd>
+                  <dt className="nonvisual">/ {rating.range}</dt>
+                </>
+              ) : null}
               {rating.count ? (
                 <>
                   <dt className="nonvisual">Count</dt>
@@ -122,30 +120,22 @@ export const VendorCard = ({
               {delivery.price && delivery.method ? (
                 <>
                   <dt className="nonvisual">Method / Price:</dt>
-                  <>
-                    <dd className="_delivery">
-                      <DeliveryGuyIcon role="presentation" />
-                      <div>
-                        <span>{delivery.method} </span>
-                        {delivery.price.value ? (
-                          <span>{delivery.price.value} </span>
-                        ) : null}
-                        {delivery.price.currency ? (
-                          <span>{delivery.price.currency ?? ""}</span>
-                        ) : null}
-                      </div>
-                    </dd>
-                    <dt className="nonvisual">Currency</dt>
-                  </>
+                  <dd className="_delivery">
+                    <Icon name="delivery" role="presentation" />
+                    <div>
+                      <span>{delivery.method} </span>
+                      <span>{delivery.price.value ?? null} </span>
+                      <span>{delivery.price.currency ?? null}</span>
+                    </div>
+                  </dd>
+                  <dt className="nonvisual">Currency</dt>
                 </>
               ) : (
                 <>
                   <dt className="nonvisual">Method</dt>
                   <dd className="_delivery faded">
-                    <>
-                      <TimeRemainingIcon role="presentation" />
-                      <span>{delivery.method}</span>
-                    </>
+                    <Icon name="remainingTime" role="presentation" />
+                    <span>{delivery.method ?? null}</span>
                   </dd>
                 </>
               )}
