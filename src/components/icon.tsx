@@ -82,6 +82,7 @@ const Snappfood = ({ name, color, ...props }: IconProps) => (
     />
   </svg>
 )
+
 const Twitter = ({ name, color, ...props }: IconProps) => (
   <svg
     width={1.25}
@@ -98,6 +99,7 @@ const Twitter = ({ name, color, ...props }: IconProps) => (
     />
   </svg>
 )
+
 const Instagram = ({ name, color, ...props }: IconProps) => (
   <svg
     width={1.25}
@@ -114,6 +116,7 @@ const Instagram = ({ name, color, ...props }: IconProps) => (
     />
   </svg>
 )
+
 const Telegram = ({ name, color, ...props }: IconProps) => (
   <svg
     width={1.25}
@@ -130,6 +133,7 @@ const Telegram = ({ name, color, ...props }: IconProps) => (
     />
   </svg>
 )
+
 const Aparat = ({ name, color, ...props }: IconProps) => (
   <svg
     width={1.25}
@@ -151,6 +155,7 @@ const Aparat = ({ name, color, ...props }: IconProps) => (
     />
   </svg>
 )
+
 const Linkedin = ({ name, color, ...props }: IconProps) => (
   <svg
     width={1.25}
@@ -167,6 +172,7 @@ const Linkedin = ({ name, color, ...props }: IconProps) => (
     />
   </svg>
 )
+
 const Flash = ({ name, color, ...props }: IconProps) => (
   <svg
     width={6.58}
@@ -182,6 +188,7 @@ const Flash = ({ name, color, ...props }: IconProps) => (
     />
   </svg>
 )
+
 const User = ({ name, color, ...props }: IconProps) => (
   <svg
     width={14}
@@ -199,6 +206,7 @@ const User = ({ name, color, ...props }: IconProps) => (
     />
   </svg>
 )
+
 const Navigation = ({ name, color, ...props }: IconProps) => (
   <svg
     width={12}
@@ -213,6 +221,7 @@ const Navigation = ({ name, color, ...props }: IconProps) => (
     <path d="M10.007 2.024c2.213 2.254 2.213 5.907 0 8.16l-3.005 3.06a1.399 1.399 0 01-2.004 0l-3.005-3.06c-2.213-2.253-2.213-5.906 0-8.16a5.595 5.595 0 018.014 0zM6 3.56c-1.38 0-2.5 1.14-2.5 2.545C3.5 7.51 4.62 8.65 6 8.65s2.5-1.14 2.5-2.546S7.38 3.56 6 3.56z" />
   </svg>
 )
+
 const Delivery = ({ name, color, ...props }: IconProps) => (
   <svg
     width={16}
@@ -226,6 +235,7 @@ const Delivery = ({ name, color, ...props }: IconProps) => (
     <path d="M11.868.35c3.638 0 6.35 2.742 6.682 6.386.668.429 1.05.918 1.05 1.418h-1.04a10.722 10.722 0 01-1.123 4.067l5.32 3.208v8.216H1.24v-8.216l5.119-3.087a10.72 10.72 0 01-1.186-4.188H4.135c0-.5.382-.989 1.05-1.42C5.515 3.093 8.228.35 11.867.35zm4.529 13.508c-1.187 1.497-2.77 2.486-4.53 2.486-1.716 0-3.266-.942-4.443-2.38l-4.244 2.56v5.18h2.94v-1.607l2.063-1.94h7.514l2.063 1.94v1.607h3.058v-5.18l-4.421-2.666zm-.577 6.239H8.06v1.607h7.76v-1.607zm.796-11.942H7.119c.272 3.17 2.437 6.25 4.749 6.25 2.31 0 4.476-3.08 4.748-6.25zM11.868 2.29c-2.225 0-3.957 1.431-4.554 3.54 1.278-.363 2.851-.586 4.553-.586s3.275.223 4.552.587c-.595-2.11-2.328-3.541-4.551-3.541z" />
   </svg>
 )
+
 const Cross = ({ name, color, ...props }: IconProps) => (
   <svg
     height={8}
@@ -245,6 +255,7 @@ const Cross = ({ name, color, ...props }: IconProps) => (
     />
   </svg>
 )
+
 const Googleplay = ({ name, color, ...props }: IconProps) => (
   <svg
     width={135}
@@ -423,6 +434,7 @@ const Googleplay = ({ name, color, ...props }: IconProps) => (
     </defs>
   </svg>
 )
+
 const Sibapps = ({ name, color, ...props }: IconProps) => (
   <svg
     width={8.4375}
@@ -485,6 +497,7 @@ const Sibapps = ({ name, color, ...props }: IconProps) => (
     />
   </svg>
 )
+
 const Star = ({ name, color, ...props }: IconProps) => (
   <svg
     width={12}
@@ -502,6 +515,7 @@ const Star = ({ name, color, ...props }: IconProps) => (
     />
   </svg>
 )
+
 const Search = ({ name, color, ...props }: IconProps) => (
   <svg
     width={17}
@@ -517,6 +531,7 @@ const Search = ({ name, color, ...props }: IconProps) => (
     />
   </svg>
 )
+
 const Percentage = ({ name, color, ...props }: IconProps) => (
   <svg
     width={7}
@@ -534,6 +549,7 @@ const Percentage = ({ name, color, ...props }: IconProps) => (
     />
   </svg>
 )
+
 const Message = ({ name, color, ...props }: IconProps) => (
   <svg height={30} width={35} className={name} data-color={color} {...props}>
     <defs>
@@ -569,6 +585,7 @@ const Message = ({ name, color, ...props }: IconProps) => (
     </g>
   </svg>
 )
+
 const Bazzar = ({ name, color, ...props }: IconProps) => (
   <svg
     width={135}
@@ -642,6 +659,7 @@ const Bazzar = ({ name, color, ...props }: IconProps) => (
     </defs>
   </svg>
 )
+
 const Support = ({ name, color, ...props }: IconProps) => (
   <svg
     style={{
@@ -655,6 +673,7 @@ const Support = ({ name, color, ...props }: IconProps) => (
     <path stroke="red" fill="#00f" d="M10 10H110V110H10z" />
   </svg>
 )
+
 const Time = ({ name, color, ...props }: IconProps) => (
   <svg
     width={1.125}
@@ -673,6 +692,7 @@ const Time = ({ name, color, ...props }: IconProps) => (
     />
   </svg>
 )
+
 const Order = ({ name, color, ...props }: IconProps) => (
   <svg
     width={1.25}
@@ -691,6 +711,7 @@ const Order = ({ name, color, ...props }: IconProps) => (
     />
   </svg>
 )
+
 const Offer = ({ name, color, ...props }: IconProps) => (
   <svg
     width={1.5}
@@ -784,6 +805,7 @@ const Offer = ({ name, color, ...props }: IconProps) => (
     </defs>
   </svg>
 )
+
 const RemainingTime = ({ name, color, ...props }: IconProps) => (
   <svg
     width={17}
@@ -801,6 +823,7 @@ const RemainingTime = ({ name, color, ...props }: IconProps) => (
     />
   </svg>
 )
+
 const Coupon = ({ name, color, ...props }: IconProps) => (
   <svg
     width={16}
@@ -844,6 +867,7 @@ const Coupon = ({ name, color, ...props }: IconProps) => (
     </defs>
   </svg>
 )
+
 const Iapps = ({ name, color, ...props }: IconProps) => (
   <svg
     width={135}
@@ -938,6 +962,7 @@ const Iapps = ({ name, color, ...props }: IconProps) => (
     </defs>
   </svg>
 )
+
 const Helmet = ({ name, color, ...props }: IconProps) => (
   <svg
     width={1.25}
