@@ -7,7 +7,6 @@
 .button {
   --button-inline-padding: clamp(22px, 0.25em + 24px, 2em);
   --button-block-padding: clamp(4px, 0.4em + 4px, 0.75em);
-  --button-svg-size: 1em;
 
   font-size: var(--length-14);
   border: none;
@@ -84,8 +83,8 @@
 }
 
 .button > span > svg {
-  inline-size: var(--button-svg-size);
+  inline-size: var(--length-6);
   aspect-ratio: 1/1;
   min-inline-size: fit-content;
-  margin-inline-start: var(--length-20);
+  margin-inline-start: var(--length-8);
 }
