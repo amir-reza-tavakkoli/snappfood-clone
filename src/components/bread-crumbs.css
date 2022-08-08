@@ -23,7 +23,7 @@
 }
 
 :where(.bread-crumbs ol > li svg) {
-  margin-inline-start: var(--length-4);
+  margin-inline-start: var(--length-6);
   margin-block-end: calc(var(--length-2) * -1);
   inline-size: var(--length-6);
   fill: var(--color-faded);
