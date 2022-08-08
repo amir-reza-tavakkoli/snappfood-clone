@@ -5,25 +5,31 @@
 }
 
 :where(.button) {
-  font-size: var(--length-14);
-  border: none;
-  cursor: pointer;
   display: inline-flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  border-style: solid;
-  border-radius: var(--length-3);
-  border-width: var(--border-thick);
+  inline-size: 100%;
+  min-block-size: max-content;
+  min-inline-size: max-content;
   padding-block-start: var(--length-8);
   padding-inline-end: var(--length-20);
   padding-block-end: var(--length-8);
   padding-inline-start: var(--length-20);
-  min-inline-size: max-content;
-  inline-size: 100%;
-  min-block-size: max-content;
-  overflow-x: hidden;
+  font-size: var(--length-14);
+  border-width: var(--border-thick);
+  border-radius: var(--length-3);
+  border: none;
+  border-style: solid;
+  cursor: pointer;
+  overflow: hidden;
   word-break: break-all;
+}
+
+:where(.button > span) {
+  text-align: center;
+  max-inline-size: 100vmin;
+  overflow: hidden;
 }
 
 :where(.button[data-variant="faded"]) {
@@ -98,9 +104,9 @@
 
 :where(.button > span > svg) {
   inline-size: var(--length-6);
-  aspect-ratio: 1/1;
   min-inline-size: fit-content;
   margin-inline-start: var(--length-8);
+  aspect-ratio: 1/1;
 }
 
 :where(.button:disabled) {
