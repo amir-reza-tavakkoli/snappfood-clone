@@ -1,4 +1,4 @@
-import "./svg.css"
+import "./icon.css"
 
 type IconName =
   | "snappfood"
