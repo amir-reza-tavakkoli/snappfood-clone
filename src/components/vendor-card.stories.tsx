@@ -121,17 +121,6 @@ export const WithOverflowingName = () => {
   return <VendorCard {...props}></VendorCard>
 }
 
-export const WithLongDeliveryText = () => {
-  const props = {
-    ...persianProps,
-    delivery: {
-      method:
-        overflowingText,
-    },
-  }
-  return <VendorCard {...props}></VendorCard>
-}
-
 export const WithOverflowingDeliveryText = () => {
   const props = {
     ...persianProps,
