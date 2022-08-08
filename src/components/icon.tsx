@@ -1,12 +1,12 @@
 import "./svg.css"
 
-type IconNames =
+type IconName =
   | "snappfood"
   | "twitter"
   | "instagram"
   | "telegram"
   | "aparat"
-  | "linkedln"
+  | "linkedin"
   | "flash"
   | "user"
   | "navigation"
@@ -25,10 +25,10 @@ type IconNames =
   | "time"
   | "helmet"
   | "offer"
-  | "copoun"
+  | "coupon"
   | "remainingTime"
 
-type IconColors =
+type IconColor =
   | "accent"
   | "primary"
   | "text"
@@ -38,8 +38,8 @@ type IconColors =
   | "error"
 
 type CustomIconProps = {
-  name: IconNames
-  color?: IconColors
+  name: IconName
+  color?: IconColor
 }
 
 type DefaultSVGProps = JSX.IntrinsicElements["svg"]
@@ -47,7 +47,7 @@ type DefaultSVGProps = JSX.IntrinsicElements["svg"]
 type IconProps = DefaultSVGProps & CustomIconProps
 
 let icons = new Map<
-  IconNames,
+  IconName,
   ({ name, color, ...props }: IconProps) => JSX.Element
 >()
 
@@ -156,7 +156,7 @@ icons.set("aparat", ({ name, color, ...props }: IconProps) => (
     />
   </svg>
 ))
-icons.set("linkedln", ({ name, color, ...props }: IconProps) => (
+icons.set("linkedin", ({ name, color, ...props }: IconProps) => (
   <svg
     width={1.25}
     height={1.25}
@@ -806,7 +806,7 @@ icons.set("remainingTime", ({ name, color, ...props }: IconProps) => (
     />
   </svg>
 ))
-icons.set("copoun", ({ name, color, ...props }: IconProps) => (
+icons.set("coupon", ({ name, color, ...props }: IconProps) => (
   <svg
     width={16}
     height={16}
@@ -964,6 +964,6 @@ icons.set("helmet", ({ name, color, ...props }: IconProps) => (
 ))
 
 export const Icon = ({ name, color, ...props }: IconProps) => {
-  const Item = icons.get(name)
-  return Item ? <Item name={name} color={color} {...props} /> : null
+  const Item = icons.get(name)!
+  return <Item name={name} color={color} {...props} />
 }
