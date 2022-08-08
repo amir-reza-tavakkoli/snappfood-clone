@@ -11,7 +11,7 @@ export const PrimaryVariant = () => <Button variant="primary">انصراف</Butt
 export const WithIconAndConstrained = () => (
   <div style={{ inlineSize: "40px" }}>
     <Button icon={{ name: "user", color: "text" }} variant="accent">
-      offers
+      Offers
     </Button>
   </div>
 )
@@ -19,7 +19,7 @@ export const WithIconAndConstrained = () => (
 export const PrimaryWithIcon = () => (
   <div style={{ inlineSize: "80px" }}>
     <Button icon={{ name: "user", color: "text" }} variant="primary">
-      offers
+      Offers
     </Button>
   </div>
 )
@@ -27,6 +27,18 @@ export const PrimaryWithIcon = () => (
 export const AccentWithIconConstrainedRTL = () => (
   <div style={{ inlineSize: "40px" }}>
     <Button
+      icon={{ name: "user", color: "primary" }}
+      dir="rtl"
+      variant="accent"
+    >
+      ثبت سفارش
+    </Button>
+  </div>
+)
+
+export const Disabled = () => (
+  <div style={{ inlineSize: "40px" }}>
+    <Button disabled={true}
       icon={{ name: "user", color: "primary" }}
       dir="rtl"
       variant="accent"
@@ -60,6 +72,14 @@ export const FadedConstrained = () => (
   <div style={{ width: "40px" }}>
     <Button dir="rtl" icon={{ name: "user", color: "text" }} variant="faded">
       سفارش
+    </Button>
+  </div>
+)
+
+export const WithOverflow = () => (
+  <div style={{ width: "40px" }}>
+    <Button icon={{ name: "user", color: "text" }} variant="faded">
+      JjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjJjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjJjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj
     </Button>
   </div>
 )
