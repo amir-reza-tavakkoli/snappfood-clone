@@ -3,40 +3,44 @@ import { BreadCrumbs } from "./bread-crumbs"
 
 const props: ComponentProps<typeof BreadCrumbs> = {
   title: "links",
-  item: {
-    name: "Snappfood",
-    href: "#",
-    key: 1,
-    successor: {
-      name: "Bakery",
+  items: [
+    {
+      name: "Snappfood",
+      href: "#",
+      key: 1,
+    },
+    {
+      name: "Bakeries",
       href: "#",
       key: 2,
-      successor: {
-        name: "Shiraz bakeries",
-        href: "#",
-        key: 3,
-      },
     },
-  },
+    {
+      name: "Shiraz bakeries",
+      href: "#",
+      key: 3,
+    },
+  ],
 }
 
 const rtlProps: ComponentProps<typeof BreadCrumbs> = {
   title: "لینک ها",
-  item: {
-    name: "اسنپ فود",
-    href: "#",
-    key: 1,
-    successor: {
-      name: "نانوایی",
+  items: [
+    {
+      name: "اسنپ فود",
+      href: "#",
+      key: 1,
+    },
+    {
+      name: " نانوایی ها",
       href: "#",
       key: 2,
-      successor: {
-        name: "نانوایی های شیراز",
-        href: "#",
-        key: 3,
-      },
     },
-  },
+    {
+      name: "نانوایی های شیراز",
+      href: "#",
+      key: 3,
+    },
+  ],
 }
 
 export const BreadCrumbsDefault = () => {
