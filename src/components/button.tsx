@@ -1,10 +1,10 @@
-import type { ReactNode } from "react"
+import { type IconProps, Icon } from "./icon"
 import "./button.css"
 
 type DefaultButtonProps = JSX.IntrinsicElements["button"]
 
 type CustomButtonProps = {
-  icon?: ReactNode
+  icon?: IconProps
   rounding?: "normal" | "full"
   variant?: "primary" | "accent" | "faded"
 }
@@ -19,6 +19,7 @@ export const Button = ({
   className: extraClassName,
   ...otherProps
 }: ButtonProps) => {
+
   return (
     <button
       className={!extraClassName ? "button" : `button ${extraClassName}`}
@@ -26,7 +27,7 @@ export const Button = ({
       data-variant={variant}
       {...otherProps}
     >
-      {children} {icon ? <span>{icon}</span> : null}
+      {children} {icon ? <span><Icon {...icon} /></span> : null}
     </button>
   )
 }
