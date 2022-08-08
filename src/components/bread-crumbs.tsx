@@ -24,9 +24,8 @@ export const BreadCrumbs = ({ title, items }: BreadCrumbsProps) => {
             >
               {item.name}
             </a>
-
             {index !== array.length - 1 ? (
-              <Icon name="flash" color="faded" role="presentation"/>
+              <Icon name="flash" color="faded" role="presentation" />
             ) : null}
           </li>
         ))}
