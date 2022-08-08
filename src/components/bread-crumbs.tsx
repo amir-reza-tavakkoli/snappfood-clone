@@ -1,49 +1,36 @@
-import { useMemo } from "react"
-import type { ReactNode } from "react"
 import "./bread-crumbs.css"
-import { LeftGrayFlash } from "./svg"
+import { Icon } from "./icon"
 
 type Item = {
   name: string
   href: string
-  key: number
-  successor?: Item
+  key?: number
 }
 
 type BreadCrumbsProps = {
   title: string
-  item?: Item
+  items: Item[]
 }
 
-export const BreadCrumbs = ({ title, item }: BreadCrumbsProps) => {
-  const memoizedItems = useMemo(() => {
-    const items: ReactNode[] = []
-    while (item) {
-      items.push(
-        <li key={item.key}>
-          <a
-            href={item.href}
-            aria-current={item && item.successor ? undefined : "page"}
-          >
-            {" "}
-            {item.name}{" "}
-          </a>
-          {item.successor ? (
-            <LeftGrayFlash role="presentation"></LeftGrayFlash>
-          ) : null}
-        </li>,
-      )
-
-      if (item) {
-        item = item.successor
-      }
-    }
-    return items
-  }, [item])
-
+export const BreadCrumbs = ({ title, items }: BreadCrumbsProps) => {
   return (
     <nav aria-label="Breadcrumb" className="bread-crumbs">
-      <ol aria-label={title}>{memoizedItems}</ol>
+      <ol aria-label={title}>
+        {items.map((item, index, array) => (
+          <li key={item.key ?? index}>
+            <a
+              href={item.href}
+              aria-current={index === array.length - 1 ? "page" : undefined}
+            >
+              {item.name}
+            </a>
+
+            {index !== array.length - 1 ? (
+              <Icon name="flash" color="faded" role="presentation"/>
+            ) : null}
+          </li>
+        ))}
+      </ol>
     </nav>
   )
 }
