@@ -1,55 +1,64 @@
 import { Button } from "./button"
-import { OrderIcon, UserIconFaded } from "./svg"
 
-export const WithDefaultVariant = () => <Button>faded</Button>
+export const DefaultVariant = () => <Button>Faded</Button>
 
-export const WithFadedVariant = () => <Button variant="faded">انصراف</Button>
-export const WithAccentVariant = () => <Button variant="accent">انصراف</Button>
-export const WithPrimaryVariant = () => (
-  <Button variant="primary">انصراف</Button>
-)
+export const FadedVariant = () => <Button variant="faded">انصراف</Button>
 
-export const WithAccentVarianAndtIconAndConstrainted = () => (
+export const AccentVariant = () => <Button variant="accent">انصراف</Button>
+
+export const PrimaryVariant = () => <Button variant="primary">انصراف</Button>
+
+export const WithIconAndConstrained = () => (
   <div style={{ inlineSize: "40px" }}>
-    <Button icon={<OrderIcon />} variant="accent">
+    <Button icon={{ name: "user", color: "text" }} variant="accent">
       offers
     </Button>
   </div>
 )
-export const WithAccentVarianAndtIconAndConstraintedAndRTL = () => (
+
+export const PrimaryWithIcon = () => (
+  <div style={{ inlineSize: "80px" }}>
+    <Button icon={{ name: "user", color: "text" }} variant="primary">
+      offers
+    </Button>
+  </div>
+)
+
+export const AccentWithIconConstrainedRTL = () => (
   <div style={{ inlineSize: "40px" }}>
-    <Button icon={<OrderIcon />} variant="accent">
+    <Button
+      icon={{ name: "user", color: "primary" }}
+      dir="rtl"
+      variant="accent"
+    >
       ثبت سفارش
     </Button>
   </div>
 )
 
-export const WithAccentVariantAndConstraintedAndIconAndRTL = () => (
+export const AccentConstrainedIcon = () => (
   <div style={{ inlineSize: "280px" }}>
-    <Button dir="rtl" icon={<UserIconFaded />} variant="accent">
+    <Button dir="rtl" icon={{ name: "user", color: "text" }} variant="accent">
       ورود به حساب کاربری
     </Button>
   </div>
 )
 
-export const WithAccentAndRouningAndIconAndConstrainted = () => (
+export const WithRounding = () => (
   <div style={{ inlineSize: "40px" }}>
-    <Button icon={<OrderIcon />} variant="accent" rounding="full">
-      سفارش
-    </Button>
-  </div>
-)
-export const WithAccentAndRouningAndIconAndConstraintedAndRTL = () => (
-  <div style={{ inlineSize: "40px" }}>
-    <Button icon={<OrderIcon />} variant="accent" rounding="full">
+    <Button
+      icon={{ name: "search", color: "primary" }}
+      variant="accent"
+      rounding="full"
+    >
       سفارش
     </Button>
   </div>
 )
 
-export const WithFadedVariantAndIconAndConstraintedAndRTL = () => (
+export const FadedConstrained = () => (
   <div style={{ width: "40px" }}>
-    <Button dir="rtl" icon={<UserIconFaded />} variant="faded">
+    <Button dir="rtl" icon={{ name: "user", color: "text" }} variant="faded">
       سفارش
     </Button>
   </div>
