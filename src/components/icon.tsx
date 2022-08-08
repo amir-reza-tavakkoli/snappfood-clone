@@ -46,12 +46,7 @@ type DefaultSVGProps = JSX.IntrinsicElements["svg"]
 
 type IconProps = DefaultSVGProps & CustomIconProps
 
-let icons = new Map<
-  IconName,
-  ({ name, color, ...props }: IconProps) => JSX.Element
->()
-
-icons.set("snappfood", ({ name, color, ...props }: IconProps) => (
+const Snappfood = ({ name, color, ...props }: IconProps) => (
   <svg
     width={68}
     height={34}
@@ -86,8 +81,8 @@ icons.set("snappfood", ({ name, color, ...props }: IconProps) => (
       fill="#FF00A6"
     />
   </svg>
-))
-icons.set("twitter", ({ name, color, ...props }: IconProps) => (
+)
+const Twitter = ({ name, color, ...props }: IconProps) => (
   <svg
     width={1.25}
     height={1.25}
@@ -102,8 +97,8 @@ icons.set("twitter", ({ name, color, ...props }: IconProps) => (
       fill="#676A70"
     />
   </svg>
-))
-icons.set("instagram", ({ name, color, ...props }: IconProps) => (
+)
+const Instagram = ({ name, color, ...props }: IconProps) => (
   <svg
     width={1.25}
     height={1.25}
@@ -118,8 +113,8 @@ icons.set("instagram", ({ name, color, ...props }: IconProps) => (
       fill="#676A70"
     />
   </svg>
-))
-icons.set("telegram", ({ name, color, ...props }: IconProps) => (
+)
+const Telegram = ({ name, color, ...props }: IconProps) => (
   <svg
     width={1.25}
     height={1.25}
@@ -134,8 +129,8 @@ icons.set("telegram", ({ name, color, ...props }: IconProps) => (
       fill="#676A70"
     />
   </svg>
-))
-icons.set("aparat", ({ name, color, ...props }: IconProps) => (
+)
+const Aparat = ({ name, color, ...props }: IconProps) => (
   <svg
     width={1.25}
     height={1.25}
@@ -155,8 +150,8 @@ icons.set("aparat", ({ name, color, ...props }: IconProps) => (
       fill="#676A70"
     />
   </svg>
-))
-icons.set("linkedin", ({ name, color, ...props }: IconProps) => (
+)
+const Linkedin = ({ name, color, ...props }: IconProps) => (
   <svg
     width={1.25}
     height={1.25}
@@ -171,8 +166,8 @@ icons.set("linkedin", ({ name, color, ...props }: IconProps) => (
       fill="#676A70"
     />
   </svg>
-))
-icons.set("flash", ({ name, color, ...props }: IconProps) => (
+)
+const Flash = ({ name, color, ...props }: IconProps) => (
   <svg
     width={6.58}
     height={11.17}
@@ -186,8 +181,8 @@ icons.set("flash", ({ name, color, ...props }: IconProps) => (
       fill="#FF00A6"
     />
   </svg>
-))
-icons.set("user", ({ name, color, ...props }: IconProps) => (
+)
+const User = ({ name, color, ...props }: IconProps) => (
   <svg
     width={14}
     height={18}
@@ -203,8 +198,8 @@ icons.set("user", ({ name, color, ...props }: IconProps) => (
       d="M9.5 10.666a4.167 4.167 0 014.167 4.167v1.666a.833.833 0 11-1.667 0v-1.666a2.5 2.5 0 00-2.5-2.5h-5a2.5 2.5 0 00-2.5 2.5v1.666a.833.833 0 11-1.667 0v-1.666A4.167 4.167 0 014.5 10.666h5zM7 .666a4.167 4.167 0 110 8.333A4.167 4.167 0 017 .666zm0 1.667a2.5 2.5 0 100 5 2.5 2.5 0 000-5z"
     />
   </svg>
-))
-icons.set("navigation", ({ name, color, ...props }: IconProps) => (
+)
+const Navigation = ({ name, color, ...props }: IconProps) => (
   <svg
     width={12}
     height={14}
@@ -217,8 +212,8 @@ icons.set("navigation", ({ name, color, ...props }: IconProps) => (
   >
     <path d="M10.007 2.024c2.213 2.254 2.213 5.907 0 8.16l-3.005 3.06a1.399 1.399 0 01-2.004 0l-3.005-3.06c-2.213-2.253-2.213-5.906 0-8.16a5.595 5.595 0 018.014 0zM6 3.56c-1.38 0-2.5 1.14-2.5 2.545C3.5 7.51 4.62 8.65 6 8.65s2.5-1.14 2.5-2.546S7.38 3.56 6 3.56z" />
   </svg>
-))
-icons.set("delivery", ({ name, color, ...props }: IconProps) => (
+)
+const Delivery = ({ name, color, ...props }: IconProps) => (
   <svg
     width={16}
     height={16}
@@ -230,8 +225,8 @@ icons.set("delivery", ({ name, color, ...props }: IconProps) => (
   >
     <path d="M11.868.35c3.638 0 6.35 2.742 6.682 6.386.668.429 1.05.918 1.05 1.418h-1.04a10.722 10.722 0 01-1.123 4.067l5.32 3.208v8.216H1.24v-8.216l5.119-3.087a10.72 10.72 0 01-1.186-4.188H4.135c0-.5.382-.989 1.05-1.42C5.515 3.093 8.228.35 11.867.35zm4.529 13.508c-1.187 1.497-2.77 2.486-4.53 2.486-1.716 0-3.266-.942-4.443-2.38l-4.244 2.56v5.18h2.94v-1.607l2.063-1.94h7.514l2.063 1.94v1.607h3.058v-5.18l-4.421-2.666zm-.577 6.239H8.06v1.607h7.76v-1.607zm.796-11.942H7.119c.272 3.17 2.437 6.25 4.749 6.25 2.31 0 4.476-3.08 4.748-6.25zM11.868 2.29c-2.225 0-3.957 1.431-4.554 3.54 1.278-.363 2.851-.586 4.553-.586s3.275.223 4.552.587c-.595-2.11-2.328-3.541-4.551-3.541z" />
   </svg>
-))
-icons.set("cross", ({ name, color, ...props }: IconProps) => (
+)
+const Cross = ({ name, color, ...props }: IconProps) => (
   <svg
     height={8}
     width={8}
@@ -249,8 +244,8 @@ icons.set("cross", ({ name, color, ...props }: IconProps) => (
       strokeWidth={1.4}
     />
   </svg>
-))
-icons.set("googleplay", ({ name, color, ...props }: IconProps) => (
+)
+const Googleplay = ({ name, color, ...props }: IconProps) => (
   <svg
     width={135}
     height={41}
@@ -427,8 +422,8 @@ icons.set("googleplay", ({ name, color, ...props }: IconProps) => (
       </linearGradient>
     </defs>
   </svg>
-))
-icons.set("sibapps", ({ name, color, ...props }: IconProps) => (
+)
+const Sibapps = ({ name, color, ...props }: IconProps) => (
   <svg
     width={8.4375}
     height={2.5625}
@@ -489,8 +484,8 @@ icons.set("sibapps", ({ name, color, ...props }: IconProps) => (
       fill="#FFF"
     />
   </svg>
-))
-icons.set("star", ({ name, color, ...props }: IconProps) => (
+)
+const Star = ({ name, color, ...props }: IconProps) => (
   <svg
     width={12}
     height={12}
@@ -506,8 +501,8 @@ icons.set("star", ({ name, color, ...props }: IconProps) => (
       d="M6 9.621L2.426 11.5l.682-3.98L.217 4.702l3.996-.581L6 .5l1.787 3.621 3.996.58-2.892 2.82.683 3.979L6 9.621z"
     />
   </svg>
-))
-icons.set("search", ({ name, color, ...props }: IconProps) => (
+)
+const Search = ({ name, color, ...props }: IconProps) => (
   <svg
     width={17}
     height={17}
@@ -521,8 +516,8 @@ icons.set("search", ({ name, color, ...props }: IconProps) => (
       fill="#A6AAAD"
     />
   </svg>
-))
-icons.set("percentage", ({ name, color, ...props }: IconProps) => (
+)
+const Percentage = ({ name, color, ...props }: IconProps) => (
   <svg
     width={7}
     height={8}
@@ -538,8 +533,8 @@ icons.set("percentage", ({ name, color, ...props }: IconProps) => (
       fill="#FFF"
     />
   </svg>
-))
-icons.set("message", ({ name, color, ...props }: IconProps) => (
+)
+const Message = ({ name, color, ...props }: IconProps) => (
   <svg height={30} width={35} className={name} data-color={color} {...props}>
     <defs>
       <filter id="a" height="138.7%" width="131.4%" x="-15.7%" y="-15.1%">
@@ -573,8 +568,8 @@ icons.set("message", ({ name, color, ...props }: IconProps) => (
       <use fill="#fff" stroke="#fff" strokeWidth={2} />
     </g>
   </svg>
-))
-icons.set("bazzar", ({ name, color, ...props }: IconProps) => (
+)
+const Bazzar = ({ name, color, ...props }: IconProps) => (
   <svg
     width={135}
     height={41}
@@ -646,8 +641,8 @@ icons.set("bazzar", ({ name, color, ...props }: IconProps) => (
       </linearGradient>
     </defs>
   </svg>
-))
-icons.set("support", ({ name, color, ...props }: IconProps) => (
+)
+const Support = ({ name, color, ...props }: IconProps) => (
   <svg
     style={{
       flex: 1,
@@ -659,8 +654,8 @@ icons.set("support", ({ name, color, ...props }: IconProps) => (
   >
     <path stroke="red" fill="#00f" d="M10 10H110V110H10z" />
   </svg>
-))
-icons.set("time", ({ name, color, ...props }: IconProps) => (
+)
+const Time = ({ name, color, ...props }: IconProps) => (
   <svg
     width={1.125}
     height={1.125}
@@ -677,8 +672,8 @@ icons.set("time", ({ name, color, ...props }: IconProps) => (
       fill="#FFF"
     />
   </svg>
-))
-icons.set("order", ({ name, color, ...props }: IconProps) => (
+)
+const Order = ({ name, color, ...props }: IconProps) => (
   <svg
     width={1.25}
     height={1.25}
@@ -695,8 +690,8 @@ icons.set("order", ({ name, color, ...props }: IconProps) => (
       clipRule="evenodd"
     />
   </svg>
-))
-icons.set("offer", ({ name, color, ...props }: IconProps) => (
+)
+const Offer = ({ name, color, ...props }: IconProps) => (
   <svg
     width={1.5}
     height={1.5}
@@ -788,8 +783,8 @@ icons.set("offer", ({ name, color, ...props }: IconProps) => (
       </linearGradient>
     </defs>
   </svg>
-))
-icons.set("remainingTime", ({ name, color, ...props }: IconProps) => (
+)
+const RemainingTime = ({ name, color, ...props }: IconProps) => (
   <svg
     width={17}
     height={18}
@@ -805,8 +800,8 @@ icons.set("remainingTime", ({ name, color, ...props }: IconProps) => (
       d="M8.5.666A8.333 8.333 0 11.167 8.999a.833.833 0 011.667 0 6.666 6.666 0 102.83-5.454l.134.135 1.267 1.265c.117.116.18.27.18.436a.614.614 0 01-.52.609l-.098.007H1.519a.62.62 0 01-.613-.532L.9 5.38V1.283c0-.34.279-.617.619-.617.088 0 .2.039.333.116l.105.065 1.512 1.508A8.303 8.303 0 018.5.666zm-.235 4.87a.77.77 0 01.764.68l.005.09v3.598l1.927 1.123a.77.77 0 01.317.973l-.04.08a.77.77 0 01-.973.318l-.08-.041-2.308-1.347a.77.77 0 01-.377-.574l-.005-.09v-4.04a.77.77 0 01.77-.77z"
     />
   </svg>
-))
-icons.set("coupon", ({ name, color, ...props }: IconProps) => (
+)
+const Coupon = ({ name, color, ...props }: IconProps) => (
   <svg
     width={16}
     height={16}
@@ -848,8 +843,8 @@ icons.set("coupon", ({ name, color, ...props }: IconProps) => (
       </linearGradient>
     </defs>
   </svg>
-))
-icons.set("iapps", ({ name, color, ...props }: IconProps) => (
+)
+const Iapps = ({ name, color, ...props }: IconProps) => (
   <svg
     width={135}
     height={40}
@@ -942,8 +937,8 @@ icons.set("iapps", ({ name, color, ...props }: IconProps) => (
       </linearGradient>
     </defs>
   </svg>
-))
-icons.set("helmet", ({ name, color, ...props }: IconProps) => (
+)
+const Helmet = ({ name, color, ...props }: IconProps) => (
   <svg
     width={1.25}
     height={1.25}
@@ -961,9 +956,41 @@ icons.set("helmet", ({ name, color, ...props }: IconProps) => (
       d="M7.552 17.626c-1.967.834-4.124-.37-4.557-2.341l-.193.075a.833.833 0 01-1.135-.777V9.167c0-2.545 1.051-4.5 2.65-5.803C5.896 2.078 7.966 1.458 10 1.458s4.104.62 5.682 1.906c1.6 1.303 2.651 3.258 2.651 5.803V12.5c0 .334-.2.636-.508.767L7.552 17.626zm2.35-10.537l-6.443.758a5.386 5.386 0 011.911-3.19C6.604 3.65 8.284 3.124 10 3.124c1.716 0 3.396.526 4.63 1.531 1.213.99 2.036 2.472 2.036 4.51v2.782l-9.765 4.143a1.667 1.667 0 01-2.314-1.425l5.715-2.223a.833.833 0 00.531-.776v-3.75a.833.833 0 00-.93-.828zm-.736 4.008l-5.833 2.268V9.54l5.833-.686v2.243z"
     />
   </svg>
-))
+)
+
+const icons: Record<
+  IconName,
+  ({ name, color, ...props }: IconProps) => JSX.Element
+> = {
+  snappfood: Snappfood,
+  twitter: Twitter,
+  instagram: Instagram,
+  telegram: Telegram,
+  aparat: Aparat,
+  linkedin: Linkedin,
+  flash: Flash,
+  user: User,
+  navigation: Navigation,
+  delivery: Delivery,
+  cross: Cross,
+  order: Order,
+  googleplay: Googleplay,
+  sibapps: Sibapps,
+  iapps: Iapps,
+  star: Star,
+  search: Search,
+  percentage: Percentage,
+  message: Message,
+  bazzar: Bazzar,
+  support: Support,
+  time: Time,
+  helmet: Helmet,
+  offer: Offer,
+  coupon: Coupon,
+  remainingTime: RemainingTime,
+}
 
 export const Icon = ({ name, color, ...props }: IconProps) => {
-  const Item = icons.get(name)!
+  const Item = icons[name]!
   return <Item name={name} color={color} {...props} />
 }
