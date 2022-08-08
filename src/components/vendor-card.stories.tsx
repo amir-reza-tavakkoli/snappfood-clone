@@ -22,35 +22,12 @@ const cardProps: ComponentProps<typeof VendorCard> = {
   },
 }
 
-export const WithoutName = () => {
-  const props = { ...cardProps, name: undefined }
-  return <VendorCard {...props}></VendorCard>
-}
-
-export const WithoutImage = () => {
-  const props = { ...cardProps, image: undefined }
-  return <VendorCard {...props}></VendorCard>
-}
-
-export const WithBadImage = () => {
-  const props = { ...cardProps, image: "noSuchImage.com" }
-  return <VendorCard {...props}></VendorCard>
-}
-
 export const DefaultCard = () => {
   return <VendorCard {...cardProps}></VendorCard>
 }
 
-export const WithImageNode = () => {
-  const props = {
-    ...cardProps,
-    image: (
-      <img
-        src="https://cdn.snappfood.ir/300x200/cdn/vendor_sub_types/7/03.jpg"
-        alt="cool alt text"
-      />
-    ),
-  }
+export const WithBadImage = () => {
+  const props = { ...cardProps, image: "noSuchImage.com" }
   return <VendorCard {...props}></VendorCard>
 }
 
@@ -98,13 +75,13 @@ export const WithTagsOverflow = () => {
   const props = {
     ...cardProps,
     tags: [
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+      "Jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj",
     ],
   }
   return <VendorCard {...props}></VendorCard>
 }
 
-export const WithNameOverflow = () => {
+export const WithLongName = () => {
   const props = {
     ...cardProps,
     name: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
@@ -112,7 +89,15 @@ export const WithNameOverflow = () => {
   return <VendorCard {...props}></VendorCard>
 }
 
-export const WithDeliveryOverflow = () => {
+export const WithOverflowingName = () => {
+  const props = {
+    ...cardProps,
+    name: "Jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj",
+  }
+  return <VendorCard {...props}></VendorCard>
+}
+
+export const WithLongDeliveryText = () => {
   const props = {
     ...cardProps,
     delivery: {
@@ -123,21 +108,12 @@ export const WithDeliveryOverflow = () => {
   return <VendorCard {...props}></VendorCard>
 }
 
-export const WithoutDelivery = () => {
-  const props = {
-    ...cardProps,
-    delivery: undefined,
-  }
-  return <VendorCard {...props}></VendorCard>
-}
-
-export const WithoutDeliveryMethod = () => {
+export const WithOverflowingDeliveryText = () => {
   const props = {
     ...cardProps,
     delivery: {
-      price: {
-        value: 6000,
-      },
+      method:
+        "Jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj",
     },
   }
   return <VendorCard {...props}></VendorCard>
