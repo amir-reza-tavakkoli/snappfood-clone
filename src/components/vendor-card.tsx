@@ -1,5 +1,5 @@
 import "./vendor-card.css"
-import { StarIcon, TimeRemainingIcon, DeliveryGuyIcon } from "./svg"
+import { Icon } from "./icon"
 
 export type VendorCardProps = {
   name: string
@@ -87,7 +87,7 @@ export const VendorCard = ({
             <dl>
               <dt className="nonvisual" role="presentation"></dt>
               <dd role="presentation" className="_star-icon">
-                {<StarIcon role="presentation" />}
+                {<Icon name="star" role="presentation" />}
               </dd>
               {rating.value ? (
                 <>
@@ -121,7 +121,7 @@ export const VendorCard = ({
                 <>
                   <dt className="nonvisual">Method / Price:</dt>
                   <dd className="_delivery">
-                    <DeliveryGuyIcon role="presentation" />
+                    <Icon name="delivery" role="presentation" />
                     <div>
                       <span>{delivery.method} </span>
                       <span>{delivery.price.value ?? null} </span>
@@ -134,7 +134,7 @@ export const VendorCard = ({
                 <>
                   <dt className="nonvisual">Method</dt>
                   <dd className="_delivery faded">
-                    <TimeRemainingIcon role="presentation" />
+                    <Icon name="remainingTime" role="presentation" />
                     <span>{delivery.method ?? null}</span>
                   </dd>
                 </>
