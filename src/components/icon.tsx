@@ -983,10 +983,7 @@ const Helmet = ({ name, color, ...props }: IconProps) => (
   </svg>
 )
 
-const icons: Record<
-  IconName,
-  typeof Icon
-> = {
+const icons: Record<IconName, typeof Icon> = {
   snappfood: Snappfood,
   twitter: Twitter,
   instagram: Instagram,

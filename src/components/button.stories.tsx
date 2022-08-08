@@ -38,7 +38,8 @@ export const AccentWithIconConstrainedRTL = () => (
 
 export const Disabled = () => (
   <div style={{ inlineSize: "40px" }}>
-    <Button disabled={true}
+    <Button
+      disabled={true}
       icon={{ name: "user", color: "primary" }}
       dir="rtl"
       variant="accent"

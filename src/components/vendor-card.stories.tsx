@@ -98,9 +98,7 @@ export const WithoutDiscount = () => {
 export const WithTagsOverflow = () => {
   const props = {
     ...persianProps,
-    tags: [
-      overflowingText,
-    ],
+    tags: [overflowingText],
   }
   return <VendorCard {...props}></VendorCard>
 }
@@ -125,8 +123,7 @@ export const WithOverflowingDeliveryText = () => {
   const props = {
     ...persianProps,
     delivery: {
-      method:
-        overflowingText
+      method: overflowingText,
     },
   }
   return <VendorCard {...props}></VendorCard>

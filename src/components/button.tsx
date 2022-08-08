@@ -19,7 +19,6 @@ export const Button = ({
   className: extraClassName,
   ...otherProps
 }: ButtonProps) => {
-
   return (
     <button
       className={!extraClassName ? "button" : `button ${extraClassName}`}
