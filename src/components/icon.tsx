@@ -44,7 +44,7 @@ type CustomIconProps = {
 
 type DefaultSVGProps = JSX.IntrinsicElements["svg"]
 
-type IconProps = DefaultSVGProps & CustomIconProps
+export type IconProps = DefaultSVGProps & CustomIconProps
 
 const Snappfood = ({ name, color, ...props }: IconProps) => (
   <svg
@@ -983,10 +983,7 @@ const Helmet = ({ name, color, ...props }: IconProps) => (
   </svg>
 )
 
-const icons: Record<
-  IconName,
-  ({ name, color, ...props }: IconProps) => JSX.Element
-> = {
+const icons: Record<IconName, typeof Icon> = {
   snappfood: Snappfood,
   twitter: Twitter,
   instagram: Instagram,
@@ -1016,6 +1013,6 @@ const icons: Record<
 }
 
 export const Icon = ({ name, color, ...props }: IconProps) => {
-  const Item = icons[name]!
-  return <Item name={name} color={color} {...props} />
+  const Component = icons[name]!
+  return <Component name={name} color={color} {...props} />
 }

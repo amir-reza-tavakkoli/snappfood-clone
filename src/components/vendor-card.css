@@ -24,6 +24,7 @@
 
 :where(.vendor-card ._name) {
   padding-block-start: var(--length-32);
+  padding-inline: var(--length-32);
   margin-block-end: var(--length-8);
   text-align: center;
   font-size: var(--length-18);
@@ -123,8 +124,14 @@
   margin-block-end: var(--length-12);
   font-size: var(--length-12);
   color: var(--color-faded);
+  padding-inline: var(--length-32);
   order: 2;
   word-break: break-all;
+}
+
+:where(.vendor-card ._categories) {
+  display: inline-block;
+  padding-inline: var(--length-24);
 }
 
 :where(.vendor-card ._delivery) {
