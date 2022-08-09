@@ -2,8 +2,8 @@ import { ComponentProps } from "react"
 import { Footer } from "./footer"
 
 const props: ComponentProps<typeof Footer> = {
-  name: "SnappFood",
-  description: "Experince the delightful sex",
+  name: "اسنپ فود",
+  description: "تجربه سفارش غذا، از زودفود تا اسنپ‌ فود",
   homepage: "snappfood.ir",
   logo: { name: "snappfood" },
   contacts: [
@@ -23,6 +23,10 @@ const props: ComponentProps<typeof Footer> = {
       name: "E-Trust",
       href: "",
       logo: "https://snappfood.ir/static/images/senf.png",
+    },{
+      name: "E-Trust",
+      href: "",
+      logo: "https://snappfood.ir/static/images/senf.png",
     },
   ],
   links: [
@@ -30,6 +34,8 @@ const props: ComponentProps<typeof Footer> = {
     { name: "وبلاگ", href: "#" },
     { name: "قوانین سایت", href: "#" },
     { name: "حریم شخصی", href: "#" },
+    { name: "ثبت نام فروشندگان", href: "#" },
+    { name: "ثبت نام فروشندگان", href: "#" },
     { name: "ثبت نام فروشندگان", href: "#" },
     { name: "تماس با اسنپ فود", href: "#" },
     { name: "ٍثبت شکایات", href: "#" },
