@@ -3,14 +3,14 @@
   padding-inline-start: var(--length-20);
   inline-size: 100%;
 }
-:where(.bread-crumbs ol > li a) {
+:where(.bread-crumbs ol:only-of-type li a) {
   text-align: center;
   text-decoration: none;
   color: inherit;
   margin-inline-start: var(--length-8);
 }
 
-:where(.bread-crumbs ol > li) {
+:where(.bread-crumbs ol:only-of-type li) {
   text-align: center;
   font-weight: 400;
   font-size: var(--length-12);
@@ -18,11 +18,11 @@
   color: var(--color-faded);
 }
 
-:where(.bread-crumbs ol > li:last-of-type) {
+:where(.bread-crumbs ol:only-of-type li:last-of-type) {
   color: var(--color-text-2);
 }
 
-:where(.bread-crumbs ol > li svg) {
+:where(.bread-crumbs ol:only-of-type li svg) {
   margin-inline-start: var(--length-6);
   margin-block-end: calc(var(--length-2) * -1);
   inline-size: var(--length-6);
@@ -30,6 +30,6 @@
   transform: rotate(180deg);
 }
 
-:where(html[dir="rtl"] .bread-crumbs ol > li svg) {
+:where(html[dir="rtl"] .bread-crumbs ol:only-of-type li svg) {
   transform: none;
 }
