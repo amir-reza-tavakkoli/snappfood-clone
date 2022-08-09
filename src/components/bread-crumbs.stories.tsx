@@ -18,31 +18,6 @@ const props: ComponentProps<typeof BreadCrumbs> = {
   ],
 }
 
-const rtlProps: ComponentProps<typeof BreadCrumbs> = {
-  items: [
-    {
-      name: "اسنپ فود",
-      href: "#",
-    },
-    {
-      name: " نانوایی ها",
-      href: "#",
-    },
-    {
-      name: "نانوایی های شیراز",
-      href: "#",
-    },
-  ],
-}
-
 export const BreadCrumbsDefault = () => {
   return <BreadCrumbs {...props}></BreadCrumbs>
-}
-
-export const DefaultRTL = () => {
-  return (
-    <div dir="rtl">
-      <BreadCrumbs {...rtlProps}></BreadCrumbs>
-    </div>
-  )
 }
