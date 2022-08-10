@@ -167,6 +167,7 @@
 @supports not (container-type: size) {
   :where(.footer ._credentials) {
     justify-content: center;
+    padding-inline: 20px;
   }
 
   :where(.footer ._vendor span:only-of-type) {
