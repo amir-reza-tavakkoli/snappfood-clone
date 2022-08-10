@@ -16,6 +16,7 @@
 
 :where(.footer > div) {
   padding-block-start: var(--length-40);
+  align-self: flex-start;
 }
 
 :where(.footer ._vendor) {
@@ -26,12 +27,13 @@
 
 :where(.footer ._vendor span:only-of-type) {
   margin-inline-start: var(--length-8);
-  margin-block-start: var(--length-20);
+  margin-block-start: var(--length-16);
 }
 
 :where(.footer ._vendor svg) {
   inline-size: var(--length-80);
-  block-size: var(--length-80);
+  block-size: var(--length-40);
+  margin-inline-start: calc(var(--length-28) * -1);
 }
 
 :where(.footer ._vendor span:only-of-type span:last-of-type) {
@@ -219,8 +221,7 @@
 
     :where(.footer ._sitemap) {
       padding-inline: var(--length-32);
-      margin-inline-start: 0px;
-      margin-inline-end: 0px;
+      margin-inline: 0px;
     }
   }
 
@@ -326,7 +327,7 @@
     justify-content: center;
     align-items: center;
   }
-  
+
   :where(.footer ._sitemap li) {
     margin-inline: 0px;
     margin-block: 0px;
