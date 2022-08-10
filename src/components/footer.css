@@ -13,16 +13,22 @@
   flex-grow: 1;
 }
 
+:where(.footer > div) {
+  align-self: flex-start;
+  padding-block-start: var(--length-40);
+}
+
 :where(.footer ._vendor) {
   flex-shrink: 1;
   display: flex;
   justify-content: flex-start;
-  align-items: center;
-  margin-inline-start: var(--length-80);
+  /* align-items: flex-start; */
+  /* margin-inline-start: var(--length-80); */
 }
 
 :where(.footer ._vendor span:only-of-type) {
   margin-inline-start: var(--length-8);
+  margin-block-start: var(--length-20);
 }
 
 :where(.footer ._vendor svg) {
@@ -67,7 +73,7 @@
   flex-wrap: nowrap;
   inline-size: max-content;
   margin-inline-end: var(--length-20);
-  margin-inline-start: 9.75rem;
+  margin-inline-start: 4.75rem;
 }
 
 :where(.footer ._contacts li) {
