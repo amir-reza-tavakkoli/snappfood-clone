@@ -1,4 +1,4 @@
-import { ComponentProps } from "react"
+import type { ComponentProps } from "react"
 import "./footer.css"
 import { Icon } from "./icon"
 
@@ -36,8 +36,10 @@ export const Footer = ({
           <a href={homepage} aria-label="Homepage" rel="canonical">
             <Icon name={logo.name} role="presentation" />
           </a>
-          <span>{name}</span>
-          <span>{description}</span>
+          <span>
+            <span>{name}</span>
+            <span>{description}</span>
+          </span>
         </p>
 
         <address aria-label="Contacts">
@@ -47,7 +49,7 @@ export const Footer = ({
                 <a href={item.href} rel="external" aria-label={item.logo.name}>
                   <Icon
                     name={item.logo.name}
-                    color="faded"
+                    color="text"
                     role="presentation"
                   />
                 </a>
