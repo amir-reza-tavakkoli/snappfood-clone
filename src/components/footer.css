@@ -32,8 +32,8 @@
 
 :where(.footer ._vendor svg) {
   inline-size: var(--length-80);
-  block-size: var(--length-40);
-  margin-inline-start: calc(var(--length-28) * -1);
+  block-size: var(--length-80);
+  /* margin-inline-start: calc(var(--length-28) * -1); */
 }
 
 :where(.footer ._vendor span:only-of-type span:last-of-type) {
@@ -170,6 +170,14 @@
       text-align: center;
     }
 
+    :where(.footer ._vendor svg) {
+      margin-inline-start: calc(var(--length-10) * -1);
+    }
+
+    :where(.footer ._vendor span:only-of-type) {
+      margin-inline-start: calc(var(--length-8) * -1);
+    }
+
     :where(.footer ._vendor) {
       justify-content: center;
       flex-direction: column;
@@ -261,6 +269,10 @@
     justify-content: center;
     flex-direction: column;
     align-items: center;
+  }
+
+  :where(.footer ._vendor svg) {
+    margin-inline-start: calc(var(--length-10) * -1);
   }
 
   :where(.footer ._vendor a) {
