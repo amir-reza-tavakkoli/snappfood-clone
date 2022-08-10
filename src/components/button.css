@@ -4,88 +4,112 @@
   }
 }
 
-.button {
-  --button-inline-padding: clamp(22px, 0.25em + 24px, 2em);
-  --button-block-padding: clamp(4px, 0.4em + 4px, 0.75em);
-  --button-svg-size: 1em;
-
-  font-size: var(--length-14);
-  border: none;
-  cursor: pointer;
+:where(.button) {
   display: inline-flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  border-style: solid;
-  border-radius: var(--length-3);
-  border-width: var(--border-thick);
-  padding-block-start: var(--button-block-padding);
-  padding-inline-end: var(--button-inline-padding);
-  padding-block-end: var(--button-block-padding);
-  padding-inline-start: var(--button-inline-padding);
-  min-inline-size: max-content;
   inline-size: 100%;
-  min-block-size: fit-content;
+  min-block-size: max-content;
+  min-inline-size: max-content;
+  padding-block-start: var(--length-8);
+  padding-inline-end: var(--length-20);
+  padding-block-end: var(--length-8);
+  padding-inline-start: var(--length-20);
+  font-size: var(--length-14);
+  border-width: var(--border-thick);
+  border-radius: var(--length-3);
+  border: none;
+  border-style: solid;
+  cursor: pointer;
+  overflow: hidden;
+  word-break: break-all;
 }
 
-.button[data-variant="faded"] {
+:where(.button > span) {
+  text-align: center;
+  max-inline-size: 100vmin;
+  overflow: hidden;
+}
+
+:where(.button[data-variant="faded"]) {
   color: var(--color-text);
   background-color: var(--color-faded-4);
   border-color: var(--color-faded-4);
   font-weight: 700;
 }
 
-.button[data-variant="faded"]:hover {
+:where(.button[data-variant="faded"]:hover) {
   background-color: var(--color-faded-5);
   border-color: var(--color-faded-5);
 }
 
-.button[data-variant="faded"]:active {
+:where(.button[data-variant="faded"]:active) {
   background-color: var(--color-faded-3);
   border-color: var(--color-faded-3);
 }
 
-.button[data-variant="primary"] {
+:where(.button[data-variant="faded"]:disabled:hover, .button[data-variant="faded"]:disabled:active) {
+  background-color: var(--color-faded);
+  border-color: var(--color-faded);
+}
+
+:where(.button[data-variant="primary"]) {
   color: var(--color-text-2);
   background-color: var(--color-primary);
   border-color: var(--color-primary);
   font-weight: 400;
 }
 
-.button[data-variant="primary"]:hover {
+:where(.button[data-variant="primary"]:hover) {
   background-color: var(--color-primary-3);
   border-color: var(--color-primary-3);
 }
 
-.button[data-variant="primary"]:active {
+:where(.button[data-variant="primary"]:active) {
   background-color: var(--primary-button-active-color);
   border-color: var(--primary-button-active-color);
 }
 
-.button[data-variant="accent"] {
+:where(.button[data-variant="primary"]:disabled:hover, .button[data-variant="primary"]:disabled:active) {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+:where(.button[data-variant="accent"]) {
   font-weight: 700;
   background-color: var(--color-accent);
   border-color: var(--color-accent);
   color: var(--color-primary);
 }
 
-.button[data-variant="accent"]:hover {
+:where(.button[data-variant="accent"]:hover) {
   background-color: var(--color-accent-2);
   border-color: var(--color-accent-2);
 }
 
-.button[data-variant="accent"]:active {
+:where(.button[data-variant="accent"]:active) {
   background-color: var(--color-accent-3);
   border-color: var(--color-accent-3);
 }
 
-.button[data-rounding="full"] {
+:where(.button[data-variant="accent"]:disabled:hover, .button[data-variant="accent"]:disabled:active) {
+  background-color: var(--color-accent);
+  border-color: var(--color-accent);
+}
+
+:where(.button[data-rounding="full"]) {
   border-radius: var(--length-48);
 }
 
-.button > span > svg {
-  inline-size: var(--button-svg-size);
-  aspect-ratio: 1/1;
+:where(.button > span > svg) {
+  inline-size: var(--length-6);
   min-inline-size: fit-content;
-  margin-inline-start: var(--length-20);
+  margin-inline-start: var(--length-8);
+  aspect-ratio: 1/1;
+}
+
+:where(.button:disabled) {
+  cursor: not-allowed;
+  opacity: 0.6;
 }
