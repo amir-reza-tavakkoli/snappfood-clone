@@ -15,16 +15,13 @@
 }
 
 :where(.footer > div) {
-  /* align-self: flex-start; */
-  padding-block-start: var(--length-48);
+  padding-block-start: var(--length-40);
 }
 
 :where(.footer ._vendor) {
   flex-shrink: 1;
   display: flex;
   justify-content: flex-start;
-  /* align-items: flex-start; */
-  /* margin-inline-start: var(--length-80); */
 }
 
 :where(.footer ._vendor span:only-of-type) {
@@ -167,12 +164,6 @@
 
 @supports not (container-type: size) {
   @media (max-width: 1100px) {
-    :where(.footer ._credentials) {
-      justify-content: center;
-      padding-inline: var(--length-80);
-      margin-inline: var(--length-32);
-    }
-
     :where(.footer ._vendor span:only-of-type) {
       text-align: center;
     }
@@ -188,12 +179,6 @@
       margin-block-end: calc(var(--length-10) * -1);
     }
 
-    :where(.footer ._sitemap) {
-      padding-inline: var(--length-32);
-      margin-inline-start: var(--length-48);
-      margin-inline-end: var(--length-48);
-    }
-
     :where(.footer ._contacts) {
       display: flex;
       justify-content: center;
@@ -202,10 +187,31 @@
       margin-left: auto;
       margin-right: auto;
     }
+
+    :where(.footer ._sitemap) {
+      padding-inline: var(--length-32);
+      margin-inline-start: var(--length-48);
+      margin-inline-end: var(--length-48);
+    }
+
+    :where(.footer ._credentials) {
+      justify-content: center;
+      padding-inline: var(--length-80);
+      margin-inline: var(--length-32);
+    }
   }
 
   @media (max-width: 550px) {
-    :where(.footer address) {
+    :where(.footer ._contacts) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-inline: var(--length-4);
+      text-align: center;
+      flex-wrap: wrap;
+    }
+
+    :where(.footer address:only-of-type) {
       display: flex;
       align-items: center;
       justify-content: center;
@@ -216,14 +222,26 @@
       margin-inline-start: 0px;
       margin-inline-end: 0px;
     }
+  }
 
+  @media (max-width: 300px) {
     :where(.footer ._contacts) {
       display: flex;
-      align-items: center;
+      flex-direction: column;
       justify-content: center;
-      margin-inline: var(--length-4);
-      text-align: center;
-      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    :where(.footer ._sitemap) {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    :where(.footer ._sitemap li) {
+      margin-inline: 0px;
+      margin-block: 0px;
     }
   }
 }
@@ -234,12 +252,6 @@
 }
 
 @container footer (max-width: 1100px) {
-  :where(.footer ._credentials) {
-    justify-content: center;
-    padding-inline: var(--length-80);
-    margin-inline: var(--length-32);
-  }
-
   :where(.footer ._vendor span:only-of-type) {
     text-align: center;
   }
@@ -255,12 +267,6 @@
     margin-block-end: calc(var(--length-10) * -1);
   }
 
-  :where(.footer ._sitemap) {
-    padding-inline: var(--length-32);
-    margin-inline-start: var(--length-48);
-    margin-inline-end: var(--length-48);
-  }
-
   :where(.footer ._contacts) {
     display: flex;
     justify-content: center;
@@ -269,9 +275,30 @@
     margin-left: auto;
     margin-right: auto;
   }
+
+  :where(.footer ._sitemap) {
+    padding-inline: var(--length-32);
+    margin-inline-start: var(--length-48);
+    margin-inline-end: var(--length-48);
+  }
+
+  :where(.footer ._credentials) {
+    justify-content: center;
+    padding-inline: var(--length-80);
+    margin-inline: var(--length-32);
+  }
 }
 
 @container footer (max-width: 550px) {
+  :where(.footer ._contacts) {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-inline: var(--length-4);
+    text-align: center;
+  }
+
   :where(.footer address) {
     display: flex;
     align-items: center;
@@ -283,13 +310,25 @@
     margin-inline-start: 0px;
     margin-inline-end: 0px;
   }
+}
 
+@container footer (max-width: 300px) {
   :where(.footer ._contacts) {
     display: flex;
-    align-items: center;
+    flex-direction: column;
     justify-content: center;
-    margin-inline: var(--length-4);
-    text-align: center;
-    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  :where(.footer ._sitemap) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  :where(.footer ._sitemap li) {
+    margin-inline: 0px;
+    margin-block: 0px;
   }
 }
