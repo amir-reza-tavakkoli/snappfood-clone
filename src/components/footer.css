@@ -39,6 +39,7 @@
 :where(.footer ._vendor span:only-of-type span:last-of-type) {
   display: block;
   padding-inline-start: var(--length-6);
+  min-inline-size: max-content;
   padding-block: 0px;
   margin-inline-end: 0px;
   margin-block: 0px;
@@ -161,4 +162,49 @@
 :where(.footer ._credentials li) {
   max-inline-size: var(--length-80);
   padding-inline: var(--length-2);
+}
+
+:where(.footer) {
+  container-type: size;
+  container-name: footer;
+}
+
+@container footer (max-width: 1100px) {
+  :where(.footer ._credentials) {
+    justify-content: center;
+  }
+
+  :where(.footer ._vendor span:only-of-type) {
+    /* margin-inline: 0px; */
+    text-align: center;
+  }
+
+  :where(.footer ._vendor) {
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  :where(.footer ._vendor a) {
+    margin-inline-start: var(--length-20);
+    margin-block-end: -10px;
+  }
+
+  :where(.footer ._sitemap) {
+    padding-inline: var(--length-20);
+  }
+
+  :where(.footer ._contacts) {
+    margin-inline: 0px;
+    margin-block: var(--length-16);
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@container footer (max-width: 550px) {
+  :where(.footer ._credentials) {
+    justify-content: center;
+    padding-inline: 20px;
+  }
 }
