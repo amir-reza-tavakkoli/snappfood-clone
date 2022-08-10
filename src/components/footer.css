@@ -164,6 +164,38 @@
   padding-inline: var(--length-2);
 }
 
+@supports not (container-type: size) {
+  :where(.footer ._credentials) {
+    justify-content: center;
+  }
+
+  :where(.footer ._vendor span:only-of-type) {
+    text-align: center;
+  }
+
+  :where(.footer ._vendor) {
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  :where(.footer ._vendor a) {
+    margin-inline-start: var(--length-20);
+    margin-block-end: -10px;
+  }
+
+  :where(.footer ._sitemap) {
+    padding-inline: var(--length-20);
+  }
+
+  :where(.footer ._contacts) {
+    margin-inline: 0px;
+    margin-block: var(--length-16);
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
 :where(.footer) {
   container-type: size;
   container-name: footer;
