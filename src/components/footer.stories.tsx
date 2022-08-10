@@ -1,4 +1,4 @@
-import { ComponentProps } from "react"
+import type { ComponentProps } from "react"
 import { Footer } from "./footer"
 
 const props: ComponentProps<typeof Footer> = {
@@ -23,7 +23,8 @@ const props: ComponentProps<typeof Footer> = {
       name: "E-Trust",
       href: "",
       logo: "https://snappfood.ir/static/images/senf.png",
-    },{
+    },
+    {
       name: "E-Trust",
       href: "",
       logo: "https://snappfood.ir/static/images/senf.png",
@@ -36,7 +37,6 @@ const props: ComponentProps<typeof Footer> = {
     { name: "حریم شخصی", href: "#" },
     { name: "ثبت نام فروشندگان", href: "#" },
     { name: "ثبت نام فروشندگان", href: "#" },
-    { name: "ثبت نام فروشندگان", href: "#" },
     { name: "تماس با اسنپ فود", href: "#" },
     { name: "ٍثبت شکایات", href: "#" },
     { name: "پرسش های متداول", href: "#" },
@@ -44,7 +44,5 @@ const props: ComponentProps<typeof Footer> = {
 }
 
 export const DefaultFooter = () => {
-  return (
-    <Footer {...props}></Footer>
-  )
+  return <Footer {...props}></Footer>
 }
