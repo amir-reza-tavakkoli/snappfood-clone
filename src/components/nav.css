@@ -1,6 +1,6 @@
 @import "../base.css";
 
-:where(.vendor-nav ._items) {
+:where(.nav ._items) {
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -12,17 +12,17 @@
   overflow-x: auto;
 }
 
-:where(.vendor-nav ._items li) {
+:where(.nav ._items li) {
   flex-grow: 1;
   flex-shrink: 1;
   min-inline-size: var(--length-80);
 }
 
-:where(.vendor-nav ._items a) {
+:where(.nav ._items a) {
   text-decoration: none;
 }
 
-:where(.vendor-nav ._items ._name) {
+:where(.nav ._items ._name) {
   color: var(--color-text-2);
   line-height: var(--length-16);
   font-weight: 400;
@@ -30,7 +30,7 @@
   overflow-wrap: break-word;
 }
 
-:where(.vendor-nav ._items a span:first-child) {
+:where(.nav ._items a span:first-child) {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -38,7 +38,7 @@
   padding-block-end: var(--length-16);
 }
 
-:where(.vendor-nav ._items a img) {
+:where(.nav ._items a img) {
   display: inline-block;
   inline-size: var(--length-48);
   max-inline-size: var(--length-48);
@@ -46,7 +46,7 @@
   aspect-ratio: 1/1;
 }
 
-:where(html[dir="rtl"] .vendor-nav ._items) {
+:where(html[dir="rtl"] .nav ._items) {
   flex-direction: row;
   direction: rtl;
 }
