@@ -9,15 +9,14 @@ export type ImageItemProps = {
 
 export const ImageItem = ({ title, image, type }: ImageItemProps) => {
   return (
-    <figure className="image-item">
-      {type ? <p className="nonvisual">{type}</p> : null}
-      <img src={image} alt={title} />
-      <figcaption className="_title">
-        {title}{" "}
+    <article className="image-item" aria-label={type ?? undefined}>
+      <img src={image} alt="" role="presentation" />
+      <p>
+        {title}
         <span role="presentation">
-          <Icon name="flash" color="accent" role="presentation"/>
+          <Icon name="flash" color="accent" role="presentation" />
         </span>
-      </figcaption>
-    </figure>
+      </p>
+    </article>
   )
 }
