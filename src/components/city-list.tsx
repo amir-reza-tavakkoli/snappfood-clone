@@ -1,6 +1,6 @@
-import "./tabular-list.css"
+import "./city-list.css"
 
-type TabularListProps = {
+type CityListProps = {
   title: string
   type: string
   items: {
@@ -9,9 +9,9 @@ type TabularListProps = {
   }[]
 }
 
-export const TabularList = ({ title, type, items }: TabularListProps) => {
+export const CityList = ({ title, type, items }: CityListProps) => {
   return (
-    <article className="tabular-list">
+    <article className="city-list">
       <p>{title}</p>
       <ul aria-label={type ?? undefined}>
         {items.map((item, index) => (

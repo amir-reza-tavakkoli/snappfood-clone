@@ -1,9 +1,9 @@
 import type { ComponentProps } from "react"
-import { TabularList } from "./tabular-list"
+import { CityList } from "./city-list"
 
-const props: ComponentProps<typeof TabularList> = {
+const props: ComponentProps<typeof CityList> = {
   title: "اسنپ‌فود در شهرهای ایران",
-  type: "cities",
+  type: "شهر",
   items: [
     { name: "شیراز", href: "#" },
     { name: "تهران", href: "#" },
@@ -30,14 +30,14 @@ const props: ComponentProps<typeof TabularList> = {
   ],
 }
 
-export const TabularListDefault = () => {
-  return <TabularList {...props}></TabularList>
+export const CityListDefault = () => {
+  return <CityList {...props}></CityList>
 }
 
 export const OverflowingText = () => {
-  const items = props.items.map((item, index, array) => {
-    return {...item, name:item.name.repeat(5)}
+  const items = props.items.map(item => {
+    return { ...item, name: item.name.repeat(5) }
   })
-  const newProps = {...props, items}
-  return <TabularList {...newProps}></TabularList>
+  const newProps = { ...props, items }
+  return <CityList {...newProps}></CityList>
 }
