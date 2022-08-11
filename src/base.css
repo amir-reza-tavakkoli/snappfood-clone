@@ -21,6 +21,7 @@
   --length-24: 1.5rem;
   --length-28: 1.75rem;
   --length-32: 2rem;
+  --length-40: 2.5rem;
   --length-48: 3rem;
   --length-64: 4rem;
   --length-80: 5rem;
@@ -43,7 +44,8 @@
   --color-faded-5: hsla(218, 6%, 24%, 0.12);
   --color-faded-6: hsla(210, 14%, 11%, 0.2);
   --color-faded-7: hsla(210, 20%, 98%, 0.06);
-  --color-faded-8: hsla(218, 6%, 24%, 0.7);
+  --color-faded-8: hsla(210, 20%, 98%, 1);
+  --color-faded-9: hsla(218, 6%, 24%, 0.7);
   --color-accent: hsl(321deg 100% 50%);
   --color-accent-2: hsl(325deg 100% 61%);
   --color-accent-3: hsl(320, 100%, 44%);

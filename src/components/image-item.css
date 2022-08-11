@@ -1,5 +1,3 @@
-@import "../base.css";
-
 :where(.image-item) {
   position: relative;
   inline-size: 100%;
@@ -11,7 +9,7 @@
   box-shadow: var(--box-shadow-normal);
 }
 
-:where(.image-item > img) {
+:where(.image-item img) {
   inline-size: 100%;
   aspect-ratio: 2/1;
   display: inline-block;
@@ -19,17 +17,16 @@
   border-radius: var(--length-12);
 }
 
-:where(.image-item ._title) {
+:where(.image-item p) {
   position: absolute;
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  /* flex-direction: row-reverse; */
   max-inline-size: 75%;
   inset-inline-start: 0px;
   inset-block-end: 0px;
   padding-block-start: var(--length-4);
-  padding-inline-end: var(--length-12);
+  padding-inline-end: var(--length-8);
   padding-block-end: var(--length-4);
   padding-inline-start: var(--length-14);
   border-start-end-radius: var(--length-12);
@@ -40,9 +37,10 @@
   background-color: var(--color-primary);
   line-height: var(--length-24);
   word-break: break-all;
+
 }
 
-:where(.image-item ._title > span) {
+:where(.image-item p span) {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -55,15 +53,18 @@
   transform: rotate(180deg);
 }
 
-:where(.image-item ._title > span:hover) {
+:where(.image-item p span:hover) {
   transform: none;
   transform: rotate(180deg) translateX(calc(var(--length-2) * -1));
 }
 
-:where(html[dir="rtl"] .image-item ._title > span) {
+:where(html[dir="rtl"] .image-item p) {
+    gap: var(--length-4);
+}
+:where(html[dir="rtl"] .image-item p span) {
   transform: none;
 }
 
-:where(html[dir="rtl"] .image-item ._title > span:hover) {
+:where(html[dir="rtl"] .image-item p span:hover) {
   transform: translateX(calc(var(--length-2) * -1));
 }
