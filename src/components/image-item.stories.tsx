@@ -1,5 +1,5 @@
+import type { ComponentProps } from "react"
 import { ImageItem } from "./image-item"
-import { ComponentProps } from "react"
 
 const imageItemProps: ComponentProps<typeof ImageItem> = {
   image:
@@ -10,11 +10,6 @@ const imageItemProps: ComponentProps<typeof ImageItem> = {
 
 export const ImageItemDefault = () => {
   return <ImageItem {...imageItemProps}></ImageItem>
-}
-
-export const WithoutName = () => {
-  const props = { ...imageItemProps, title: undefined }
-  return <ImageItem {...props}></ImageItem>
 }
 
 export const WithLongName = () => {
@@ -32,11 +27,6 @@ export const WithOverflowingName = () => {
     title:
       "LoremIpsumissimplydummytextoftheprintingandtypesettingindustryLoremIpsumhasbeentheindustry'sstandarddummtexteversincethe1500s,whenanunknownprinter ookagalleyoftypeandscrambledittomakeatypejjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj",
   }
-  return <ImageItem {...props}></ImageItem>
-}
-
-export const WithoutImage = () => {
-  const props = { ...imageItemProps, image: undefined }
   return <ImageItem {...props}></ImageItem>
 }
 
