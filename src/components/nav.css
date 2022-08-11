@@ -1,0 +1,52 @@
+@import "../base.css";
+
+:where(.nav ._items) {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-grow: 0;
+  flex-shrink: 1;
+  inline-size: 100%;
+  padding-block-start: var(--length-16);
+  font-size: var(--length-12);
+  overflow-x: auto;
+}
+
+:where(.nav ._items li) {
+  flex-grow: 1;
+  flex-shrink: 1;
+  min-inline-size: var(--length-80);
+}
+
+:where(.nav ._items a) {
+  text-decoration: none;
+}
+
+:where(.nav ._items ._name) {
+  color: var(--color-text-2);
+  line-height: var(--length-16);
+  font-weight: 400;
+  max-inline-size: 75%;
+  overflow-wrap: break-word;
+}
+
+:where(.nav ._items a span:first-child) {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-block-end: var(--length-16);
+}
+
+:where(.nav ._items a img) {
+  display: inline-block;
+  inline-size: var(--length-48);
+  max-inline-size: var(--length-48);
+  margin-block-end: var(--length-16);
+  aspect-ratio: 1/1;
+}
+
+:where(html[dir="rtl"] .nav ._items) {
+  flex-direction: row;
+  direction: rtl;
+}
