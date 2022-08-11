@@ -1,5 +1,3 @@
-@import "../base.css";
-
 :where(.image-item) {
   position: relative;
   inline-size: 100%;
@@ -29,7 +27,7 @@
   inset-inline-start: 0px;
   inset-block-end: 0px;
   padding-block-start: var(--length-4);
-  padding-inline-end: var(--length-12);
+  padding-inline-end: var(--length-8);
   padding-block-end: var(--length-4);
   padding-inline-start: var(--length-14);
   border-start-end-radius: var(--length-12);
@@ -40,6 +38,7 @@
   background-color: var(--color-primary);
   line-height: var(--length-24);
   word-break: break-all;
+
 }
 
 :where(.image-item ._title > span) {
@@ -60,8 +59,12 @@
   transform: rotate(180deg) translateX(calc(var(--length-2) * -1));
 }
 
+:where(html[dir="rtl"] .image-item ._title) {
+    gap: 5px;
+}
 :where(html[dir="rtl"] .image-item ._title > span) {
   transform: none;
+  /* margin-inline: 10px; */
 }
 
 :where(html[dir="rtl"] .image-item ._title > span:hover) {
