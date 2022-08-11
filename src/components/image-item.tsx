@@ -1,5 +1,5 @@
 import "./image-item.css"
-import { LeftPinkFlashIcon } from "./svg"
+import { Icon } from "./icon"
 
 export type ImageItemProps = {
   title: string
@@ -15,7 +15,7 @@ export const ImageItem = ({ title, image, type }: ImageItemProps) => {
       <figcaption className="_title">
         {title}{" "}
         <span role="presentation">
-          <LeftPinkFlashIcon />
+          <Icon name="flash" color="accent" role="presentation"/>
         </span>
       </figcaption>
     </figure>
