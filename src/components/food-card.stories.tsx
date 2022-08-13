@@ -1,4 +1,4 @@
-import { ComponentProps } from "react"
+import type { ComponentProps } from "react"
 import { FoodCard } from "./food-card"
 
 const props: ComponentProps<typeof FoodCard> = {
@@ -16,8 +16,8 @@ const props: ComponentProps<typeof FoodCard> = {
       available: true,
     },
     {
-      variation: "بزرگ",
-      vaule: 70000,
+      variation: "کوچک",
+      vaule: 55000,
       currency: "تومان",
       available: true,
     },
@@ -50,7 +50,6 @@ export const LongIngerdients = () => {
       "ریحان",
     ],
   }
-
   return <FoodCard {...longIngredients}></FoodCard>
 }
 
@@ -76,7 +75,6 @@ export const LongIngerdientsConstrained = () => {
       "ریحان",
     ],
   }
-
   return (
     <div style={{ width: "300px", height: "250px" }}>
       {" "}
@@ -90,7 +88,6 @@ export const BadImage = () => {
     ...props,
     image: "NoSuchUrl.com",
   }
-
   return <FoodCard {...longIngredients}></FoodCard>
 }
 
