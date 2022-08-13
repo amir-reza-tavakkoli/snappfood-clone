@@ -7,7 +7,6 @@
   padding-inline: var(--length-40);
   padding-block: var(--length-40);
   background-color: var(--color-faded-8);
-  overflow-x: hidden;
 }
 
 :where(.footer > *) {
@@ -15,7 +14,7 @@
 }
 
 :where(.footer > div) {
-  padding-block-start: var(--length-40);
+  padding-block-start: var(--length-32);
   align-self: flex-start;
 }
 
