@@ -2,16 +2,26 @@ import { ComponentProps } from "react"
 import { FoodCard } from "./food-card"
 
 const props: ComponentProps<typeof FoodCard> = {
-    name: "پیتزا استیک",
-    type : "غذا",
+  name: "پیتزا استیک",
+  type: "غذا",
   ingredients: ["گوشت خوک مرینت شده", "پنیر گودا", "سس ناپولی", "ریحان"],
   available: true,
   image:
     "https://cdn.snappfood.ir/641x641/cdn/71/82/3/vendor/62b604a15b978.jpeg",
-  price: {
-    vaule: 70000,
-    currency: "تومان",
-  },
+  prices: [
+    {
+      variation: "بزرگ",
+      vaule: 70000,
+      currency: "تومان",
+      available: true,
+    },
+    {
+      variation: "بزرگ",
+      vaule: 70000,
+      currency: "تومان",
+      available: true,
+    },
+  ],
 }
 
 export const FoodCardDefault = () => {
@@ -44,6 +54,37 @@ export const LongIngerdients = () => {
   return <FoodCard {...longIngredients}></FoodCard>
 }
 
+export const LongIngerdientsConstrained = () => {
+  const longIngredients: ComponentProps<typeof FoodCard> = {
+    ...props,
+    ingredients: [
+      "گوشت خوک مرینت شده",
+      "پنیر گودا",
+      "سس ناپولی",
+      "ریحان",
+      "گوشت خوک مرینت شده",
+      "پنیر گودا",
+      "سس ناپولی",
+      "ریحان",
+      "گوشت خوک مرینت شده",
+      "پنیر گودا",
+      "سس ناپولی",
+      "ریحان",
+      "گوشت خوک مرینت شده",
+      "پنیر گودا",
+      "سس ناپولی",
+      "ریحان",
+    ],
+  }
+
+  return (
+    <div style={{ width: "300px", height: "250px" }}>
+      {" "}
+      <FoodCard {...longIngredients}></FoodCard>
+    </div>
+  )
+}
+
 export const BadImage = () => {
   const longIngredients: ComponentProps<typeof FoodCard> = {
     ...props,
@@ -52,8 +93,6 @@ export const BadImage = () => {
 
   return <FoodCard {...longIngredients}></FoodCard>
 }
-
-
 
 export const SmallConstrained = () => {
   return (

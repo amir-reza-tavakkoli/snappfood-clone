@@ -7,8 +7,7 @@
   overflow-x: auto;
 }
 
-:where(.food-card > div:first-of-type),
-:where(.food-card > div:last-of-type) {
+:where(.food-card > div) {
   flex-grow: 2;
   display: flex;
   padding-inline: var(--length-8);
@@ -19,21 +18,41 @@
 }
 
 :where(.food-card > div:first-of-type div) {
+  align-self: flex-start;
   display: flex;
   flex-direction: column;
+  padding-block-start: var(--length-8);
 }
 
-:where(.food-card > div:last-of-type) {
+:where(.food-card > div:nth-child(1)) {
+  margin-block-start: var(--length-8);
+}
+:where(.food-card > div:nth-child(n + 1)) {
   justify-content: space-between;
   align-items: center;
-  padding-block: var(--length-16);
+  padding-block: var(--length-8);
 }
 
-:where(.food-card img) {
+:where(.food-card > div:nth-of-type(n + 2):hover) {
+  background-color: var(--color-faded-4);
+}
+
+:where(.food-card div:nth-child(n + 1) button) {
+  padding-block: var(--length-6);
+  padding-inline: var(--length-32);
+  transition: all 150ms ease-out 0s;
+  color: var(--color-accent);
+  box-shadow: var(--box-shadow-thick);
+  border: var(--border-thick) solid var(--color-accent-4);
+  box-shadow: hsla(218, 6%, 24%, 0.06) 0px 1px 0px,
+    hsla(0, 0%, 0%, 0.2) 0px 4px 16px -8px;
+}
+
+:where(.food-card div img) {
   flex-grow: 1;
   align-self: flex-start;
   inline-size: 45%;
-  max-inline-size: 500px;
+  max-inline-size: 32rem;
   margin-inline-end: var(--length-4);
   aspect-ratio: 1/1;
   border-radius: var(--length-8);
@@ -67,10 +86,21 @@
 
 :where(.food-card ._price) {
   display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
   inline-size: max-content;
 }
 
-:where(.food-card ._price *) {
+:where(.food-card ._price div) {
+  display: flex;
+}
+
+:where(.food-card ._variation) {
+  font-size: var(--length-12);
+}
+
+:where(.food-card ._price dd) {
   padding-inline: var(--length-2);
   padding-block: var(--length-2);
   text-align: center;
@@ -80,20 +110,9 @@
   color: var(--color-text);
 }
 
-:where(.food-card button) {
-  padding-inline: var(--length-24);
-  padding-block: var(--length-6);
-  padding-inline: var(--length-32);
-  transition: all 150ms ease-out 0s;
-  color: var(--color-accent);
-  box-shadow: var(--box-shadow-thick);
-  border: var(--border-thick) solid rgba(255, 0, 166, 0.06);
-  box-shadow: rgb(58 61 66 / 6%) 0px 1px 0px, rgb(0 0 0 / 20%) 0px 4px 16px -8px;
-}
-
-:where(.food-card button:hover) {
+:where(.food-card div:nth-child(n + 1) button:hover) {
   background-color: var(--color-accent);
   color: var(--color-primary);
-  border-color: rgba(255, 0, 166, 0.06);
+  border-color: var(--color-accent-4);
   box-shadow: var(--box-shadow-thick);
 }

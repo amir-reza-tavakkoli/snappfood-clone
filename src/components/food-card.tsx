@@ -7,16 +7,11 @@ type FoodCardProps = {
   ingredients?: string[]
   available: boolean
   image?: string
-  price?: {
+  prices?: {
+    variation?: string
     vaule: number
     currency: string
-  }
-  variations?: {
-    name: "string"
-    price: {
-      vaule: number
-      currency: string
-    }
+    available: boolean
   }[]
 }
 
@@ -25,12 +20,11 @@ export const FoodCard = ({
   type,
   image,
   ingredients,
-  price,
+  prices,
   available,
-  variations,
 }: FoodCardProps) => {
   return (
-    <dl className="food-card" aria-label="Food">
+    <dl className="food-card" aria-label="Item">
       <div>
         <div>
           <dt className="nonvisual">Name</dt>
@@ -58,42 +52,48 @@ export const FoodCard = ({
           role="presentation"
         />
       </div>
-      <div>
-        {price ? (
-          <>
-            <dt className="nonvisual">Price</dt>
-            <dd>
-              <dl className="_price">
-                <dt className="nonvisual">Value</dt>
-                <dd>{price.vaule}</dd>
-                <dt className="nonvisual">Currency</dt>
-                <dd>{price.currency}</dd>
-              </dl>
-            </dd>
-          </>
-        ) : null}
-        <dt className="nonvisual">Availbility</dt>
-        <dd>
-          {!variations && available ? (
-            <Button
-              variant="primary"
-              rounding="full"
-              aria-lable={!available ? "Not available" : "available"}
-            >
-              افزودن
-            </Button>
-          ) : (
-            <Button
-              disabled
-              variant="primary"
-              rounding="full"
-              aria-lable={(!available ? "Not available" : "available")}
-            >
-              افزودن
-            </Button>
-          )}
-        </dd>
-      </div>
+      {prices!.map((item, index) => (
+        <div>
+          {item ? (
+            <>
+              <dt className="nonvisual">Price</dt>
+              <dd>
+                <dl className="_price">
+                  <dt className="nonvisual">Variation</dt>
+                  <dd className="_variation">{item.variation}</dd>
+                  <div>
+                    <dt className="nonvisual">Value</dt>
+                    <dd>{item.vaule}</dd>
+                    <dt className="nonvisual">Currency</dt>
+                    <dd>{item.currency}</dd>
+                  </div>
+                </dl>
+              </dd>
+            </>
+          ) : null}
+          <dt className="nonvisual">Add</dt>
+          <dd>
+            {available && item.available ? (
+              <Button
+                variant="primary"
+                rounding="full"
+                aria-label={"Add" + name + item.variation}
+              >
+                افزودن
+              </Button>
+            ) : (
+              <Button
+                disabled
+                variant="primary"
+                rounding="full"
+                aria-label="Not available"
+              >
+                افزودن
+              </Button>
+            )}
+          </dd>
+        </div>
+      ))}
     </dl>
   )
 }
