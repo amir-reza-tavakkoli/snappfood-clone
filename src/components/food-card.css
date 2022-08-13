@@ -17,7 +17,7 @@
   justify-content: space-between;
 }
 
-:where(.food-card > div:first-of-type div) {
+:where(.food-card ._identity) {
   align-self: flex-start;
   display: flex;
   flex-direction: column;
@@ -48,7 +48,7 @@
     hsla(0, 0%, 0%, 0.2) 0px 4px 16px -8px;
 }
 
-:where(.food-card div img) {
+:where(.food-card img:only-of-type) {
   flex-grow: 1;
   align-self: flex-start;
   inline-size: 45%;

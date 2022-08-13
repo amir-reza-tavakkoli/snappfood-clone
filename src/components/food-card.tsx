@@ -24,9 +24,10 @@ export const FoodCard = ({
   available,
 }: FoodCardProps) => {
   return (
-    <dl className="food-card" aria-label="Item">
+    <dl className="food-card">
       <div>
-        <div>
+        <dt className="nonvisual">Item</dt>
+        <dl className="_identity">
           <dt className="nonvisual">Name</dt>
           <dd className="_name">{name}</dd>
           <dt className="nonvisual">Type</dt>
@@ -45,7 +46,7 @@ export const FoodCard = ({
               </dd>
             </>
           ) : null}
-        </div>
+        </dl>
         <img
           src={image ?? "https://snappfood.ir/static/images/placeholder.png"}
           alt=""
