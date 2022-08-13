@@ -3,6 +3,7 @@ import "./food-card.css"
 
 type FoodCardProps = {
   name: string
+  type: string
   ingredients?: string[]
   available: boolean
   image?: string
@@ -10,21 +11,32 @@ type FoodCardProps = {
     vaule: number
     currency: string
   }
+  variations?: {
+    name: "string"
+    price: {
+      vaule: number
+      currency: string
+    }
+  }[]
 }
 
 export const FoodCard = ({
   name,
+  type,
   image,
   ingredients,
   price,
   available,
+  variations,
 }: FoodCardProps) => {
   return (
-    <dl className="food-card">
+    <dl className="food-card" aria-label="Food">
       <div>
         <div>
           <dt className="nonvisual">Name</dt>
           <dd className="_name">{name}</dd>
+          <dt className="nonvisual">Type</dt>
+          <dd className="nonvisual">{type}</dd>
           {ingredients ? (
             <>
               <dt className="nonvisual">Ingredients</dt>
@@ -32,7 +44,7 @@ export const FoodCard = ({
                 <ul>
                   {ingredients.map((item, index) => (
                     <li key={index}>
-                      {item} {index - 1 === ingredients.length ? "" : ", "}
+                      {item} {index !== ingredients.length - 1 ? ", " : " "}
                     </li>
                   ))}
                 </ul>
@@ -62,12 +74,21 @@ export const FoodCard = ({
         ) : null}
         <dt className="nonvisual">Availbility</dt>
         <dd>
-          {available ? (
-            <Button variant="accent" rounding="full">
+          {!variations && available ? (
+            <Button
+              variant="primary"
+              rounding="full"
+              aria-lable={!available ? "Not available" : "available"}
+            >
               افزودن
             </Button>
           ) : (
-            <Button disabled variant="primary" rounding="full">
+            <Button
+              disabled
+              variant="primary"
+              rounding="full"
+              aria-lable={(!available ? "Not available" : "available")}
+            >
               افزودن
             </Button>
           )}

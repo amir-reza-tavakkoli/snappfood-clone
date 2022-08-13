@@ -1,7 +1,9 @@
+import { ComponentProps } from "react"
 import { FoodCard } from "./food-card"
 
-const props = {
-  name: "پیتزا استیک",
+const props: ComponentProps<typeof FoodCard> = {
+    name: "پیتزا استیک",
+    type : "غذا",
   ingredients: ["گوشت خوک مرینت شده", "پنیر گودا", "سس ناپولی", "ریحان"],
   available: true,
   image:
@@ -13,15 +15,58 @@ const props = {
 }
 
 export const FoodCardDefault = () => {
-    return (
-        <FoodCard {...props}></FoodCard>
-    )
+  return <FoodCard {...props}></FoodCard>
 }
 
-export const constrained = () => {
-    return (
-      <div style={{ width: "250px", height: "250px" }}>
-        <FoodCard {...props}></FoodCard>
-      </div>
-    )
+export const LongIngerdients = () => {
+  const longIngredients: ComponentProps<typeof FoodCard> = {
+    ...props,
+    ingredients: [
+      "گوشت خوک مرینت شده",
+      "پنیر گودا",
+      "سس ناپولی",
+      "ریحان",
+      "گوشت خوک مرینت شده",
+      "پنیر گودا",
+      "سس ناپولی",
+      "ریحان",
+      "گوشت خوک مرینت شده",
+      "پنیر گودا",
+      "سس ناپولی",
+      "ریحان",
+      "گوشت خوک مرینت شده",
+      "پنیر گودا",
+      "سس ناپولی",
+      "ریحان",
+    ],
+  }
+
+  return <FoodCard {...longIngredients}></FoodCard>
+}
+
+export const BadImage = () => {
+  const longIngredients: ComponentProps<typeof FoodCard> = {
+    ...props,
+    image: "NoSuchUrl.com",
+  }
+
+  return <FoodCard {...longIngredients}></FoodCard>
+}
+
+
+
+export const SmallConstrained = () => {
+  return (
+    <div style={{ width: "300px", height: "250px" }}>
+      <FoodCard {...props}></FoodCard>
+    </div>
+  )
+}
+
+export const MediumConstrained = () => {
+  return (
+    <div style={{ width: "500px", height: "40px" }}>
+      <FoodCard {...props}></FoodCard>
+    </div>
+  )
 }

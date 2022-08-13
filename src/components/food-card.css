@@ -4,19 +4,23 @@
   inline-size: 100%;
   padding-block: var(--length-16);
   margin-inline: var(--length-16);
+  overflow-x: auto;
 }
 
 :where(.food-card > div:first-of-type),
 :where(.food-card > div:last-of-type) {
+  flex-grow: 2;
   display: flex;
+  padding-inline: var(--length-8);
 }
-:where(.food-card > div:first-of-type div){
-    display: flex;
-    flex-direction: column;
-}
+
 :where(.food-card > div:first-of-type) {
-  /* margin: 10px; */
-  /* row-gap: 20px; */
+  justify-content: space-between;
+}
+
+:where(.food-card > div:first-of-type div) {
+  display: flex;
+  flex-direction: column;
 }
 
 :where(.food-card > div:last-of-type) {
@@ -26,33 +30,39 @@
 }
 
 :where(.food-card img) {
-  align-self: center;
-  inline-size: 50%;
-  margin-inline-end: calc(var(--length-10) * -1);
+  flex-grow: 1;
+  align-self: flex-start;
+  inline-size: 45%;
+  max-inline-size: 500px;
+  margin-inline-end: var(--length-4);
   aspect-ratio: 1/1;
   border-radius: var(--length-8);
 }
 
 :where(.food-card ._ingredients) {
-  display: inline-block;
+  display: block;
+  max-width: max-content;
+  min-width: 100px;
   padding-block: var(--length-16);
-  margin-inline: 0px;
   padding-inline-end: var(--length-16);
+  margin-inline: 0px;
   margin-block: 0px;
   text-align: start;
   line-height: var(--length-16);
   font-size: var(--length-12);
   font-weight: 400;
   color: var(--color-faded);
+  word-break: normal;
 }
 
 :where(.food-card ._name) {
-    display: inline-block;
-    text-align: initial;
-    font-size: var(--length-16);
-    font-weight: 700;
-    line-height:var(--length-24);
+  display: inline-block;
+  text-align: initial;
+  font-size: var(--length-16);
+  font-weight: 700;
+  line-height: var(--length-24);
   color: var(--color-text);
+  word-break: break-all;
 }
 
 :where(.food-card ._price) {
@@ -63,10 +73,27 @@
 :where(.food-card ._price *) {
   padding-inline: var(--length-2);
   padding-block: var(--length-2);
+  text-align: center;
+  font-size: var(--length-12);
+  font-weight: 700;
+  line-height: var(--length-20);
+  color: var(--color-text);
 }
 
 :where(.food-card button) {
+  padding-inline: var(--length-24);
+  padding-block: var(--length-6);
   padding-inline: var(--length-32);
-  /* margin-inline-end: calc(var(--length-2) * -1); */
-  margin-inline-end: 50px;
+  transition: all 150ms ease-out 0s;
+  color: var(--color-accent);
+  box-shadow: var(--box-shadow-thick);
+  border: var(--border-thick) solid rgba(255, 0, 166, 0.06);
+  box-shadow: rgb(58 61 66 / 6%) 0px 1px 0px, rgb(0 0 0 / 20%) 0px 4px 16px -8px;
+}
+
+:where(.food-card button:hover) {
+  background-color: var(--color-accent);
+  color: var(--color-primary);
+  border-color: rgba(255, 0, 166, 0.06);
+  box-shadow: var(--box-shadow-thick);
 }
