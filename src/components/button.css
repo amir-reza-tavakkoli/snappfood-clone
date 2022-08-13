@@ -1,8 +1,8 @@
-@media (pointer: coarse) {
+/* @media (pointer: coarse) {
   .button {
     min-inline-size: var(--length-48);
   }
-}
+} */
 
 :where(.button) {
   display: inline-flex;
