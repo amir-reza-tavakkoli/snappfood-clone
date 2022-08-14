@@ -60,16 +60,20 @@ export const StoreCard = ({ name, logo, type, rating }: StoreCardProps) => {
           </dl>
         </dd>
         <dt className="nonvisual">Images</dt>
-        <dl className="_image">
-          <dt className="nonvisual">Logo</dt>
-          <dd>
-            <img
-              alt=""
-              role="presentation"
-              src={logo ?? "https://snappfood.ir/static/images/placeholder.png"}
-            ></img>
-          </dd>
-        </dl>
+        <dd className="_image">
+          <dl>
+            <dt className="nonvisual">Logo</dt>
+            <dd>
+              <img
+                alt=""
+                role="presentation"
+                src={
+                  logo ?? "https://snappfood.ir/static/images/placeholder.png"
+                }
+              ></img>
+            </dd>
+          </dl>
+        </dd>
       </div>
       <div>
         <dt className="nonvisual">Information</dt>

@@ -36,6 +36,7 @@
   block-size: 100%;
   align-self: stretch;
 }
+
 :where(.store-card ._identity > *) {
   order: 2;
 }
@@ -46,6 +47,7 @@
   font-size: var(--length-20);
   font-weight: 700;
   overflow-wrap: normal;
+  margin-block-end: var(--length-8);
 }
 
 :where(.store-card ._image) {
@@ -68,6 +70,8 @@
 :where(.store-card ._rating) {
   order: 1;
   padding-inline-start: var(--length-16);
+  margin-block-start: var(--length-8);
+  margin-inline-start: calc(var(--length-6) * -1);
 }
 
 :where(.store-card ._rating > dl) {
