@@ -1,0 +1,122 @@
+:where(.store-card) {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  inline-size: 100%;
+}
+
+:where(.store-card > div:first-child) {
+  flex-grow: 1;
+  flex-shrink: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+:where(.store-card > div:last-child) {
+  flex-grow: 0;
+  flex-shrink: 0;
+  margin-block-start: var(--length-16);
+}
+
+:where(.store-card ._identity) {
+  align-self: flex-end;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-self: stretch;
+  order: 1;
+}
+
+:where(.store-card ._identity dl) {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  block-size: 100%;
+  align-self: stretch;
+}
+
+:where(.store-card ._identity > *) {
+  order: 2;
+}
+
+:where(.store-card ._name) {
+  order: 3;
+  padding-inline-start: var(--length-16);
+  font-size: var(--length-20);
+  font-weight: 700;
+  overflow-wrap: normal;
+  margin-block-end: var(--length-8);
+}
+
+:where(.store-card ._image) {
+  align-self: flex-start;
+  inline-size: 30%;
+}
+
+:where(.store-card ._image img) {
+  align-self: flex-start;
+  inline-size: 100%;
+  min-inline-size: var(--length-80);
+  margin-inline-end: var(--length-20);
+  padding-inline: var(--length-1);
+  padding-block: var(--length-1);
+  aspect-ratio: 1/1;
+  border: var(--border-normal) solid var(--color-faded-4);
+  border-radius: var(--length-12);
+}
+
+:where(.store-card ._rating) {
+  order: 1;
+  padding-inline-start: var(--length-16);
+  margin-block-start: var(--length-8);
+  margin-inline-start: calc(var(--length-6) * -1);
+}
+
+:where(.store-card ._rating > dl) {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  margin-block-end: calc(var(--length-4) * -1);
+}
+
+:where(.store-card ._rating > dl > dd) {
+  font-size: var(--length-12);
+}
+
+:where(.store-card ._rating > dl > dd:first-of-type) {
+  font-weight: 700;
+}
+
+:where(.store-card ._rating ._rating-count) {
+  margin-block: var(--length-6);
+  margin-inline: var(--length-6);
+  color: var(--color-faded);
+}
+
+:where(.store-card ._rating ._star-icon svg) {
+  inline-size: var(--length-12);
+  margin-block-start: 0;
+  margin-block-end: var(--length-4);
+  margin-inline: var(--length-4);
+}
+
+:where(.store-card button) {
+  margin-block-start: var(--length-8);
+  color: var(--color-action);
+  border: var(--border-thick) solid var(--color-action-4);
+  box-shadow: var(--box-shadow-light);
+}
+
+:where(.store-card button:hover) {
+  color: var(--color-action-2);
+  border-color: var(--color-action-4);
+}
+
+:where(.store-card button:active) {
+  color: var(--color-action-2);
+  background-color: var(--color-action-4);
+  border-color: var(--color-action-4);
+}

@@ -50,10 +50,10 @@
   --color-accent-2: hsl(325deg 100% 61%);
   --color-accent-3: hsl(320, 100%, 44%);
   --color-accent-4: hsla(321, 100%, 50%, 0.06);
-
   --color-action: hsl(152, 100%, 36%);
   --color-action-2: hsl(150, 100%, 26%);
   --color-action-3: hsl(152, 78%, 44%);
+  --color-action-4: rgba(0, 133, 66, 0.1);
   --color-warning: hsl(48, 96%, 52%);
   --color-warning-2: hsl(40, 100%, 31%);
   --color-warning-3: hsl(48, 100%, 62%);
