@@ -4,6 +4,7 @@ import { StoreCard } from "./store-card"
 const props: ComponentProps<typeof StoreCard> = {
   name: "مگیران برگر",
   logo: "https://cdn.snappfood.ir/300x200/cdn/vendor_sub_types/7/01.jpg",
+  type : "رستوران",
   rating: {
     value: 3.6,
     count: 12366,
