@@ -1,11 +1,11 @@
-import { Button } from "./button"
 import { Icon } from "./icon"
+import { Button } from "./button"
 import "./store-card.css"
 
 type StoreCardProps = {
   name: string
-  logo: string
-  type?: string
+  logo?: string
+  type: string
   rating?: {
     value?: number | string
     range?: number
@@ -17,14 +17,13 @@ export const StoreCard = ({ name, logo, type, rating }: StoreCardProps) => {
   return (
     <dl className="store-card">
       <div>
-        <div className="_identity">
-          <dt className="nonvisual">Name</dt>
-          <dd className="_name">{name}</dd>
-          <dt className="nonvisual">Type</dt>
-          <dd className="nonvisual">{type}</dd>
-
-          <dt className="nonvisual">Ratings</dt>
+        <dt className="nonvisual">Store</dt>
+        <dd className="_identity">
           <dl>
+            <dt className="nonvisual">Name</dt>
+            <dd className="_name">{name}</dd>
+            <dt className="nonvisual">Type</dt>
+            <dd className="nonvisual">{type}</dd>
             {rating ? (
               <>
                 <dt className="nonvisual">Rating</dt>
@@ -59,13 +58,18 @@ export const StoreCard = ({ name, logo, type, rating }: StoreCardProps) => {
               </>
             ) : null}
           </dl>
-        </div>
-        <div className="_image">
+        </dd>
+        <dt className="nonvisual">Images</dt>
+        <dl className="_image">
           <dt className="nonvisual">Logo</dt>
           <dd>
-            <img alt="" role="presentation" src={logo}></img>
+            <img
+              alt=""
+              role="presentation"
+              src={logo ?? "https://snappfood.ir/static/images/placeholder.png"}
+            ></img>
           </dd>
-        </div>
+        </dl>
       </div>
       <div>
         <dt className="nonvisual">Information</dt>
