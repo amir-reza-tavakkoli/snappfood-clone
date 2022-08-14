@@ -5,7 +5,7 @@ import "./store-card.css"
 type StoreCardProps = {
   name: string
   logo?: string
-  type: string
+  type?: string
   rating?: {
     value?: number | string
     range?: number

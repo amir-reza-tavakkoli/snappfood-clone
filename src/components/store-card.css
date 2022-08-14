@@ -56,6 +56,7 @@
 :where(.store-card ._image img) {
   align-self: flex-start;
   inline-size: 100%;
+  min-inline-size: var(--length-80);
   margin-inline-end: var(--length-20);
   padding-inline: var(--length-1);
   padding-block: var(--length-1);
