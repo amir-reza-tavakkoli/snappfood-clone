@@ -78,7 +78,7 @@ export const StoreCard = ({ name, logo, type, rating }: StoreCardProps) => {
       <div>
         <dt className="nonvisual">Information</dt>
         <dd>
-          <Button variant="primary" type="button" rounding="full">
+          <Button variant="primary" type="button" rounding="full" icon={{name : "info", color : "action"}}>
             اطلاعات و نظرات
           </Button>
         </dd>

@@ -35,6 +35,7 @@
   justify-content: space-between;
   block-size: 100%;
   align-self: stretch;
+  /* margin-inline-start: -5%; */
 }
 
 :where(.store-card ._identity > *) {
@@ -47,12 +48,12 @@
   font-size: var(--length-20);
   font-weight: 700;
   overflow-wrap: normal;
-  margin-block-end: var(--length-8);
+  margin-block-end: var(--length-10);
 }
 
 :where(.store-card ._image) {
   align-self: flex-start;
-  inline-size: 30%;
+  inline-size: 25%;
 }
 
 :where(.store-card ._image img) {
@@ -63,14 +64,14 @@
   padding-inline: var(--length-1);
   padding-block: var(--length-1);
   aspect-ratio: 1/1;
-  border: var(--border-normal) solid var(--color-faded-4);
+  border: var(--border-extra-thick) solid var(--color-faded-4);
   border-radius: var(--length-12);
 }
 
 :where(.store-card ._rating) {
   order: 1;
   padding-inline-start: var(--length-16);
-  margin-block-start: var(--length-8);
+  margin-block-start: var(--length-10);
   margin-inline-start: calc(var(--length-6) * -1);
 }
 
@@ -107,7 +108,11 @@
   margin-block-start: var(--length-8);
   color: var(--color-action);
   border: var(--border-thick) solid var(--color-action-4);
-  box-shadow: var(--box-shadow-light);
+  box-shadow: var(--box-shadow-normal);
+}
+
+:where(.store-card button svg) {
+  margin-block-start: var(--length-4);
 }
 
 :where(.store-card button:hover) {
