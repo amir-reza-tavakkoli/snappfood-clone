@@ -2,6 +2,7 @@ import "./icon.css"
 
 type IconName =
   | "snappfood"
+  | "info"
   | "twitter"
   | "instagram"
   | "telegram"
@@ -586,6 +587,24 @@ const Message = ({ name, color, ...props }: IconProps) => (
   </svg>
 )
 
+const Info = ({ name, color, ...props }: IconProps) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="1.0625rem"
+    height="1.0625rem"
+    viewBox="0 0 20 20"
+    fill="#D2D4D6"
+    className={name}
+    data-color={color}
+    {...props}
+  >
+    <path
+      d="M9 .666c4.595 0 8.334 3.738 8.334 8.333 0 4.595-3.739 8.334-8.334 8.334S.667 13.594.667 8.999 4.405.666 9 .666zm0 1.667c-3.676 0-6.666 2.995-6.666 6.666 0 3.672 2.99 6.667 6.666 6.667 3.677 0 6.667-2.995 6.667-6.667 0-3.671-2.99-6.666-6.667-6.666zm-.83 6.66c0-.457.37-.827.827-.827h.014c.456 0 .826.37.826.826v3.34a.837.837 0 01-.837.834.83.83 0 01-.83-.83v-.002-3.342zm-.211-3.1A1.04 1.04 0 019 4.85a1.04 1.04 0 011.042 1.042A1.04 1.04 0 019 6.934 1.04 1.04 0 017.96 5.893z"
+      fill="#00D170"
+    />
+  </svg>
+)
+
 const Bazzar = ({ name, color, ...props }: IconProps) => (
   <svg
     width={135}
@@ -985,6 +1004,7 @@ const Helmet = ({ name, color, ...props }: IconProps) => (
 
 const icons: Record<IconName, typeof Icon> = {
   snappfood: Snappfood,
+  info : Info,
   twitter: Twitter,
   instagram: Instagram,
   telegram: Telegram,
