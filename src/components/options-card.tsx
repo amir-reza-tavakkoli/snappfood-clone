@@ -1,8 +1,8 @@
-import { ComponentProps } from "react"
+import type { ComponentProps } from "react"
 import { Icon } from "./icon"
 import "./options-card.css"
 
-type OptionsCardProps = {
+type OptionNotesProps = {
   options: {
     name: string
     value: string
@@ -11,7 +11,7 @@ type OptionsCardProps = {
   }[]
 }
 
-export const OptionsCard = ({ options }: OptionsCardProps) => {
+export const OptionNotes = ({ options }: OptionNotesProps) => {
   return (
     <dl className="options-card">
       <dt className="nonvisual">Options</dt>
@@ -19,16 +19,17 @@ export const OptionsCard = ({ options }: OptionsCardProps) => {
         <dl>
           {options.map((item, index) =>
             item.interactive ? (
-              <div key={index} data-interactive>
+              <div key={index} data-interactive aria-label="Option">
                 {<Icon name={item.icon.name} color={item.icon.color} />}
                 <dt>{item.name}</dt>
                 <dd>{item.value}</dd>
                 <button type="button">
-                  {<Icon name="flash" color="action" />}
+                  {<Icon name="flash" color="action" />}{" "}
+                  <span className="nonvisual">Change</span>
                 </button>
               </div>
             ) : (
-              <div key={index}>
+              <div key={index} aria-label="Note">
                 {<Icon name={item.icon.name} color={item.icon.color} />}
                 <dt>{item.name}</dt>
                 <dd>{item.value}</dd>

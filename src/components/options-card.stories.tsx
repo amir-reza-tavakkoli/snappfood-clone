@@ -1,7 +1,7 @@
 import type { ComponentProps } from "react"
-import { OptionsCard } from "./options-card"
+import { OptionNotes } from "./options-card"
 
-const props: ComponentProps<typeof OptionsCard> = {
+const props: ComponentProps<typeof OptionNotes> = {
   options: [
     {
       name: "پیک فروشنده",
@@ -24,6 +24,6 @@ const props: ComponentProps<typeof OptionsCard> = {
   ],
 }
 
-export const OptionsCardDefault = () => {
-  return <OptionsCard {...props}></OptionsCard>
+export const OptionNotesDefault = () => {
+  return <OptionNotes {...props}></OptionNotes>
 }
