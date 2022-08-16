@@ -1,0 +1,50 @@
+:where(.options-card) {
+  display: flex;
+  flex-direction: column;
+  inline-size: 100%;
+  padding-inline: var(--length-32);
+  padding-block: var(--length-16);
+  background-color:rgb(249, 250, 251);
+}
+
+:where(.options-card div) {
+  flex-grow: 0;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  inline-size: 100%;
+  min-inline-size: 10rem;
+  margin-block: var(--length-16);
+  padding-block: var(--length-12);
+  padding-inline: var(--length-20);
+  font-size: var(--length-12);
+  color: var(color-text);
+  background-color: var(--color-primary);
+}
+
+:where(.options-card div dt) {
+  margin-left: auto;
+  padding-inline: var(--length-4);
+}
+
+:where(.options-card div[data-interactive] dd) {
+  margin-right: auto;
+}
+
+:where(.options-card div button) {
+  flex-shrink: 0;
+  display: inline;
+  border: none;
+  background-color: transparent;
+  padding-inline: var(--length-16);
+}
+
+:where(.options-card div button svg) {
+  transform: rotate(-90deg);
+}
+
+:where(.options-card div *) {
+  text-align: center;
+}
