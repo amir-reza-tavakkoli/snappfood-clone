@@ -6,19 +6,19 @@ const props: ComponentProps<typeof OptionNotes> = {
     {
       name: "پیک فروشنده",
       interactive: false,
-      value: "4000تومان",
+      value: "4000 تومان",
       icon: { name: "delivery", color: "text" },
     },
     {
       name: "پیک فروشنده",
       interactive: false,
-      value: "4000تومان",
+      value: "4000 تومان",
       icon: { name: "delivery", color: "text" },
     },
     {
       name: "پیک فروشنده",
       interactive: true,
-      value: "4000تومان",
+      value: "4000 تومان",
       icon: { name: "delivery", color: "text" },
     },
   ],
