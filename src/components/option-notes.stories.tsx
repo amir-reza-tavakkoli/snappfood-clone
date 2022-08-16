@@ -1,5 +1,5 @@
 import type { ComponentProps } from "react"
-import { OptionNotes } from "./options-card"
+import { OptionNotes } from "./option-notes"
 
 const props: ComponentProps<typeof OptionNotes> = {
   options: [
