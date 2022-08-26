@@ -1004,7 +1004,7 @@ const Helmet = ({ name, color, ...props }: IconProps) => (
 
 const icons: Record<IconName, typeof Icon> = {
   snappfood: Snappfood,
-  info : Info,
+  info: Info,
   twitter: Twitter,
   instagram: Instagram,
   telegram: Telegram,
