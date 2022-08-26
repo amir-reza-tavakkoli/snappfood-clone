@@ -37,7 +37,6 @@
   background-color: var(--color-primary);
   line-height: var(--length-24);
   word-break: break-all;
-
 }
 
 :where(.image-item p span) {
@@ -59,7 +58,7 @@
 }
 
 :where(html[dir="rtl"] .image-item p) {
-    gap: var(--length-4);
+  gap: var(--length-4);
 }
 :where(html[dir="rtl"] .image-item p span) {
   transform: none;
