@@ -1,6 +1,6 @@
 :where(.bread-crumbs) {
-  margin-block-start: var(--length-24);
-  padding-inline-start: var(--length-20);
+  margin-block-start: min(var(--length-24), 36px);
+  padding-inline-start: min(var(--length-20), 32px);
   inline-size: 100%;
 }
 
@@ -8,7 +8,7 @@
   text-align: center;
   text-decoration: none;
   color: inherit;
-  margin-inline-start: var(--length-8);
+  margin-inline-start: min(var(--length-8), 16px);
 }
 
 :where(.bread-crumbs li) {
@@ -17,6 +17,7 @@
   font-size: var(--length-12);
   line-height: var(--length-12);
   color: var(--color-faded);
+  white-space: nowrap;
 }
 
 :where(.bread-crumbs li:last-of-type) {
@@ -24,9 +25,11 @@
 }
 
 :where(.bread-crumbs svg) {
-  margin-inline-start: var(--length-6);
+  margin-inline-start: min(var(--length-6), 20px);
   margin-block-end: calc(var(--length-2) * -1);
   inline-size: var(--length-6);
+  block-size: var(--length-12);
+  aspect-ratio: 1/1.92;
   fill: var(--color-faded);
   transform: rotate(180deg);
 }
