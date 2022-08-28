@@ -26,6 +26,31 @@
   --length-64: 4rem;
   --length-80: 5rem;
 
+  --length-fluid-small: clamp(
+    var(--length-20),
+    var(--length-12) + 1.45vw,
+    var(--length-28)
+  ); //1.5
+  --length-fluid-normal: clamp(
+    var(--length-24),
+    var(--length-16) + 1.45vw,
+    var(--length-32)
+  ); //1.75
+  --length-fluid-big: clamp(
+    var(--length-28),
+    var(--length-20) + 1.45vw,
+    2.25rem
+  ); //2rem
+  --length-fluid-extra-big: clamp(
+    var(--length-32),
+    var(--length-24) + 1.45vw,
+    var(--length-40)
+  );
+
+  --small: 34.375rem;
+  --normal: 68.75rem;
+  --big: 137.5rem;
+
   --border-thin: 0.5px;
   --border-normal: 1px;
   --border-thick: 1.5px;
