@@ -30,17 +30,17 @@
     var(--length-20),
     var(--length-12) + 1.45vw,
     var(--length-28)
-  ); //1.5
+  );
   --length-fluid-normal: clamp(
     var(--length-24),
     var(--length-16) + 1.45vw,
     var(--length-32)
-  ); //1.75
+  );
   --length-fluid-big: clamp(
     var(--length-28),
     var(--length-20) + 1.45vw,
     2.25rem
-  ); //2rem
+  );
   --length-fluid-extra-big: clamp(
     var(--length-32),
     var(--length-24) + 1.45vw,
