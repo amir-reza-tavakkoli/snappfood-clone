@@ -1,7 +1,7 @@
 :where(.city-list) {
   inline-size: 100%;
-  padding-inline: min(var(--length-32), 32px);
-  padding-block: var(--length-32);
+  padding-inline: min(var(--length-32), 36px);
+  padding-block: min(var(--length-32), 48px);
   border-block-start: var(--border-normal) solid var(--color-faded-2);
   background-color: var(--color-primary);
 }
@@ -37,4 +37,11 @@
 :where(.city-list a) {
   text-decoration: none;
   color: inherit;
+}
+
+@media (pointer: coarse) {
+  :where(.city-list a) {
+    display: inline-flex;
+    min-block-size: var(--length-coarse-min);
+  }
 }
