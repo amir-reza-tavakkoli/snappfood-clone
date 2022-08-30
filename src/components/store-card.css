@@ -3,6 +3,7 @@
   flex-direction: column;
   justify-content: flex-start;
   inline-size: 100%;
+  min-inline-size: min-content;
 }
 
 :where(.store-card > div:first-child) {
@@ -17,7 +18,7 @@
 :where(.store-card > div:last-child) {
   flex-grow: 0;
   flex-shrink: 0;
-  margin-block-start: var(--length-16);
+  margin-block-start: min(var(--length-16), 32px);
 }
 
 :where(.store-card ._identity) {
@@ -35,7 +36,6 @@
   justify-content: space-between;
   block-size: 100%;
   align-self: stretch;
-  /* margin-inline-start: -5%; */
 }
 
 :where(.store-card ._identity > *) {
@@ -44,35 +44,38 @@
 
 :where(.store-card ._name) {
   order: 3;
-  padding-inline-start: var(--length-16);
-  font-size: var(--length-20);
+  padding-inline-start: min(24px, var(--length-16));
+  font-size: var(--length-fluid-extra-small);
   font-weight: 700;
   overflow-wrap: normal;
-  margin-block-end: var(--length-10);
+  margin-block-end: min(var(--length-10), 20px);
 }
 
 :where(.store-card ._image) {
   align-self: flex-start;
   inline-size: 25%;
+  min-inline-size: min-content;
 }
 
 :where(.store-card ._image img) {
+  flex-shrink: 0;
   align-self: flex-start;
   inline-size: 100%;
-  min-inline-size: var(--length-80);
-  margin-inline-end: var(--length-20);
+  min-inline-size: min(var(--length-80), 160px);
+  margin-inline-end: min(var(--length-20), 36px);
   padding-inline: var(--length-1);
   padding-block: var(--length-1);
   aspect-ratio: 1/1;
   border: var(--border-extra-thick) solid var(--color-faded-4);
-  border-radius: var(--length-12);
+  border-radius: min(var(--length-12), 16px);
 }
 
 :where(.store-card ._rating) {
   order: 1;
-  padding-inline-start: var(--length-16);
-  margin-block-start: var(--length-10);
+  padding-inline-start: min(24px, var(--length-16));
+  margin-block-start: min(var(--length-10), 20px);
   margin-inline-start: calc(var(--length-6) * -1);
+  white-space: nowrap;
 }
 
 :where(.store-card ._rating > dl) {
@@ -92,27 +95,30 @@
 }
 
 :where(.store-card ._rating ._rating-count) {
-  margin-block: var(--length-6);
-  margin-inline: var(--length-6);
+  margin-block: min(12px, var(--length-6));
+  margin-inline: min(10px, var(--length-6));
   color: var(--color-faded);
 }
 
 :where(.store-card ._rating ._star-icon svg) {
   inline-size: var(--length-12);
-  margin-block-start: 0;
-  margin-block-end: var(--length-4);
-  margin-inline: var(--length-4);
+  block-size: var(--length-12);
+  aspect-ratio: 1/1;
+  margin-block-start: var(--length-1);
+  margin-block-end: min(8px, var(--length-4));
+  margin-inline: min(8px, var(--length-4));
 }
 
 :where(.store-card button) {
-  margin-block-start: var(--length-8);
+  margin-block-start: min(16px, var(--length-8));
   color: var(--color-action);
   border: var(--border-thick) solid var(--color-action-4);
-  box-shadow: var(--box-shadow-normal);
+  box-shadow: var(--box-shadow-thick);
+  padding-block: min(8px, var(--length-4));
 }
 
 :where(.store-card button svg) {
-  margin-block-start: var(--length-4);
+  margin-block-start: min(8px, var(--length-4));
 }
 
 :where(.store-card button:hover) {
