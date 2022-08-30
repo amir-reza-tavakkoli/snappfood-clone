@@ -2,8 +2,9 @@
   display: flex;
   flex-direction: column;
   inline-size: 100%;
-  padding-inline: var(--length-12);
-  padding-block: var(--length-12);
+  min-inline-size: min-content;
+  padding-inline: min(var(--length-12), 20px);
+  padding-block: min(var(--length-12), 24px);
   background-color: var(--color-faded-8);
   overflow: auto;
 }
@@ -17,14 +18,14 @@
   flex-wrap: wrap;
   inline-size: 100%;
   min-inline-size: 9rem;
-  margin-block: var(--length-12);
-  padding-block: var(--length-12);
-  padding-inline: var(--length-14);
+  margin-block: min(var(--length-12), 24px);
+  padding-block: min(var(--length-12), 24px);
+  padding-inline: min(var(--length-14), 20px);
   border: var(--border-normal) solid var(--color-faded-4);
   font-size: var(--length-12);
   color: var(color-text-2);
   background-color: var(--color-primary);
-  border-radius: var(--length-8);
+  border-radius: min(var(--length-8), 10px);
 }
 
 :where(.options-card div *) {
@@ -32,8 +33,8 @@
 }
 
 :where(.options-card div dt) {
-  padding-inline-end: var(--length-4);
-  padding-inline-start: var(--length-16);
+  padding-inline-end: min(var(--length-4), 6px);
+  padding-inline-start: min(var(--length-16), 24px);
 }
 
 :where(.options-card div[data-interactive]) {
@@ -50,14 +51,15 @@
 
 :where(.options-card div button) {
   flex-shrink: 0;
-  padding-inline: var(--length-16);
+  padding-block-start: min(var(--length-3), 6px);
+  padding-inline: min(var(--length-6), 10px);
   border: none;
   background-color: transparent;
 }
 
-:where(.options-card div > svg) {
-  inline-size: var(--length-16);
-  block-size: var(--length-16);
+:where(.options-card svg) {
+  inline-size: var(--length-12);
+  block-size: var(--length-12);
   aspect-ratio: 1/1;
 }
 
