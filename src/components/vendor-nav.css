@@ -5,7 +5,7 @@
   flex-grow: 0;
   flex-shrink: 1;
   inline-size: 100%;
-  padding-block-start: min(var(--length-16), 24px);
+  padding-block-start: min(var(--length-16), 32px);
   font-size: var(--length-12);
   overflow-x: auto;
 }
