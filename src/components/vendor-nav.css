@@ -1,28 +1,26 @@
-@import "../base.css";
-
-:where(.vendor-nav ._items) {
+:where(.vendor-nav ul) {
   display: flex;
   justify-content: flex-start;
   align-items: center;
   flex-grow: 0;
   flex-shrink: 1;
   inline-size: 100%;
-  padding-block-start: var(--length-16);
+  padding-block-start: min(var(--length-16), 24px);
   font-size: var(--length-12);
   overflow-x: auto;
 }
 
-:where(.vendor-nav ._items > li) {
+:where(.vendor-nav li) {
   flex-grow: 1;
   flex-shrink: 1;
   min-inline-size: var(--length-80);
 }
 
-:where(.vendor-nav ._items ._link) {
+:where(.vendor-nav ._link) {
   text-decoration: none;
 }
 
-:where(.vendor-nav ._items ._name) {
+:where(.vendor-nav span) {
   color: var(--color-text-2);
   line-height: var(--length-16);
   font-weight: 400;
@@ -30,23 +28,28 @@
   overflow-wrap: break-word;
 }
 
-:where(.vendor-nav ._items ._link > div) {
+:where(.vendor-nav ._link > div) {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-block-end: var(--length-16);
+  padding-block-end: min(var(--length-16), 24px);
 }
 
-:where(.vendor-nav ._items ._link img) {
+:where(.vendor-nav ._link img) {
   display: inline-block;
-  inline-size: var(--length-48);
   max-inline-size: var(--length-48);
-  margin-block-end: var(--length-16);
+  margin-block-end: min(var(--length-16), 24px);
   aspect-ratio: 1/1;
 }
 
-:where(html[dir="rtl"] .vendor-nav ._items) {
+:where(html[dir="rtl"] .vendor-nav ul) {
   flex-direction: row;
   direction: rtl;
+}
+
+@media (pointer: coarse) {
+  :where(.vendor-nav ._link) {
+    min-block-size: var(--length-coarse-min);
+  }
 }
