@@ -66,3 +66,13 @@
 :where(.options-card div button svg) {
   transform: rotate(-90deg);
 }
+
+@media (pointer: coarse) {
+  :where(.options-card div button) {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    min-block-size: var(--length-coarse-min);
+    min-inline-size: var(--length-coarse-min);
+  }
+}

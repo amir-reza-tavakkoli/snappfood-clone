@@ -351,3 +351,12 @@
     margin-block: 0px;
   }
 } */
+
+@media (pointer: coarse) {
+  :where(.footer ._sitemap a, .footer ._credentials a) {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    min-block-size: var(--length-coarse-min);
+  }
+}
