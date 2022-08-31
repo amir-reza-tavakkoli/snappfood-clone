@@ -49,6 +49,6 @@
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    min-block-size: var(--length-40);
+    min-block-size: var(--length-coarse-min);
   }
 }
