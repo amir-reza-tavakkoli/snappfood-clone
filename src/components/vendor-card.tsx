@@ -85,8 +85,8 @@ export const VendorCard = ({
           <dt className="nonvisual">Rating</dt>
           <dd className="_rating">
             <dl>
-              <dt className="nonvisual" role="presentation"></dt>
-              <dd role="presentation" className="_star-icon">
+              <dt className="nonvisual">Stars</dt>
+              <dd className="_star-icon">
                 {<Icon name="star" role="presentation" />}
               </dd>
               {rating.value ? (

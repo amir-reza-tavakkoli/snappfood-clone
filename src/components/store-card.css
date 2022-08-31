@@ -131,3 +131,14 @@
   background-color: var(--color-action-4);
   border-color: var(--color-action-4);
 }
+
+@media (prefers-contrast: more) {
+  :where(.store-card ._rating-count) {
+    color: var(--color-text);
+  }
+
+  :where(.store-card button) {
+    color: var(--color-action-2);
+    opacity: 0.98;
+  }
+}
