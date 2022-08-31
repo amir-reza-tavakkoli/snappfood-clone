@@ -14,7 +14,7 @@ type VendorNavProps = {
 export const Nav = ({ items, type }: VendorNavProps) => {
   return (
     <nav className="nav">
-      <ul className="_items" aria-label={type}>
+      <ul aria-label={type}>
         {items.map((item, index) => (
           <li key={index}>
             <a href={item.href}>
