@@ -1,28 +1,29 @@
 :where(.city-list) {
   inline-size: 100%;
-  padding-inline: var(--length-32);
-  padding-block: var(--length-32);
+  padding-inline: min(var(--length-32), 36px);
+  padding-block: min(var(--length-32), 48px);
   border-block-start: var(--border-normal) solid var(--color-faded-2);
   background-color: var(--color-primary);
 }
 
 :where(.city-list p) {
   margin-block-end: var(--length-32);
-  font-size: var(--length-16);
+  font-size: var(--length-fluid-text);
   font-weight: 700;
   color: var(--color-text);
 }
 
 :where(.city-list ul) {
-  --length-item-min: 9.375rem;
+  --length-item-min: min(9.375rem, 250px);
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(var(--length-item-min), 1fr));
   inline-size: 100%;
-  margin: calc(var(--length-4) * -1);
+  margin-inline: calc(var(--length-4) * -1);
+  margin-block: calc(var(--length-4) * -1);
 }
 
 :where(.city-list li) {
-  padding-inline: var(--length-6);
+  padding-inline: min(var(--length-6), 10px);
   padding-block: var(--length-6);
   margin-inline: 0px;
   margin-block: 0px;
@@ -36,4 +37,11 @@
 :where(.city-list a) {
   text-decoration: none;
   color: inherit;
+}
+
+@media (pointer: coarse) {
+  :where(.city-list a) {
+    display: inline-flex;
+    min-block-size: var(--length-coarse-min);
+  }
 }

@@ -15,11 +15,6 @@ const props: ComponentProps<typeof Footer> = {
   ],
   credentials: [
     {
-      name: "Enamad",
-      href: "",
-      logo: "https://trustseal.enamad.ir/logo.aspx?id=65397&Code=xzjJOBtSHm9NSiFaYy2l",
-    },
-    {
       name: "E-Trust",
       href: "",
       logo: "https://snappfood.ir/static/images/senf.png",

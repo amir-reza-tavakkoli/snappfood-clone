@@ -26,21 +26,33 @@
   --length-64: 4rem;
   --length-80: 5rem;
 
+  --length-coarse-min: 40px;
+
+  --length-fluid-text: clamp(
+    var(--length-12),
+    var(--length-4) + 1.45vw,
+    var(--length-20)
+  );
+  --length-fluid-extra-small: clamp(
+    var(--length-16),
+    var(--length-8) + 1.45vw,
+    var(--length-24)
+  );
   --length-fluid-small: clamp(
     var(--length-20),
     var(--length-12) + 1.45vw,
     var(--length-28)
-  ); //1.5
+  );
   --length-fluid-normal: clamp(
     var(--length-24),
     var(--length-16) + 1.45vw,
     var(--length-32)
-  ); //1.75
+  );
   --length-fluid-big: clamp(
     var(--length-28),
     var(--length-20) + 1.45vw,
     2.25rem
-  ); //2rem
+  );
   --length-fluid-extra-big: clamp(
     var(--length-32),
     var(--length-24) + 1.45vw,
