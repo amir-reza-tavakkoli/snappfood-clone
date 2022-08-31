@@ -26,6 +26,18 @@
   --length-64: 4rem;
   --length-80: 5rem;
 
+  --length-coarse-min: 40px;
+
+  --length-fluid-text: clamp(
+    var(--length-12),
+    var(--length-4) + 1.45vw,
+    var(--length-20)
+  );
+  --length-fluid-extra-small: clamp(
+    var(--length-16),
+    var(--length-8) + 1.45vw,
+    var(--length-24)
+  );
   --length-fluid-small: clamp(
     var(--length-20),
     var(--length-12) + 1.45vw,
