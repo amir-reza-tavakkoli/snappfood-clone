@@ -24,7 +24,6 @@
   font-size: var(--length-fluid-extra-small);
   font-weight: 700;
   order: 1;
-  /* word-break: break-all; */
 }
 
 :where(.vendor-card ._images) {
@@ -36,7 +35,6 @@
 :where(.vendor-card ._image > img) {
   display: inline-block;
   inline-size: 100%;
-  /* block-size: 100%; */
   border-start-start-radius: min(16px, var(--length-12));
   border-start-end-radius: min(16px, var(--length-12));
   aspect-ratio: 2/1;

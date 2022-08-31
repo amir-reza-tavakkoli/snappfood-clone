@@ -3,7 +3,6 @@
   flex-direction: column;
   inline-size: 100%;
   padding-block: min(var(--length-16), 32px);
-  /* margin-inline: min(var(--length-16), 24px); */
   overflow-x: hidden;
 }
 
