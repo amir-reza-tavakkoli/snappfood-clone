@@ -10,8 +10,137 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model Test {
-  id        Int      @id @default(autoincrement())
+model Food {
+  id          String          @id @default(uuid())
+  createdAt   DateTime        @default(now())
+  updatedAt   DateTime        @updatedAt
+  name        String
+  ingredients String?
+  avatarUrl   String?
+  basePrice   Decimal         @default(0)
+  description String?
+  score       Float           @default(0)
+  foodTypes   FoodhasTypes[]
+  stores      StoreHasFoods[]
+  orders      OrderHasFoods[]
+}
+
+model FoodhasTypes {
+  food       Food     @relation(fields: [foodId], references: [id])
+  foodId     String
+  foodType   FoodType @relation(fields: [foodTypeId], references: [id])
+  foodTypeId String
+  main       Boolean  @default(false)
+
+  @@id([foodTypeId, foodId])
+}
+
+model FoodType {
+  id          String         @id @default(uuid())
+  updatedAt   DateTime       @updatedAt
+  name        String         @unique
+  description String?
+  foods       FoodhasTypes[]
+}
+
+model Store {
+  id                 String               @id @default(uuid())
+  name               String
+  createdAt          DateTime             @default(now())
+  updatedAt          DateTime             @updatedAt
+  registrationNumber String               @unique
+  avatarUrl          String?
+  orderCapacity      Int?
+  currentDiscount    Float                @default(0)
+  minOrderPrice      Decimal              @default(0)
+  address            String
+  active             Boolean              @default(false)
+  delivery           String
+  foods              StoreHasFoods[]
+  categories         StoreHasCategories[]
+  orders             Order[]
+}
+
+model StoreHasFoods {
+  store          Store   @relation(fields: [storeId], references: [id])
+  storeId        String
+  food           Food    @relation(fields: [foodId], references: [id])
+  foodId         String
+  capacityPerDay Int?
+  isAvailible    Boolean @default(false)
+  discount       Float   @default(0)
+  price          Decimal
+  maxPerOrder    Int?
+
+  @@id([foodId, storeId])
+}
+
+model StoreHasCategories {
+  store           Store         @relation(fields: [storeId], references: [id])
+  storeId         String
+  storeCategories StoreCategory @relation(fields: [storeCategoryId], references: [id])
+  storeCategoryId String
+  main            Boolean
+
+  @@id([storeCategoryId, storeId])
+}
+
+model StoreCategory {
+  id          String               @id @default(uuid())
+  name        String
+  updatedAt   DateTime             @updatedAt
+  description String
+  stores      StoreHasCategories[]
+}
+
+model User {
+  id        String   @id @default(uuid())
   createdAt DateTime @default(now())
-  name      String
+  updatedAt DateTime @updatedAt
+  firstName String?
+  lastName  String
+  address   String?
+  email     String   @unique
+  avatarUrl String?
+  orders    Order[]
+}
+
+model Order {
+  id            String          @id @default(uuid())
+  createdAt     DateTime        @default(now())
+  updatedAt     DateTime        @updatedAt
+  user          User            @relation(fields: [userId], references: [id])
+  userId        String
+  store         Store           @relation(fields: [storeId], references: [id])
+  storeId       String
+  rate          Float?
+  comment       String?
+  satisfied     Boolean         @default(false)
+  deliveyPrice  Decimal         @default(0)
+  tax           Decimal         @default(0)
+  packaging     Decimal         @default(0)
+  appliedCoupon String?
+  foods         OrderHasFoods[]
+  orderStatus   OrderStatus     @relation(fields: [orderStatusId], references: [id])
+  orderStatusId String
+}
+
+model OrderHasFoods {
+  order      Order   @relation(fields: [orderId], references: [id])
+  orderId    String
+  food       Food    @relation(fields: [foodId], references: [id])
+  foodId     String
+  finalPrice Decimal
+  count      Int
+  free       Boolean @default(false)
+
+  @@id([foodId, orderId])
+}
+
+model OrderStatus {
+  id         String   @id @default(uuid())
+  name       String
+  updatedAt  DateTime @updatedAt
+  successful Boolean  @default(false)
+  orders     Order[]
 }
